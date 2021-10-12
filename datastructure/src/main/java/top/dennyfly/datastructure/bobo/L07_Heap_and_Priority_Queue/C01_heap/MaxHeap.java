@@ -12,13 +12,13 @@ public class MaxHeap<E extends Comparable<E>> {
         data = new Array<>();
     }
 
-    // 将任意数组转换成堆，heapify操作，nlogn
-    public MaxHeap(E[] arr) {
-        data = new Array<>(arr);
-        for (int i = parent(arr.length - 1); i >= 0; i--) {
-            siftDown(i);
-        }
-    }
+//    // 将任意数组转换成堆，heapify操作，nlogn
+//    public MaxHeap(E[] arr) {
+//        data = new Array<>(arr);
+//        for (int i = parent(arr.length - 1); i >= 0; i--) {
+//            siftDown(i);
+//        }
+//    }
 
     public int size() {
         return data.getSize();
