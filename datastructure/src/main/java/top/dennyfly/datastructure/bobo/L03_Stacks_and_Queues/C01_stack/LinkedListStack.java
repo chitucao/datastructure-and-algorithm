@@ -5,7 +5,7 @@ import top.dennyfly.datastructure.bobo.L04_LinkedList.LinkedList;
 /**
  * @author DennyFly
  * @since 2021/9/8 15:21
- * 链表实现的栈
+ * 链表实现的栈，操作链表首部
  */
 public class LinkedListStack<E> implements Stack<E> {
 

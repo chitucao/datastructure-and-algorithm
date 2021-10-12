@@ -5,7 +5,7 @@ import top.dennyfly.datastructure.bobo.L02_Arrays.Array;
 /**
  * @author DennyFly
  * @since 2021/7/5 12:10
- * 数组实现的栈
+ * 数组实现的栈，操作数组尾部
  */
 public class ArrayStack<E> implements Stack<E> {
 

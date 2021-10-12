@@ -2,6 +2,13 @@ package top.dennyfly.datastructure.bobo.L03_Stacks_and_Queues.C02_queue;
 
 import top.dennyfly.datastructure.bobo.L02_Arrays.Array;
 
+
+/**
+ * @author DennyFly
+ * @since 2021/10/12 17:18
+ * 数组实现的队列
+ * 数组尾部入队、首部出队
+ */
 public class ArrayQueue<E> implements Queue<E> {
 
     private Array<E> array;
