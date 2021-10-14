@@ -1,7 +1,7 @@
-package top.dennyfly.datastructure.bobo.L07_Heap_and_Priority_Queue.C02_priority_queue;
+package top.dennyfly.datastructure.bobo.L08_Heap_and_Priority_Queue.C02_priority_queue;
 
 import top.dennyfly.datastructure.bobo.L03_Stacks_and_Queues.C02_queue.Queue;
-import top.dennyfly.datastructure.bobo.L07_Heap_and_Priority_Queue.C01_heap.MaxHeap;
+import top.dennyfly.datastructure.bobo.L08_Heap_and_Priority_Queue.C01_heap.MaxHeap;
 
 /**
  * @author DennyFly

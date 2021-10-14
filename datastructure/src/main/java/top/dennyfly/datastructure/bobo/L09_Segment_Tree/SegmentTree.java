@@ -1,4 +1,4 @@
-package top.dennyfly.datastructure.bobo.L08_Segment_Tree;
+package top.dennyfly.datastructure.bobo.L09_Segment_Tree;
 
 /**
  * @author DennyFly

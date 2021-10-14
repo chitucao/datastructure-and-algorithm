@@ -1,4 +1,4 @@
-package top.dennyfly.datastructure.bobo.L06_Set_and_Map.C02_map;
+package top.dennyfly.datastructure.bobo.L07_Set_and_Map.C02_map;
 
 public interface Map<K, V> {
 

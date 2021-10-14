@@ -1,4 +1,4 @@
-package top.dennyfly.datastructure.bobo.L06_Set_and_Map.C01_set;
+package top.dennyfly.datastructure.bobo.L07_Set_and_Map.C01_set;
 
 public interface Set<E> {
 

@@ -1,4 +1,4 @@
-package top.dennyfly.datastructure.bobo.L05_Binary_Search_Tree;
+package top.dennyfly.datastructure.bobo.L06_Binary_Search_Tree;
 
 import org.junit.Test;
 
