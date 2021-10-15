@@ -5,6 +5,7 @@ import java.util.TreeMap;
 /**
  * @author DennyFly
  * @since 2021/10/14 16:34
+ * 基于TreeMap实现的字典树
  */
 public class Trie {
 

@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * @author DennyFly
  * @since 2021/10/14 17:10
  */
-public class SearchComparison {
+public class WithBSTSearchComparison {
 
     @Test
     public void testAddAndSearch() {
