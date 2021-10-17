@@ -12,11 +12,11 @@ import java.util.ArrayList;
 public class Main {
 
     @Test
-    public void testDiffCount(){
+    public void testDiffCount() {
         System.out.println("Pride and Prejudice");
 
         ArrayList<String> words = new ArrayList<>();
-        if(FileOperation.readFile("pride-and-prejudice.txt", words)) {
+        if (FileOperation.readFile("pride-and-prejudice.txt", words)) {
             System.out.println("Total words: " + words.size());
 
             AVLTree<String, Integer> map = new AVLTree<>();
@@ -31,6 +31,9 @@ public class Main {
             System.out.println("Total different words: " + map.getSize());
             System.out.println("Frequency of PRIDE: " + map.get("pride"));
             System.out.println("Frequency of PREJUDICE: " + map.get("prejudice"));
+
+            System.out.println("is BST : " + map.isBST());
+            System.out.println("is Balanced : " + map.isBalanced());
         }
 
         System.out.println();
