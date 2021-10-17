@@ -34,4 +34,35 @@ public class Main {
         System.out.println(uf.isConnected(1, 3));
         System.out.println(uf.isConnected(1,4));
     }
+
+    @Test
+    public void testParentArrWithRankUF() {
+        UF uf = new UnionFind4(10);
+        uf.unionElements(1, 2);
+        uf.unionElements(2, 3);
+        System.out.println(uf.isConnected(1, 3));
+        System.out.println(uf.isConnected(1,4));
+    }
+
+    @Test
+    public void testParentArrWithCompressIfUF() {
+        UF uf = new UnionFind5(10);
+        uf.unionElements(1, 2);
+        uf.unionElements(2, 3);
+        uf.unionElements(2,9);
+        System.out.println(uf.isConnected(1, 3));
+        System.out.println(uf.isConnected(1,4));
+        System.out.println(uf.isConnected(1,9));
+    }
+
+    @Test
+    public void testParentArrWithCompressRecursionUF() {
+        UF uf = new UnionFind6(10);
+        uf.unionElements(1, 2);
+        uf.unionElements(2, 3);
+        uf.unionElements(2,9);
+        System.out.println(uf.isConnected(1, 3));
+        System.out.println(uf.isConnected(1,4));
+        System.out.println(uf.isConnected(1,9));
+    }
 }
