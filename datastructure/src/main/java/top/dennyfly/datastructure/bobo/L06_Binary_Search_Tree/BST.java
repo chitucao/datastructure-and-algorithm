@@ -1,7 +1,5 @@
 package top.dennyfly.datastructure.bobo.L06_Binary_Search_Tree;
 
-import org.junit.Test;
-
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
@@ -323,106 +321,5 @@ public class BST<E extends Comparable<E>> {
 //            add(node.right, e);
 //        }
 //    }
-
-    @Test
-    public void testToString() {
-        /////////////////
-        //      5      //
-        //    /   \    //
-        //   3    6    //
-        //  / \    \   //
-        // 2  4     8  //
-        /////////////////
-        BST<Integer> bst = new BST<>();
-        int[] nums = {5, 3, 6, 8, 4, 2};
-        for (int num : nums) {
-            bst.add(num);
-        }
-        System.out.println(bst);
-    }
-
-    @Test
-    public void testOrder() {
-        /////////////////
-        //      5      //
-        //    /   \    //
-        //   3    6    //
-        //  / \    \   //
-        // 2  4     8  //
-        /////////////////
-        BST<Integer> bst = new BST<>();
-        int[] nums = {5, 3, 6, 8, 4, 2};
-        for (int num : nums) {
-            bst.add(num);
-        }
-        // 前序 532468
-        bst.preOrder();
-        System.out.println();
-
-        // 非递归前序
-        bst.preOrderNR();
-        System.out.println();
-
-        // 中序 234568
-        bst.inOrder();
-        System.out.println();
-
-        // 后序 243865
-        bst.postOrder();
-        System.out.println();
-
-        // 层序 536248
-        bst.levelOrder();
-        System.out.println();
-    }
-
-    @Test
-    public void testRemoveMost() {
-        /////////////////
-        //      5      //
-        //    /   \    //
-        //   3    6    //
-        //  / \    \   //
-        // 2  4     8  //
-        /////////////////
-        BST<Integer> bst = new BST<>();
-        int[] nums = {5, 3, 6, 8, 4, 2};
-        for (int num : nums) {
-            bst.add(num);
-        }
-        System.out.println(bst);
-
-        bst.removeMax();
-        System.out.println(bst);
-
-        bst.removeMin();
-        System.out.println(bst);
-    }
-
-    @Test
-    public void testRemoveAny() {
-        /////////////////
-        //      5      //
-        //    /   \    //
-        //   3    6    //
-        //  / \    \   //
-        // 2  4     8  //
-        /////////////////
-        BST<Integer> bst = new BST<>();
-        int[] nums = {5, 3, 6, 8, 4, 2};
-        for (int num : nums) {
-            bst.add(num);
-        }
-        System.out.println(bst);
-
-        bst.remove(5);
-        System.out.println(bst);
-
-//        bst.remove(3);
-//        System.out.println(bst);
-
-//        bst.remove(6);
-//        System.out.println(bst);
-    }
 
 }

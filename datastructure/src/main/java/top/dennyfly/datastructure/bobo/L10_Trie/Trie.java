@@ -6,6 +6,14 @@ import java.util.TreeMap;
  * @author DennyFly
  * @since 2021/10/14 16:34
  * 基于TreeMap实现的字典树
+ * <p>
+ * 基本操作
+ * 1.添加一个单词；
+ * 2.判断是否包含某个单词；
+ * 3.判断是否包含某个前缀；
+ * <p>
+ * <p>
+ * 内部方法
  */
 public class Trie {
 

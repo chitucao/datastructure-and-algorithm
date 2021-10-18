@@ -3,6 +3,19 @@ package top.dennyfly.datastructure.bobo.L09_Segment_Tree;
 /**
  * @author DennyFly
  * @since 2021/10/13 13:24
+ * 线段树
+ * 维护两个数组，一个存储原始数据，一个存储树中的合并数据，同时维护一个merge操作
+ * <p>
+ * 基本操作
+ * 1.基于数组初始化线段树；
+ * 2.根据索引查询value；
+ * 3.区间查询merge value；
+ * 4.根据索引索引更新value；
+ * <p>
+ * <p>
+ * 内部方法
+ * 1.计算左孩子索引；
+ * 2.计算右孩子索引；
  */
 public class SegmentTree<E> {
 
@@ -24,6 +37,10 @@ public class SegmentTree<E> {
         buildSegmentTree(0, 0, arr.length - 1);
     }
 
+    public int getSize() {
+        return data.length;
+    }
+
     // 在treeIndex的位置创建表示区间[l...r]的线段树
     private void buildSegmentTree(int treeIndex, int l, int r) {
         // 递归终止条件，切割至左右孩子相等
@@ -41,10 +58,6 @@ public class SegmentTree<E> {
 
         // 对当前节点的值应用merger操作
         tree[treeIndex] = merger.merge(tree[leftTreeIndex], tree[rightTreeeIndex]);
-    }
-
-    public int getSize() {
-        return data.length;
     }
 
     public E get(int index) {

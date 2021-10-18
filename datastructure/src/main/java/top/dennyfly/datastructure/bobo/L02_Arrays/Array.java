@@ -1,5 +1,10 @@
 package top.dennyfly.datastructure.bobo.L02_Arrays;
 
+/**
+ * @author DennyFly
+ * @since 2021/10/18 15:49
+ * 基于数组实现的动态数组
+ */
 public class Array<E> {
 
     private E[] data;
@@ -7,9 +12,9 @@ public class Array<E> {
     private int size;
 
     @SuppressWarnings({"unchecked", "ManualArrayCopy"})
-    public Array(E[] arr){
-        data = (E[])new Object[arr.length];
-        for(int i = 0 ; i < arr.length ; i ++) {
+    public Array(E[] arr) {
+        data = (E[]) new Object[arr.length];
+        for (int i = 0; i < arr.length; i++) {
             data[i] = arr[i];
         }
         size = arr.length;
@@ -110,8 +115,8 @@ public class Array<E> {
 
         E ret = data[index];
 
-        for (int i = index+1; i < size; i++) {
-            data[i-1] = data[i];
+        for (int i = index + 1; i < size; i++) {
+            data[i - 1] = data[i];
         }
 
         size--;

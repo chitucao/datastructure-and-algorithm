@@ -1,13 +1,20 @@
 package top.dennyfly.datastructure.bobo.L07_Set_and_Map.C02_map;
 
-import top.dennyfly.datastructure.bobo.L07_Set_and_Map.C01_set.FileOperation;
+import org.junit.Test;
+import top.dennyfly.datastructure.bobo.L04_LinkedList.LinkedListMap;
+import top.dennyfly.datastructure.bobo.L06_Binary_Search_Tree.BSTMap;
+import top.dennyfly.datastructure.bobo.Other.FileOperation;
 
 import java.util.ArrayList;
 
-public class MapTimeComparsion {
+/**
+ * @author DennyFly
+ * @since 2021/10/18 15:28
+ */
+public class Main {
 
-    public static void main(String[] args) {
-
+    @Test
+    public void testDiffMap() {
         String filename = "pride-and-prejudice.txt";
 
         BSTMap<String, Integer> bstMap = new BSTMap<>();
@@ -19,7 +26,6 @@ public class MapTimeComparsion {
         LinkedListMap<String, Integer> linkedListMap = new LinkedListMap<>();
         double time2 = testMap(linkedListMap, filename);
         System.out.println("Linked List Map: " + time2 + " s");
-
     }
 
     private static double testMap(Map<String, Integer> map, String filename) {
@@ -46,6 +52,6 @@ public class MapTimeComparsion {
 
         long endTime = System.nanoTime();
 
-        return (endTime - startTime) ;
+        return (endTime - startTime);
     }
 }

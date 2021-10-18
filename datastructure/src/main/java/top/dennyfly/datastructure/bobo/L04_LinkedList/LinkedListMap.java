@@ -1,10 +1,16 @@
-package top.dennyfly.datastructure.bobo.L07_Set_and_Map.C02_map;
+package top.dennyfly.datastructure.bobo.L04_LinkedList;
 
 import org.junit.Test;
-import top.dennyfly.datastructure.bobo.L07_Set_and_Map.C01_set.FileOperation;
+import top.dennyfly.datastructure.bobo.L07_Set_and_Map.C02_map.Map;
+import top.dennyfly.datastructure.bobo.Other.FileOperation;
 
 import java.util.ArrayList;
 
+/**
+ * @author DennyFly
+ * @since 2021/10/18 15:24
+ * 基于链表实现的Map
+ */
 public class LinkedListMap<K, V> implements Map<K, V> {
 
     private class Node {
@@ -113,31 +119,6 @@ public class LinkedListMap<K, V> implements Map<K, V> {
             cur = cur.next;
         }
         return null;
-    }
-
-    @Test
-    public void testCountFreqOfWords() {
-        System.out.println("Pride and Prejudice");
-
-        ArrayList<String> words = new ArrayList<>();
-        if (FileOperation.readFile("pride-and-prejudice.txt", words)) {
-            System.out.println("Total words: " + words.size());
-
-            Map<String, Integer> map = new LinkedListMap<>();
-            for (String word : words) {
-                if (map.contains(word)) {
-                    map.set(word, map.get(word) + 1);
-                } else {
-                    map.add(word, 1);
-                }
-            }
-
-            System.out.println("Total different words: " + map.getSize());
-            System.out.println("Frequency of PRIDE: " + map.get("pride"));
-            System.out.println("Frequency of PREJUDICE: " + map.get("prejudice"));
-        }
-
-        System.out.println();
     }
 
 }

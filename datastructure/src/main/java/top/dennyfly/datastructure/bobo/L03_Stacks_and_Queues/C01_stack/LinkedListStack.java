@@ -5,13 +5,14 @@ import top.dennyfly.datastructure.bobo.L04_LinkedList.LinkedList;
 /**
  * @author DennyFly
  * @since 2021/9/8 15:21
- * 链表实现的栈，操作链表首部
+ * 基于链表实现的栈
+ * 入栈出栈操作链表头部
  */
 public class LinkedListStack<E> implements Stack<E> {
 
     private LinkedList<E> linkedList;
 
-    public LinkedListStack(){
+    public LinkedListStack() {
         linkedList = new LinkedList<>();
     }
 
@@ -47,18 +48,5 @@ public class LinkedListStack<E> implements Stack<E> {
         sb.append(linkedList);
         return sb.toString();
     }
-
-    public static void main(String[] args) {
-        LinkedListStack<Integer> stack = new LinkedListStack<>();
-
-        for(int i = 0 ; i < 5 ; i ++){
-            stack.push(i);
-            System.out.println(stack);
-        }
-
-        stack.pop();
-        System.out.println(stack);
-    }
-
 
 }

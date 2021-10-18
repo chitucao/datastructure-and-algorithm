@@ -3,6 +3,12 @@ package top.dennyfly.datastructure.bobo.L04_LinkedList;
 /**
  * @author DennyFly
  * @since 2021/9/15 10:01
+ * 不带虚拟头节点的链表
+ * <p>
+ * <p>
+ * 基本操作
+ * <p>
+ * 内部方法
  */
 public class ListNode<E> {
 
@@ -44,9 +50,4 @@ public class ListNode<E> {
         return sb.toString();
     }
 
-    public static void main(String[] args) {
-        Integer[] arr = {1, 2, 3, 4, 5};
-        ListNode<Integer> listNode = new ListNode<Integer>(arr);
-        System.out.println(listNode.toString());
-    }
 }

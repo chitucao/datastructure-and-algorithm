@@ -1,9 +1,11 @@
 package top.dennyfly.datastructure.bobo.L06_Binary_Search_Tree;
 
+import top.dennyfly.datastructure.bobo.L07_Set_and_Map.C02_map.Map;
+
 /**
  * @author DennyFly
  * @since 2021/10/18 11:10
- * 二叉树实现的map
+ * 二叉树实现的Map
  * <p>
  * 基本操作
  * 1.添加key、value；
@@ -12,13 +14,12 @@ package top.dennyfly.datastructure.bobo.L06_Binary_Search_Tree;
  * 4.根据key更新value；
  * 5.获取最小节点
  * 6.删除最小节点
- *
  * <p>
  * <p>
  * 内部方法
  * 1.根据key获取节点；
  */
-public class BSTMap<K extends Comparable<K>, V> {
+public class BSTMap<K extends Comparable<K>, V> implements Map<K, V> {
 
     class Node {
         private K key;
@@ -41,10 +42,17 @@ public class BSTMap<K extends Comparable<K>, V> {
         size = 0;
     }
 
+    @Override
     public int getSize() {
         return size;
     }
 
+    @Override
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
+    @Override
     public void add(K key, V value) {
         root = add(root, key, value);
     }
@@ -65,6 +73,7 @@ public class BSTMap<K extends Comparable<K>, V> {
         return node;
     }
 
+    @Override
     public V get(K key) {
         Node node = getNode(root, key);
         return node == null ? null : node.value;
@@ -85,6 +94,7 @@ public class BSTMap<K extends Comparable<K>, V> {
         }
     }
 
+    @Override
     public void set(K key, V newValue) {
         Node node = getNode(root, key);
         if (node == null) {
@@ -93,6 +103,7 @@ public class BSTMap<K extends Comparable<K>, V> {
         node.value = newValue;
     }
 
+    @Override
     public boolean contains(K key) {
         return getNode(root, key) != null;
     }
@@ -128,11 +139,12 @@ public class BSTMap<K extends Comparable<K>, V> {
         return node;
     }
 
-    public Node remove(K key) {
+    @Override
+    public V remove(K key) {
         Node node = getNode(root, key);
         if (node != null) {
             root = remove(root, key);
-            return node;
+            return node.value;
         }
         return null;
     }

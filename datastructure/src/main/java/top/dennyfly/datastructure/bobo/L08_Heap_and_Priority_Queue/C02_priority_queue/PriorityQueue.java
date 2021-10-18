@@ -7,6 +7,7 @@ import top.dennyfly.datastructure.bobo.L08_Heap_and_Priority_Queue.C01_heap.MaxH
  * @author DennyFly
  * @since 2021/10/12 17:28
  * 基于最大堆实现的优先队列
+ * <p>
  * 取最大元素出队，从数组的尾部入队然后执行siftUp操作
  */
 public class PriorityQueue<E extends Comparable<E>> implements Queue<E> {

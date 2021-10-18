@@ -5,6 +5,7 @@ import java.util.Objects;
 /**
  * @author DennyFly
  * @since 2021/9/6 17:33
+ * 带虚拟头节点的链表
  */
 public class LinkedList<E> {
 
@@ -141,20 +142,4 @@ public class LinkedList<E> {
         return sb.toString();
     }
 
-    public static void main(String[] args) {
-        LinkedList<Integer> list = new LinkedList<>();
-        for (int i = 0; i < 10; i++) {
-            list.add(i, i);
-        }
-        System.out.println(list.toString());
-        list.set(1, 10);
-        System.out.println(list.get(1));
-        System.out.println(list);
-
-        System.out.println(list.contains(1));
-        System.out.println(list.contains(10));
-
-        list.removeElement(10);
-        System.out.println(list);
-    }
 }

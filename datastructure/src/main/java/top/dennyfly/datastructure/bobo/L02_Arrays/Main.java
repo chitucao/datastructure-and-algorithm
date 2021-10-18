@@ -1,10 +1,13 @@
 package top.dennyfly.datastructure.bobo.L02_Arrays;
 
-public class TestCase {
+import org.junit.Test;
 
-    public static void main(String[] args) {
+public class Main {
+
+    @Test
+    public void testBasic() {
         Array<Integer> dynamicArray = new Array<>();
-        for (int i = 0; i <10 ; i++) {
+        for (int i = 0; i < 10; i++) {
             dynamicArray.addLast(i);
         }
 

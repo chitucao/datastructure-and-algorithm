@@ -3,7 +3,14 @@ package top.dennyfly.datastructure.bobo.L11_Union_Find;
 /**
  * @author DennyFly
  * @since 2021/10/15 15:33
- * 数组实现的并查集（这里索引处存储的是当前索引根父节点的值）
+ * 基于parent数组实现的并查集（这里索引处存储的是当前索引根父节点的值，查询连接的复杂度都是O(h)）
+ * <p>
+ * 这里的p和q对应根节点的索引
+ * <p>
+ * 基本操作
+ * 1.根据索引查询；
+ * 2.连接两个索引；
+ * 3.根据索引判断是否连接；
  */
 public class UnionFind2 implements UF {
 

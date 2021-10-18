@@ -6,7 +6,7 @@ import top.dennyfly.datastructure.bobo.L02_Arrays.Array;
 /**
  * @author DennyFly
  * @since 2021/10/12 17:18
- * 数组实现的队列
+ * 基于数组实现的队列
  * 数组尾部入队、首部出队
  */
 public class ArrayQueue<E> implements Queue<E> {
@@ -59,18 +59,6 @@ public class ArrayQueue<E> implements Queue<E> {
         }
         res.append("] tail");
         return res.toString();
-    }
-
-    public static void main(String[] args) {
-        ArrayQueue<Integer> queue = new ArrayQueue<>();
-        for (int i = 0; i < 10; i++) {
-            queue.enqueue(i);
-            System.out.println(queue);
-            if (i % 3 == 2) {
-                queue.dequeue();
-                System.out.println(queue);
-            }
-        }
     }
 
 }

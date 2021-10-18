@@ -3,6 +3,15 @@ package top.dennyfly.datastructure.bobo.L10_Trie;
 /**
  * @author DennyFly
  * @since 2021/10/15 13:27
+ * 基于单词数组实现的字典树
+ * <p>
+ * 基本操作
+ * 1.添加一个单词；
+ * 2.判断是否包含某个单词；
+ * 3.判断是否包含某个前缀；
+ * <p>
+ * <p>
+ * 内部方法
  */
 public class Trie3 {
 
@@ -28,20 +37,20 @@ public class Trie3 {
         this.root = new Node();
     }
 
-    public void add(String word){
+    public void add(String word) {
 
         Node cur = root;
-        for(int i = 0 ; i < word.length() ; i ++){
+        for (int i = 0; i < word.length(); i++) {
             char c = word.charAt(i);
-            if(cur.next[c-'a'] == null) {
-                cur.next[c-'a'] = new Node();
+            if (cur.next[c - 'a'] == null) {
+                cur.next[c - 'a'] = new Node();
             }
-            cur = cur.next[c-'a'];
+            cur = cur.next[c - 'a'];
         }
 
-        if(!cur.isWord){
+        if (!cur.isWord) {
             cur.isWord = true;
-            size ++;
+            size++;
         }
     }
 

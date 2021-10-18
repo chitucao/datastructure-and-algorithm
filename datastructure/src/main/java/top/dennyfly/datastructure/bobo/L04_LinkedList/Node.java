@@ -3,6 +3,7 @@ package top.dennyfly.datastructure.bobo.L04_LinkedList;
 /**
  * @author DennyFly
  * @since 2021/9/6 17:29
+ * 单链表节点
  */
 public class Node<E> {
 

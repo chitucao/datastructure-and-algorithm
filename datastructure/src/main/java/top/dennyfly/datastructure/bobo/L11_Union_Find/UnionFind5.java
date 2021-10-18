@@ -4,6 +4,13 @@ package top.dennyfly.datastructure.bobo.L11_Union_Find;
  * @author DennyFly
  * @since 2021/10/17 9:36
  * 基于循环路径压缩优化，rank可能不表示树的层数
+ * <p>
+ * 这里的p和q对应根节点的索引
+ * <p>
+ * 基本操作
+ * 1.根据索引查询；
+ * 2.连接两个索引；
+ * 3.根据索引判断是否连接；
  */
 public class UnionFind5 implements UF {
 

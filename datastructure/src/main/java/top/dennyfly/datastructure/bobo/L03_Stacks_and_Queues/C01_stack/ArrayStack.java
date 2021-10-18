@@ -5,7 +5,8 @@ import top.dennyfly.datastructure.bobo.L02_Arrays.Array;
 /**
  * @author DennyFly
  * @since 2021/7/5 12:10
- * 数组实现的栈，操作数组尾部
+ * 基于数组实现的栈
+ * 入栈和出栈操作数组尾部
  */
 public class ArrayStack<E> implements Stack<E> {
 
@@ -46,30 +47,17 @@ public class ArrayStack<E> implements Stack<E> {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         StringBuilder res = new StringBuilder();
         res.append("Stack: ");
         res.append('[');
-        for(int i = 0 ; i < dynamicArray.getSize() ; i ++){
+        for (int i = 0; i < dynamicArray.getSize(); i++) {
             res.append(dynamicArray.get(i));
-            if(i != dynamicArray.getSize() - 1) {
+            if (i != dynamicArray.getSize() - 1) {
                 res.append(", ");
             }
         }
         res.append("] top");
         return res.toString();
-    }
-
-    public static void main(String[] args) {
-
-        ArrayStack<Integer> stack = new ArrayStack<>();
-
-        for(int i = 0 ; i < 5 ; i ++){
-            stack.push(i);
-            System.out.println(stack);
-        }
-
-        stack.pop();
-        System.out.println(stack);
     }
 }

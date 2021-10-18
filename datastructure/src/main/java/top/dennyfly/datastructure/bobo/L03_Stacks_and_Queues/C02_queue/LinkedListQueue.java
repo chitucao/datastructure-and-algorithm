@@ -5,7 +5,7 @@ import top.dennyfly.datastructure.bobo.L04_LinkedList.Node;
 /**
  * @author DennyFly
  * @since 2021/9/8 17:35
- * 链表实现的队列
+ * 基于单链表实现的队列
  * 链表尾部入队，首部出队
  */
 public class LinkedListQueue<E> implements Queue<E> {
@@ -76,13 +76,5 @@ public class LinkedListQueue<E> implements Queue<E> {
         }
         sb.append("tail NULL");
         return sb.toString();
-    }
-
-    public static void main(String[] args) {
-        Queue<Integer> queue = new LinkedListQueue<>();
-        for (int i = 0; i < 10; i++) {
-            queue.enqueue(i);
-        }
-        System.out.println(queue.toString());
     }
 }

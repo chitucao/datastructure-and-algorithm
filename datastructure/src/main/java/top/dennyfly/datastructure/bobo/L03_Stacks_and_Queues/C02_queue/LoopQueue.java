@@ -3,6 +3,7 @@ package top.dennyfly.datastructure.bobo.L03_Stacks_and_Queues.C02_queue;
 /**
  * @author DennyFly
  * @since 2021/9/6 15:38
+ * 基于数组实现的循环队列
  */
 public class LoopQueue<E> implements Queue<E> {
 
@@ -96,18 +97,5 @@ public class LoopQueue<E> implements Queue<E> {
         }
         sb.append("] tail");
         return sb.toString();
-    }
-
-    public static void main(String[] args) {
-        LoopQueue<Integer> queue = new LoopQueue<>();
-        for (int i = 0; i < 8; i++) {
-            queue.enqueue(i);
-            System.out.println(queue);
-
-            if (i % 3 == 2) {
-                queue.dequeue();
-                System.out.println(queue);
-            }
-        }
     }
 }

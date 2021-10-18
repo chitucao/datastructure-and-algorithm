@@ -3,9 +3,14 @@ package top.dennyfly.datastructure.bobo.L11_Union_Find;
 /**
  * @author DennyFly
  * @since 2021/10/15 14:08
- * 基于数组实现的并查集 (对应的查找速度很快，但是连接是On级别的)
+ * 基于id数组实现的并查集 (查询O(1),连接O(n))
  * <p>
  * 这里的p和q对应数组的索引
+ * <p>
+ * 基本操作
+ * 1.根据索引查询；
+ * 2.连接两个索引；
+ * 3.根据索引判断是否连接；
  */
 public class UnionFind1 implements UF {
 

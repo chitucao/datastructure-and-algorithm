@@ -5,6 +5,10 @@ import org.junit.Test;
 /**
  * @author DennyFly
  * @since 2021/10/13 14:31
+ * 测试用例
+ * <p>
+ * 1.线段树的创建；
+ * 2.线段树的区间查询；
  */
 public class Main {
 
