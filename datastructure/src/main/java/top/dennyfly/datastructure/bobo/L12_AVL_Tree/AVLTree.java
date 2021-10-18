@@ -59,7 +59,7 @@ public class AVLTree<K extends Comparable<K>, V> {
         return size;
     }
 
-    private boolean isEmpty() {
+    public boolean isEmpty() {
         return size == 0;
     }
 
