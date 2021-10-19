@@ -14,7 +14,7 @@ package elimination;
  * -b.链表已满，删除链表尾部元素，然后加入到链表头部
  * <p>
  * 基本操作
- * 1.lru 最新的节点放在链表头部
+ * 1.offer 添加一个元素
  * <p>
  * 内部方法
  * 1.findPreNode        查找元素的前一个节点；
@@ -59,7 +59,7 @@ public class LRULinkedList<E> {
         this.capacity = capacity;
     }
 
-    public void lru(E e) {
+    public void offer(E e) {
         Node<E> preNode = findPreNode(e);
         if (preNode != null) {
             deleteByPreNode(preNode);

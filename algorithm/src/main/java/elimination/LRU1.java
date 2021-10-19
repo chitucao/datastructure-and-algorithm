@@ -1,6 +1,7 @@
 package elimination;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 /**
@@ -43,7 +44,7 @@ public class LRU1<K, V> {
 
     private int capacity;
     private Node head, tail;
-    private HashMap<K, Node> map;
+    private Map<K, Node> map;
 
     public LRU1(int capacity) {
         this.capacity = capacity;

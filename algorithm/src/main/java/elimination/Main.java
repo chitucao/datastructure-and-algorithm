@@ -14,17 +14,17 @@ public class Main {
     public void testLRULinkedList() {
         LRULinkedList<Integer> lruList = new LRULinkedList<>(5);
         for (int i = 0; i < 5; i++) {
-            lruList.lru(i);
+            lruList.offer(i);
         }
         // LRUListNode: 4-> 3-> 2-> 1-> 0-> NULL
         System.out.println(lruList);
 
         // LRUListNode: 4-> 3-> 2-> 1-> 0-> NULL
-        lruList.lru(1);
+        lruList.offer(1);
         System.out.println(lruList);
 
         // LRUListNode: 10-> 1-> 4-> 3-> 2-> NULL
-        lruList.lru(10);
+        lruList.offer(10);
         System.out.println(lruList);
     }
 
@@ -51,4 +51,22 @@ public class Main {
         System.out.println(lru);
     }
 
+    @Test
+    public void testArrayAndHashLRU() {
+        LRU2<Integer> lru = new LRU2<>(5);
+        for (int i = 0; i < 5; i++) {
+            lru.offer(i);
+        }
+
+        // LRU2: 4 3 2 1 0 end
+        System.out.println(lru);
+
+        // LRU2: 0 4 3 2 1 end
+        lru.offer(0);
+        System.out.println(lru);
+
+        // LRU2: 7 0 4 3 2 end
+        lru.offer(7);
+        System.out.println(lru);
+    }
 }
