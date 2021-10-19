@@ -15,6 +15,21 @@ import java.util.Objects;
 public class Main {
 
     @Test
+    public void testMidNode(){
+        LinkedList<Integer> list = new LinkedList<>();
+        for (int i = 0; i < 5; i++) {
+            list.addFirst(i);
+        }
+        System.out.println(list);
+        System.out.println(list.midNode().e);
+
+        list.removeFirst();
+        System.out.println(list);
+        System.out.println(list.midNode().e);
+    }
+
+
+    @Test
     public void testLinkedListMap() {
         System.out.println("Pride and Prejudice");
 

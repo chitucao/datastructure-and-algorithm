@@ -1,4 +1,4 @@
-package elimination;
+package elimination.C01_lru;
 
 /**
  * @author DennyFly

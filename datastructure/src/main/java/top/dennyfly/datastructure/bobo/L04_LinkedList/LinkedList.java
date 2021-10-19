@@ -6,6 +6,9 @@ import java.util.Objects;
  * @author DennyFly
  * @since 2021/9/6 17:33
  * 带虚拟头节点的链表
+ * <p>
+ * 扩展操作
+ * 1.midNode    求链表的中间节点（快慢指针）；
  */
 public class LinkedList<E> {
 
@@ -130,6 +133,20 @@ public class LinkedList<E> {
             delNode.next = null;
             size--;
         }
+    }
+
+    public Node<E> midNode() {
+        if (dummyHead.next == null || dummyHead.next.next == null) {
+            return dummyHead.next;
+        }
+        Node<E> quickNode;
+        Node<E> slowNode;
+        quickNode = slowNode = dummyHead.next;
+        while (quickNode.next != null && quickNode.next.next != null) {
+            slowNode = slowNode.next;
+            quickNode = quickNode.next.next;
+        }
+        return slowNode;
     }
 
     @Override
