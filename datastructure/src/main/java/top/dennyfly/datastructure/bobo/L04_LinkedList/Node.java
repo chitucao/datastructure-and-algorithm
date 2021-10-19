@@ -21,7 +21,6 @@ public class Node<E> {
 
     public Node() {
         this(null, null);
-
     }
 
 }
