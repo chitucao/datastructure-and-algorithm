@@ -5,55 +5,58 @@ import top.dennyfly.datastructure.bobo.L02_Arrays.Array;
 /**
  * @author DennyFly
  * @since 2021/7/5 12:10
- * 基于数组实现的栈
- * 入栈和出栈操作数组尾部
+ * 基于动态数组实现的栈（顺序栈）
+ * #入栈和出栈操作数组尾部
+ * #基于动态数组的方式可以自动扩容
  */
 public class ArrayStack<E> implements Stack<E> {
 
-    private Array<E> dynamicArray;
+    private Array<E> array;
 
     public ArrayStack() {
-        dynamicArray = new Array<>();
+        array = new Array<>();
     }
 
     public ArrayStack(int capacity) {
-        dynamicArray = new Array<>(capacity);
+        array = new Array<>(capacity);
     }
 
 
     @Override
     public int getSize() {
-        return dynamicArray.getSize();
+        return array.getSize();
     }
 
     @Override
     public boolean isEmpty() {
-        return dynamicArray.isEmpty();
+        return array.isEmpty();
     }
 
+    // 入栈O(1)
     @Override
     public void push(E e) {
-        dynamicArray.addLast(e);
+        array.addLast(e);
     }
 
+    // 出栈O(1)
     @Override
     public E pop() {
-        return dynamicArray.removeLast();
+        return array.removeLast();
     }
 
     @Override
     public E peek() {
-        return dynamicArray.getLast();
+        return array.getLast();
     }
 
     @Override
     public String toString() {
         StringBuilder res = new StringBuilder();
-        res.append("Stack: ");
+        res.append("ArrayStack: ");
         res.append('[');
-        for (int i = 0; i < dynamicArray.getSize(); i++) {
-            res.append(dynamicArray.get(i));
-            if (i != dynamicArray.getSize() - 1) {
+        for (int i = 0; i < array.getSize(); i++) {
+            res.append(array.get(i));
+            if (i != array.getSize() - 1) {
                 res.append(", ");
             }
         }
