@@ -18,7 +18,7 @@ public class Main {
     @Test
     public void testReverseNode() {
         LinkedList<Integer> list = new LinkedList<>();
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 6; i++) {
             list.addFirst(i);
         }
         System.out.println(list);
@@ -33,7 +33,7 @@ public class Main {
     @Test
     public void testMidNode() {
         LinkedList<Integer> list = new LinkedList<>();
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 6; i++) {
             list.addFirst(i);
         }
         System.out.println(list);

@@ -144,6 +144,7 @@ public class LinkedList<E> {
         Node<E> quickNode;
         Node<E> slowNode;
         quickNode = slowNode = dummyHead.next;
+        // 这里注意偶数的情况是想返回中间的左边还是右边，这里是返回左边
         while (quickNode.next != null && quickNode.next.next != null) {
             slowNode = slowNode.next;
             quickNode = quickNode.next.next;
