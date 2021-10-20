@@ -8,7 +8,9 @@ import java.util.Objects;
  * 带虚拟头节点的链表
  * <p>
  * 扩展操作
- * 1.midNode    求链表的中间节点（快慢指针）；
+ * 1.midNode        求链表的中间节点（快慢指针）；
+ * 2.reverseNode    反转链表（递归）；
+ * 3.reverseNode2   反转链表（遍历swap）
  */
 public class LinkedList<E> {
 
@@ -149,9 +151,52 @@ public class LinkedList<E> {
         return slowNode;
     }
 
+    public void reverseNode() {
+        Node<E> head = reverseNode(dummyHead.next);
+        dummyHead = new Node<>(null, head);
+    }
+
+    public void reverseNode2() {
+        Node<E> head = reverseNode2(dummyHead.next);
+        dummyHead = new Node<>(null, head);
+    }
+
+    // 递归反转 从后向前
+    // 注意这里的head就是第一个节点而不是虚拟头节点
+    private Node<E> reverseNode(Node<E> head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+        Node<E> next = head.next;
+        Node<E> newNode = reverseNode(next);
+        next.next = head;
+        head.next = null;
+        return newNode;
+    }
+
+    // 遍历交换反转
+    // 从前到后
+    private Node<E> reverseNode2(Node<E> head) {
+        if (head == null) {
+            return head;
+        }
+        Node<E> pre = head;
+        Node<E> cur = head.next;
+        Node<E> temp;
+        while (cur != null) {
+            temp = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = temp;
+        }
+        head.next = null;
+        return pre;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
+        sb.append("LinkedList: ");
         for (Node<E> cur = dummyHead.next; cur != null; cur = cur.next) {
             sb.append(cur.e).append("->");
         }

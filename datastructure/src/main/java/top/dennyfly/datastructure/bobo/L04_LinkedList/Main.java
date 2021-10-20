@@ -14,8 +14,24 @@ import java.util.Objects;
  */
 public class Main {
 
+    // 测试反转链表
     @Test
-    public void testMidNode(){
+    public void testReverseNode() {
+        LinkedList<Integer> list = new LinkedList<>();
+        for (int i = 0; i < 5; i++) {
+            list.addFirst(i);
+        }
+        System.out.println(list);
+
+        list.reverseNode();
+        System.out.println(list);
+
+        list.reverseNode2();
+        System.out.println(list);
+    }
+
+    @Test
+    public void testMidNode() {
         LinkedList<Integer> list = new LinkedList<>();
         for (int i = 0; i < 5; i++) {
             list.addFirst(i);
