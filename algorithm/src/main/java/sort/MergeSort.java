@@ -4,8 +4,12 @@ package sort;
  * @author DennyFly
  * @since 2021/10/25 15:08
  * 归并排序
+ * #时间复杂度O(logn)，稳定的排序算法，空间复杂度O(n)，非原地排序
  * #基于分治思想，递归编程技巧
  * #涉及到合并两个有序数组，合并两个有序数组的时候可以使用到哨兵的思想简化
+ * <p>
+ * 内部方法
+ * 1.merge  归并操作，对两个分段数组进行排序
  */
 public class MergeSort {
 
@@ -19,7 +23,7 @@ public class MergeSort {
     }
 
     private static void mergeSort1(int[] arr, int[] tempArr, int p, int q) {
-        if (p >= q) {
+        if (p > q) {
             return;
         }
         int mid = p + (q - p) / 2;

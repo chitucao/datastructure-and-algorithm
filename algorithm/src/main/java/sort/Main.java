@@ -48,6 +48,13 @@ public class Main {
         print(arr, "mergeSort1");
     }
 
+    @Test
+    public void testQuickStart(){
+        int[] arr = arr1;
+        QuickSort.quickSort1(arr1);
+        print(arr, "quickSort1");
+    }
+
 
     /**
      * 单位：毫秒
