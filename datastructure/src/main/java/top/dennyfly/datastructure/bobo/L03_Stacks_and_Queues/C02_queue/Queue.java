@@ -3,7 +3,9 @@ package top.dennyfly.datastructure.bobo.L03_Stacks_and_Queues.C02_queue;
 /**
  * @author DennyFly
  * @since 2021/9/13 15:56
- * 队列 队尾入队，队首出队
+ * 队列
+ * #要求从队尾入队，队首出队
+ * #数组实现的叫顺序队列，链表实现的叫链式队列
  */
 public interface Queue<E> {
 

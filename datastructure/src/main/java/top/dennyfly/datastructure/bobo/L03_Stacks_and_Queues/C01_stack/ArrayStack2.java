@@ -5,7 +5,7 @@ package top.dennyfly.datastructure.bobo.L03_Stacks_and_Queues.C01_stack;
  * @since 2021/10/20 16:17
  * 基于普通数组实现的栈
  * #入栈出栈都是操作数组的尾部；
- * #数组的空间提前分配，有容量的限制；
+ * #普通数组实现的栈本身有capacity的容量限制
  */
 public class ArrayStack2<E> implements Stack<E> {
 

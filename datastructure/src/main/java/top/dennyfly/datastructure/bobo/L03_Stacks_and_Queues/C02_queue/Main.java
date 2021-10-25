@@ -11,6 +11,26 @@ import java.util.Random;
 public class Main {
 
     @Test
+    public void testArrayQueue2() {
+        Queue<Integer> queue = new ArrayQueue2<>(10);
+
+        for (int i = 0; i < 5; i++) {
+            queue.enqueue(i);
+        }
+        System.out.println(queue);
+        for (int i = 0; i < 2; i++) {
+            queue.dequeue();
+        }
+        System.out.println(queue);
+        for (int i = 0; i < 5; i++) {
+            queue.enqueue(i);
+        }
+        System.out.println(queue);
+        queue.enqueue(1);
+        System.out.println(queue);
+    }
+
+    @Test
     public void testDiffQueue() {
 
         int opCount = 100000;
@@ -19,7 +39,7 @@ public class Main {
         double time1 = testQueue(arrayQueue, opCount);
         System.out.println("ArrayQueue, time: " + time1 + " s");
 
-        LoopQueue<Integer> loopQueue = new LoopQueue<>();
+        ArrayLoopQueue<Integer> loopQueue = new ArrayLoopQueue<>();
         double time2 = testQueue(loopQueue, opCount);
         System.out.println("LoopQueue, time: " + time2 + " s");
     }
@@ -48,7 +68,7 @@ public class Main {
 
     @Test
     public void testLoopQueue() {
-        LoopQueue<Integer> queue = new LoopQueue<>();
+        ArrayLoopQueue<Integer> queue = new ArrayLoopQueue<>(10);
         for (int i = 0; i < 8; i++) {
             queue.enqueue(i);
             System.out.println(queue);
