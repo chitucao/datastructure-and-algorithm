@@ -49,7 +49,7 @@ public class Main {
     }
 
     @Test
-    public void testQuickStart(){
+    public void testQuickSort() {
         int[] arr = arr1;
         QuickSort.quickSort1(arr1);
         print(arr, "quickSort1");
@@ -68,8 +68,10 @@ public class Main {
      * 归并排序1：15
      * <p>
      * 1亿级别
-     * JDK自带排序：10128
-     * 归并排序1：13794
+     * JDK自带排序：9951
+     * 归并排序1：13572
+     * 快速排序1：9126
+     * 快速排序2：9080
      */
     @Test
     public void compareSort() {
@@ -117,6 +119,16 @@ public class Main {
         MergeSort.mergeSort1(Arrays.copyOf(arr, arr.length));
         endTime = System.currentTimeMillis();
         System.out.println("归并排序1：" + (endTime - startTime));
+
+        startTime = System.currentTimeMillis();
+        QuickSort.quickSort1(Arrays.copyOf(arr, arr.length));
+        endTime = System.currentTimeMillis();
+        System.out.println("快速排序1：" + (endTime - startTime));
+
+        startTime = System.currentTimeMillis();
+        QuickSort.quickSort2(Arrays.copyOf(arr, arr.length));
+        endTime = System.currentTimeMillis();
+        System.out.println("快速排序2：" + (endTime - startTime));
     }
 
 
