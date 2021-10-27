@@ -6,7 +6,7 @@ import java.util.TreeMap;
 /**
  * @author DennyFly
  * @since 2021/10/18 9:23
- * 哈希表
+ * 哈希表（散列表）
  * <p>
  * 基本操作
  * 1.添加key、value；

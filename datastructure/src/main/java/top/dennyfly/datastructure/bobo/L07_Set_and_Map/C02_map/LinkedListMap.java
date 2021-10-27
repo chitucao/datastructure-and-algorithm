@@ -1,10 +1,4 @@
-package top.dennyfly.datastructure.bobo.L04_LinkedList;
-
-import org.junit.Test;
-import top.dennyfly.datastructure.bobo.L07_Set_and_Map.C02_map.Map;
-import top.dennyfly.datastructure.bobo.Other.FileOperation;
-
-import java.util.ArrayList;
+package top.dennyfly.datastructure.bobo.L07_Set_and_Map.C02_map;
 
 /**
  * @author DennyFly

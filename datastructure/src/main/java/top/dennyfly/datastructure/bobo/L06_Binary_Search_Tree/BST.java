@@ -7,8 +7,21 @@ import java.util.Stack;
 /**
  * @author DennyFly
  * @since 2021/9/15 13:39
+ * 二叉查找树
+ * #要求在树中的任意一个节点，其左子树中的每个节点的值，都要小于这个节点的值，而右子树节点的值都大于这个节点的值
+ *
+ *
  * <p>
- * 前序、中序、后序遍历参考  https://blog.csdn.net/xiaojinguniang/article/details/86502272
+ * 基本操作
+ * 1.add        插入节点
+ * 2.contains   是否包含指定元素
+ * 3.preOrder、inOrder、postOrder 前序、中序、后序遍历（可以使用非递归方法，借助栈）
+ * 4.levelOrder         层序遍历
+ * 5.maximum、minimum   查询最大节点、最小节点
+ * 6.removeMin、removeMax    删除最大节点、最小节点
+ * 7.remove         删除任意节点
+ * <p>
+ * 内部方法
  */
 public class BST<E extends Comparable<E>> {
 
@@ -46,6 +59,7 @@ public class BST<E extends Comparable<E>> {
     // 向以node为根的二分搜索树中插入元素e，递归算法
     // 返回插入新节点后二分搜索树的根
     private Node add(Node node, E e) {
+        // 到达叶子节点后添加
         if (node == null) {
             size++;
             return new Node(e);
@@ -56,6 +70,8 @@ public class BST<E extends Comparable<E>> {
         } else if (e.compareTo(node.e) > 0) {
             node.right = add(node.right, e);
         }
+
+        // 等于当前节点直接返回
         return node;
     }
 
@@ -77,6 +93,7 @@ public class BST<E extends Comparable<E>> {
         }
     }
 
+    // 前序O(n)
     public void preOrder() {
         preOrder(root);
     }
@@ -90,6 +107,8 @@ public class BST<E extends Comparable<E>> {
         preOrder(node.right);
     }
 
+    // 中序O(n)
+    // 输出有序数据，因此又被称为二叉排序树
     public void inOrder() {
         inOrder(root);
     }
@@ -103,6 +122,7 @@ public class BST<E extends Comparable<E>> {
         inOrder(node.right);
     }
 
+    // 后序O(n)
     public void postOrder() {
         postOrder(root);
     }
@@ -137,7 +157,8 @@ public class BST<E extends Comparable<E>> {
         }
     }
 
-    // 层序遍历
+    // 层序遍历 O(n)
+    // 借助队列
     public void levelOrder() {
         if (root == null) {
             return;
@@ -187,6 +208,10 @@ public class BST<E extends Comparable<E>> {
         return minimum(node.left);
     }
 
+    /**
+     * 1.找到最小节点作为返回值
+     * 2.删除最小节点，也就是左边节点为空的情况，需要考虑右边界定不为空的情况，此时将当前节点的左节点指向右边节点
+     */
     public E removeMin() {
         E min = minimum();
         root = removeMin(root);
@@ -227,8 +252,13 @@ public class BST<E extends Comparable<E>> {
         root = remove(root, e);
     }
 
-    // 删除以node节点为根的二叉树中的e元素
-    // 返回新的二叉树的根
+    /**
+     * 删除以node节点为根的二叉树中的e元素
+     * 返回新的二叉树的根
+     * 情况1：删除节点没有叶子节点
+     * 情况2：删除的节点只有一个节点
+     * 情况3：删除节点存在两个叶子节点，应用hibbrd deletion
+     */
     private Node remove(Node node, E e) {
         if (node == null) {
             return null;

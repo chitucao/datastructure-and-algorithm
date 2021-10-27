@@ -1,8 +1,6 @@
 package top.dennyfly.datastructure.bobo.L07_Set_and_Map.C02_map;
 
 import org.junit.Test;
-import top.dennyfly.datastructure.bobo.L04_LinkedList.LinkedListMap;
-import top.dennyfly.datastructure.bobo.L06_Binary_Search_Tree.BSTMap;
 import top.dennyfly.datastructure.bobo.Other.FileOperation;
 
 import java.util.ArrayList;

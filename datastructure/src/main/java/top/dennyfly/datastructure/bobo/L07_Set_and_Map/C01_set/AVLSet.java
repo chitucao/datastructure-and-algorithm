@@ -1,6 +1,6 @@
-package top.dennyfly.datastructure.bobo.L12_AVL_Tree;
+package top.dennyfly.datastructure.bobo.L07_Set_and_Map.C01_set;
 
-import top.dennyfly.datastructure.bobo.L07_Set_and_Map.C01_set.Set;
+import top.dennyfly.datastructure.bobo.L12_AVL_Tree.AVLTree;
 
 /**
  * @author DennyFly

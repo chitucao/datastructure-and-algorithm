@@ -1,12 +1,14 @@
 package top.dennyfly.datastructure.bobo.L12_AVL_Tree;
 
 import org.junit.Test;
-import top.dennyfly.datastructure.bobo.L06_Binary_Search_Tree.BSTMap;
-import top.dennyfly.datastructure.bobo.L06_Binary_Search_Tree.BSTSet;
+import top.dennyfly.datastructure.bobo.L07_Set_and_Map.C02_map.AVLMap;
+import top.dennyfly.datastructure.bobo.L07_Set_and_Map.C02_map.BSTMap;
+import top.dennyfly.datastructure.bobo.L07_Set_and_Map.C01_set.BSTSet;
+import top.dennyfly.datastructure.bobo.L07_Set_and_Map.C01_set.AVLSet;
 import top.dennyfly.datastructure.bobo.Other.FileOperation;
-import top.dennyfly.datastructure.bobo.L04_LinkedList.LinkedListSet;
+import top.dennyfly.datastructure.bobo.L07_Set_and_Map.C01_set.LinkedListSet;
 import top.dennyfly.datastructure.bobo.L07_Set_and_Map.C01_set.Set;
-import top.dennyfly.datastructure.bobo.L04_LinkedList.LinkedListMap;
+import top.dennyfly.datastructure.bobo.L07_Set_and_Map.C02_map.LinkedListMap;
 import top.dennyfly.datastructure.bobo.L07_Set_and_Map.C02_map.Map;
 
 import java.util.ArrayList;

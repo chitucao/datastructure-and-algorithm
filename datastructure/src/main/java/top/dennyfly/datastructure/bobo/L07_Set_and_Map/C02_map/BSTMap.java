@@ -1,6 +1,4 @@
-package top.dennyfly.datastructure.bobo.L06_Binary_Search_Tree;
-
-import top.dennyfly.datastructure.bobo.L07_Set_and_Map.C02_map.Map;
+package top.dennyfly.datastructure.bobo.L07_Set_and_Map.C02_map;
 
 /**
  * @author DennyFly
