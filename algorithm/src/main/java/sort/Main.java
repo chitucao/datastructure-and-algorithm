@@ -20,6 +20,11 @@ public class Main {
     // 执行4次后提前有序
     private static int[] arr2 = {3, 5, 4, 1, 2, 6};
 
+    // 堆排序数组
+    private static int[] arr3 = {7, 4, 5, 6, 3, 2, 1};
+
+    private static int[] arr4 = {7,1,2,3,4,5,6};
+
     @Test
     public void testBubbleSort() {
         int[] arr = arr2;
@@ -53,6 +58,16 @@ public class Main {
         int[] arr = arr1;
         QuickSort.quickSort1(arr1);
         print(arr, "quickSort1");
+    }
+
+    @Test
+    public void testHeapSort() {
+        int[] arr = arr3;
+        HeapSort.heapSort1(arr);
+        print(arr, "heapSort1");
+
+        HeapSort.heapSort2(arr);
+        print(arr, "heapSort2");
     }
 
 

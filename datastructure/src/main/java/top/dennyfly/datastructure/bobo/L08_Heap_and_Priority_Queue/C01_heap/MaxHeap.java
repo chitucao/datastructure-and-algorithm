@@ -5,19 +5,19 @@ import top.dennyfly.datastructure.bobo.L02_Arrays.Array;
 /**
  * @author DennyFly
  * @since 2021/10/18 15:05
- * 最大堆
- * 基于compare的方式，也可以实现最小堆
- * <p>
+ * 大顶堆（小顶堆）
+ * 是一棵完全二叉树，每一个父节点需要大于等于（或小于等于）子节点的值
+ * #这里堆顶的元素索引是0
  * <p>
  * 基本操作
- * 1.添加元素；
- * 2.查询最大元素；
- * 3.删除最大元素；
- * 4.替换操作（替换最大元素）
+ * 1.add        添加元素（添加到末尾，然后siftUp）；
+ * 2.findMax    查询最大元素（堆顶元素）；
+ * 3.removeMax  删除最大元素（最后一个元素替换堆顶元素后siftDown）；
+ * 4.replace    替换操作（替换堆顶元素后siftDown）
  * <p>
  * 内部方法
- * 1.siftUp；
- * 2.siftDown；
+ * 1.siftUp     堆化，从下向上；
+ * 2.siftDown   堆化，从上到下（取两个子孩子中比较大的那个替换）；
  */
 public class MaxHeap<E extends Comparable<E>> {
 
@@ -28,13 +28,15 @@ public class MaxHeap<E extends Comparable<E>> {
         data = new Array<>();
     }
 
-//    // 将任意数组转换成堆，heapify操作，nlogn
-//    public MaxHeap(E[] arr) {
-//        data = new Array<>(arr);
-//        for (int i = parent(arr.length - 1); i >= 0; i--) {
-//            siftDown(i);
-//        }
-//    }
+    // 将任意数组转换成堆，heapify操作，Onlogn 实际上是On
+    // 这里如果堆顶的元素索引是1，可以只考虑0~n/2的堆化，n/2+1~n的元素不用堆化
+    // 从后向前，从上到下的堆化
+    public MaxHeap(E[] arr) {
+        data = new Array<>(arr);
+        for (int i = parent(arr.length - 1); i >= 0; i--) {
+            siftDown(i);
+        }
+    }
 
     public int size() {
         return data.getSize();
@@ -67,6 +69,21 @@ public class MaxHeap<E extends Comparable<E>> {
         return ret;
     }
 
+    // 最大元素替换操作 （最大元素替换后siftdown 复杂度：logn）
+    public E replace(E e) {
+        E ret = findMax();
+        data.set(0, e);
+        siftDown(0);
+        return ret;
+    }
+
+    // 最大元素替换操作2 （removeMax后 siftDown，再添加元素 siftUp 复杂度：2xlogn）
+//    public E replace2(E e) {
+//        E ret = removeMax();
+//        add(e);
+//        return ret;
+//    }
+
     // 比较并替换第一个元素和下面元素的位置
     private void siftDown(int k) {
         while (leftChild(k) < data.getSize()) {
@@ -91,21 +108,6 @@ public class MaxHeap<E extends Comparable<E>> {
         }
     }
 
-    // 最大元素替换操作 （最大元素替换后siftdown 复杂度：logn）
-    public E replace(E e) {
-        E ret = findMax();
-        data.set(0, e);
-        siftDown(0);
-        return ret;
-    }
-
-    // 最大元素替换操作2 （removeMax后 siftDown，再添加元素 siftUp 复杂度：2xlogn）
-//    public E replace2(E e) {
-//        E ret = removeMax();
-//        add(e);
-//        return ret;
-//    }
-
     // 获取当前节点的父节点
     private int parent(int index) {
         if (index <= 0) {
@@ -129,7 +131,6 @@ public class MaxHeap<E extends Comparable<E>> {
         }
         return 2 * index + 2;
     }
-
 
     @Override
     public String toString() {
