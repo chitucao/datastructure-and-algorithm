@@ -7,8 +7,8 @@ package sort;
  * 数组的0下标不存储数据
  * <p>
  * 基本操作
- * 1.heapSort1      堆排序,考虑第一个元素为空的情况
- * 2.heapSort2      考虑第一个元素
+ * 1.heapSort1      堆排序,第一个元素为空
+ * 2.heapSort2      包含第一个元素
  * <p>
  * 内部方法
  * 1.buildHeap  建堆
