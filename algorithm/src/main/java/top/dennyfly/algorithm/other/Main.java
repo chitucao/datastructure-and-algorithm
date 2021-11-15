@@ -1,6 +1,7 @@
-package other;
+package top.dennyfly.algorithm.other;
 
 import org.junit.Test;
+import top.dennyfly.algorithm.backtracking.Pattern;
 
 import java.util.List;
 
@@ -26,5 +27,12 @@ public class Main {
     public void testReversePairList(){
         List<Integer> res = ReversePairList.solution1(arr2);
         System.out.println(res);
+    }
+
+    @Test
+    public void testPattern(){
+        String pattern = "tom*2?4";
+        String text = "tom213211234";
+        System.out.println(new Pattern(pattern).match(text));
     }
 }

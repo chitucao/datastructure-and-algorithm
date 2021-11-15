@@ -1,4 +1,4 @@
-package other;
+package top.dennyfly.algorithm.other;
 
 /**
  * @author DennyFly

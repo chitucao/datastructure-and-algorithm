@@ -1,4 +1,4 @@
-package search;
+package top.dennyfly.algorithm.search;
 
 /**
  * @author DennyFly

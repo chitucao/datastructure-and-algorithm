@@ -1,4 +1,4 @@
-package elimination.C01_lru;
+package top.dennyfly.algorithm.elimination.C01_lru;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package sort;
+package top.dennyfly.algorithm.sort;
 
 /**
  * @author DennyFly

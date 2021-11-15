@@ -1,4 +1,4 @@
-package other;
+package top.dennyfly.algorithm.other;
 
 import java.util.LinkedList;
 import java.util.List;

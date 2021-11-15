@@ -1,4 +1,4 @@
-package search;
+package top.dennyfly.algorithm.search;
 
 import org.junit.Test;
 

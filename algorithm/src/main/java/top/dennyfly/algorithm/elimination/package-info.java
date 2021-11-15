@@ -8,4 +8,4 @@
  * 3.基于数组实现LRU；
  *
  */
-package elimination;
+package top.dennyfly.algorithm.elimination;

@@ -5,4 +5,4 @@
  * 1.二分查找
  * 2.
  */
-package search;
+package top.dennyfly.algorithm.search;
