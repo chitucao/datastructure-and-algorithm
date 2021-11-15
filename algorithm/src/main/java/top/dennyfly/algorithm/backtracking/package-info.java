@@ -2,13 +2,13 @@
  * @author DennyFly
  * @since 2021/11/15 10:56
  * 回溯算法
- * 1.8皇后问题             {@link top.dennyfly.algorithm.backtracking.EightQueen}
- * 2.正则匹配              {@link top.dennyfly.algorithm.backtracking.Pattern}
- * 3.01背包问题（最大重量）  {@link top.dennyfly.algorithm.backtracking.PackageWeight}
- * 4.01背包问题（最大价值）  {@link top.dennyfly.algorithm.backtracking.PackageValue}
- * 4.数独（9宫格）          {@link top.dennyfly.algorithm.backtracking.Sudoku}
+ * --8皇后问题             {@link top.dennyfly.algorithm.backtracking.EightQueen}
+ * --正则匹配              {@link top.dennyfly.algorithm.backtracking.Pattern}
+ * --01背包问题（最大重量）  {@link top.dennyfly.algorithm.backtracking.PackageWeight}
+ * --01背包问题（最大价值）  {@link top.dennyfly.algorithm.backtracking.PackageValue}
+ * --数独（9宫格）          {@link top.dennyfly.algorithm.backtracking.Sudoku}
  * <p>
  * 待补充
- * 1.N皇后问题
+ * --N皇后问题
  */
 package top.dennyfly.algorithm.backtracking;

@@ -16,17 +16,41 @@ package top.dennyfly.algorithm.backtracking;
 public class PackageValue {
 
     /**
+     * 物品清单
+     */
+    public Pkg[] items;
+
+    /**
+     * 最大数量限制
+     */
+    public int maxNum;
+
+    /**
+     * 最大重量限制
+     */
+    public int maxWeight;
+
+
+    /**
      * 背包中物品总重量的最大值
      */
-    public int maxW = Integer.MIN_VALUE;
+    public int maxW;
 
     /**
      * 背包中物品的总价值的最大值
      */
-    public int maxV = Integer.MIN_VALUE;
+    public int maxV;
 
-    public void countMaxValue(Pkg[] items, int maxNum, int maxWeight) {
-        countMaxValue(0, 0, 0, items, maxNum, maxWeight);
+    public PackageValue(Pkg[] items, int maxNum, int maxWeight) {
+        this.items = items;
+        this.maxNum = maxNum;
+        this.maxWeight = maxWeight;
+        this.maxW = Integer.MIN_VALUE;
+        this.maxV = Integer.MIN_VALUE;
+    }
+
+    public void countMaxValue() {
+        countMaxValue(0, 0, 0);
     }
 
     /**
@@ -35,11 +59,8 @@ public class PackageValue {
      * @param index     物品索引
      * @param sumW      累计重量
      * @param sumV      累计价值
-     * @param items     物品列表
-     * @param maxNum    最大数量限制
-     * @param maxWeight 最大重量限制
      */
-    private void countMaxValue(int index, int sumW, int sumV, Pkg[] items, int maxNum, int maxWeight) {
+    private void countMaxValue(int index, int sumW, int sumV) {
         // 终止条件，达到最大数量或最大重量
         if (index == maxNum || sumW == maxWeight) {
             // 判断是否比上一个条件优秀
@@ -52,14 +73,13 @@ public class PackageValue {
             return;
         }
 
-        // 求解下个物品是否加入
-        countMaxValue(index + 1, sumW, sumV, items, maxNum, maxWeight);
+        // 不装当前，考虑下一个元素
+        countMaxValue(index + 1, sumW, sumV);
 
-        // 当前物品是否加入
+        // 装入当前，考虑当前元素
         Pkg curItem = items[index];
         if (sumW + curItem.getWeight() <= maxWeight) {
-            countMaxValue(index + 1, sumW + curItem.getWeight(), sumV + curItem.getValue(),
-                    items, maxNum, maxWeight);
+            countMaxValue(index + 1, sumW + curItem.getWeight(), sumV + curItem.getValue());
         }
     }
 

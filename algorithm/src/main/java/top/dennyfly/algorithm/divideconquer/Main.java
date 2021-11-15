@@ -1,4 +1,4 @@
-package top.dennyfly.algorithm.other;
+package top.dennyfly.algorithm.divideconquer;
 
 import org.junit.Test;
 import top.dennyfly.algorithm.backtracking.Pattern;

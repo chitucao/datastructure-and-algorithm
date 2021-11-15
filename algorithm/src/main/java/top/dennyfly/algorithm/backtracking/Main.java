@@ -32,24 +32,23 @@ public class Main {
     public void testPackage() {
         int[] items = new int[]{10, 20, 30, 40, 35, 45, 55, 75};
 
-        PackageWeight pkg = new PackageWeight();
-        pkg.countMaxWeight(0, 0, items, 4, 25);
+        PackageWeight pkg = new PackageWeight(items,4,25);
+        pkg.countMaxWeight();
         System.out.println(pkg.maxW);
     }
 
     @Test
     public void testPackageValue() {
-        Pkg[] pkgs = new Pkg[5];
+        Pkg[] items = new Pkg[5];
 
-        pkgs[0] = new Pkg("苹果", 10, 100);
-        pkgs[1] = new Pkg("香蕉", 20, 80);
-        pkgs[2] = new Pkg("香蕉", 30, 120);
-        pkgs[3] = new Pkg("菠萝", 25, 125);
-        pkgs[4] = new Pkg("橙子", 15, 160);
+        items[0] = new Pkg("苹果", 10, 100);
+        items[1] = new Pkg("香蕉", 20, 80);
+        items[2] = new Pkg("香蕉", 30, 120);
+        items[3] = new Pkg("菠萝", 25, 125);
+        items[4] = new Pkg("橙子", 15, 160);
 
-        PackageValue instance = new PackageValue();
-
-        instance.countMaxValue(pkgs, 5, 50);
+        PackageValue instance = new PackageValue(items,5,50);
+        instance.countMaxValue();
         System.out.println("最大总价值为 ：" + instance.maxV);
         System.out.println("最大总重量为 ：" + instance.maxW);
     }
