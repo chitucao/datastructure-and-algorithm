@@ -4,6 +4,10 @@ package top.dennyfly.algorithm.backtracking;
  * @author DennyFly
  * @since 2021/11/15 13:18
  * 01背包问题（数量和最大重量限制，求最大重量）
+ * #基于回溯算法
+ * <p>
+ * #复杂度#
+ * 时间复杂度，没有优化前，指数级  O(2^n)
  * <p>
  * #条件#
  * 对于每个物品来说，有装入背包与不装入背包两种选择，也就是需要考察每个有加入背包的情况与不加入的情况
@@ -14,7 +18,6 @@ package top.dennyfly.algorithm.backtracking;
  * <p>
  * #优化思路#
  * 1.避免递归的重复计算，使用二维数组缓存；
- * 2.
  */
 public class PackageWeight {
 
@@ -47,13 +50,12 @@ public class PackageWeight {
     public boolean[][] mem;
 
 
-
     public PackageWeight(int[] items, int maxNum, int maxWeight) {
         this.items = items;
         this.maxNum = maxNum;
         this.maxWeight = maxWeight;
         this.maxW = Integer.MIN_VALUE;
-        this.mem = new boolean[maxNum][maxWeight];
+        this.mem = new boolean[maxNum][maxWeight + 1];
     }
 
     public void countMaxWeight() {

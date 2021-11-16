@@ -29,10 +29,11 @@ public class Main {
     }
 
     @Test
-    public void testPackage() {
+    public void testPackageWeight() {
         int[] items = new int[]{10, 20, 30, 40, 35, 45, 55, 75};
 
-        PackageWeight pkg = new PackageWeight(items,4,25);
+//        PackageWeight pkg = new PackageWeight(items,4,25);
+        PackageWeight pkg = new PackageWeight(items,8,60);
         pkg.countMaxWeight();
         System.out.println(pkg.maxW);
     }
@@ -47,6 +48,7 @@ public class Main {
         items[3] = new Pkg("菠萝", 25, 125);
         items[4] = new Pkg("橙子", 15, 160);
 
+//        PackageValue instance = new PackageValue(items,5,20);
         PackageValue instance = new PackageValue(items,5,50);
         instance.countMaxValue();
         System.out.println("最大总价值为 ：" + instance.maxV);
