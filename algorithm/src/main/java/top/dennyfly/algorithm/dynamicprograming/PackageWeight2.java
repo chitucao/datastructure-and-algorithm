@@ -39,7 +39,6 @@ public class PackageWeight2 {
         this.maxNum = maxNum;
         this.maxWeight = maxWeight;
         this.states = new boolean[maxWeight + 1];
-
     }
 
     public int countMaxWeight() {
@@ -48,13 +47,25 @@ public class PackageWeight2 {
         states[items[0]] = true;
 
         // 动态规划状态转移
+        // 这里已经组合了所有值的情况，对应最后一行数据的所有情况
         for (int i = 1; i < maxNum; i++) {
             // 放入第i个元素，这里是从大到小排列避免了循环计算
+            // 第一次一个值...
+            // 第二次组合两个值...
+            // 第三次组合三个值...
+            // 其实就是一个组合所有情况的过程
             for (int j = maxWeight - items[i]; j >= 0; j--) {
                 if (states[j] == true) {
                     states[j + items[i]] = true;
                 }
             }
+
+            // 如果是从前开始，states[j + items[i]]会再计算一次，这里的i其实是不合理的
+//            for (int j = 0; j <= maxWeight - items[i]; j++) {
+//                if (states[j] == true) {
+//                    states[j + items[i]] = true;
+//                }
+//            }
         }
 
         // 重量从大到小遍历
