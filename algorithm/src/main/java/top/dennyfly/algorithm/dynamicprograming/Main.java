@@ -93,4 +93,37 @@ public class Main {
         instance = new YanghuiTriangle(data3);
         instance.navigate();
     }
+
+    @Test
+    public void testMatrixDistance1() {
+        int[][] data = {
+                {1, 3, 5, 9},
+                {2, 1, 3, 4},
+                {5, 2, 6, 7},
+                {6, 8, 4, 3}
+        };
+        MatrixDistance1 instance = new MatrixDistance1(data);
+        System.out.println("最短路径长度：" + instance.navigate());
+    }
+
+    @Test
+    public void testMatrixDistance2() {
+        int[][] data = {
+                {1, 3, 5, 9},
+                {2, 1, 3, 4},
+                {5, 2, 6, 7},
+                {6, 8, 4, 3}
+        };
+        MatrixDistance2 instance = new MatrixDistance2(data);
+        System.out.println("最短路径长度：" + instance.navigate());
+    }
+
+    @Test
+    public void testChangeMoney(){
+        int[] coins = {1,3,5};
+        int expected = 9;
+        MoneyChange moneyChange = new MoneyChange(coins, expected);
+        System.out.println("最少找零数量：" + moneyChange.change());
+    }
+
 }
