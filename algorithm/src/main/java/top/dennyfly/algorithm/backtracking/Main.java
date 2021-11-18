@@ -33,7 +33,7 @@ public class Main {
         int[] items = new int[]{10, 20, 30, 40, 35, 45, 55, 75};
 
 //        PackageWeight pkg = new PackageWeight(items,4,25);
-        PackageWeight pkg = new PackageWeight(items,8,60);
+        PackageWeight pkg = new PackageWeight(items, 8, 60);
         pkg.countMaxWeight();
         System.out.println(pkg.maxW);
     }
@@ -49,18 +49,38 @@ public class Main {
         items[4] = new Pkg("橙子", 15, 160);
 
 //        PackageValue instance = new PackageValue(items,5,20);
-        PackageValue instance = new PackageValue(items,5,50);
+        PackageValue instance = new PackageValue(items, 5, 50);
         instance.countMaxValue();
         System.out.println("最大总价值为 ：" + instance.maxV);
         System.out.println("最大总重量为 ：" + instance.maxW);
     }
 
     @Test
-    public void testSudoku(){
+    public void testSudoku() {
         Sudoku sudoku = new Sudoku(9, SUDUKU);
 //        Sudoku sudoku = new Sudoku(9);
         sudoku.place();
         sudoku.printData();
     }
 
+    @Test
+    public void testMatrixDistance() {
+        int[][] data = {
+                {1, 3, 5, 9},
+                {2, 1, 3, 4},
+                {5, 2, 6, 7},
+                {6, 8, 4, 3}
+        };
+        MatrixDistance instance = new MatrixDistance(data);
+        instance.navigate();
+        System.out.println("最短路径长度：" + instance.minDistance);
+    }
+
+    @Test
+    public void testMoneyChange(){
+        int[] coins = {1,3,5};
+        int expected = 9;
+        MoneyChange moneyChange = new MoneyChange(coins, expected);
+        System.out.println("最少找零数量：" + moneyChange.change());
+    }
 }
