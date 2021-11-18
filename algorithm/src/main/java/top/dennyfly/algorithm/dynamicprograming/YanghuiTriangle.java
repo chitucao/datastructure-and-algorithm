@@ -84,7 +84,7 @@ public class YanghuiTriangle {
         }
 
         // 倒推出路径，存在缺陷，三角形是有左右临边约束的，不像商品问题只有顺序要求
-        // 这个倒推要保证没一行的元素值都是不一样的，否则会违反临边约束，相同值时会选择最左边那条路径
+        // 这个倒推要保证同一行的元素值都是不一样的，否则会违反临边约束，倒推相同值时会选择最左边那个数据
         int tempValue = minValue;
         for (int i = rowLen - 1; i >= 0; i--) {
             for (int j = 0; j < cloumnLen; j++) {

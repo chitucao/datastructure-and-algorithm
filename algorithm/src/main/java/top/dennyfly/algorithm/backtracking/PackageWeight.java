@@ -17,7 +17,7 @@ package top.dennyfly.algorithm.backtracking;
  * 先对第一个物品进行处理，选择装进去或者不装进去（只有两种情况），然后再递归地处理剩下的物品。
  * <p>
  * #优化思路#
- * 1.避免递归的重复计算，使用二维数组缓存；
+ * 1.回溯加“备忘录”，和动态规划执行效率一致  避免递归的重复计算，使用二维数组缓存；
  */
 public class PackageWeight {
 
