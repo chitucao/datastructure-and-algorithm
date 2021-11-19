@@ -3,6 +3,8 @@ package top.dennyfly.algorithm.dynamicprograming;
 import org.junit.Test;
 import top.dennyfly.algorithm.backtracking.Pkg;
 
+import java.util.Arrays;
+
 /**
  * @author DennyFly
  * @since 2021/11/15 16:34
@@ -119,11 +121,35 @@ public class Main {
     }
 
     @Test
-    public void testChangeMoney(){
-        int[] coins = {1,3,5};
+    public void testChangeMoney() {
+        int[] coins = {1, 3, 5};
         int expected = 9;
         MoneyChange moneyChange = new MoneyChange(coins, expected);
         System.out.println("最少找零数量：" + moneyChange.change());
     }
 
+    @Test
+    public void testLevenshteinCharMatch() {
+        String str1 = "mitcmu";
+        String str2 = "mtacnu";
+        LevenshteinCharDiff instance = new LevenshteinCharDiff();
+        System.out.println("两个字符串的莱文斯坦距离为：" + instance.diffCount(str1, str2));
+    }
+
+    @Test
+    public void testMaxCharCommon() {
+        String str1 = "mitcmu";
+        String str2 = "mtacnu";
+        MaxCharCommon instance = new MaxCharCommon();
+        System.out.println("两个字符串的最大公共子串长度为：" + instance.commonCount(str1, str2));
+    }
+
+    @Test
+    public void testMaxSequence() {
+        MaxSequence instance = new MaxSequence();
+        int[] nums = {2, 9, 3, 6, 5, 1, 7};
+        System.out.println("测试数据："+ Arrays.toString(nums));
+        System.out.println("最大递增序列为：" + instance.countMaxLength(nums));
+
+    }
 }

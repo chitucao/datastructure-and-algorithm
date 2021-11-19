@@ -27,4 +27,23 @@
         </dependency>
     </dependencies>
 
+    <build>
+
+    </build>
+    <plugin>
+        <groupId>org.sonarsource.scanner.maven</groupId>
+        <artifactId>sonar-maven-plugin</artifactId>
+        <version>3.6.0.1398</version>
+    </plugin>
+
+
+    <profile>
+        <id>sonar</id>
+        <activation>
+            <activeByDefault>true</activeByDefault>
+        </activation>
+        <properties>
+            <sonar.host.url>http://sonarcube.dennyfly.top</sonar.host.url>
+        </properties>
+    </profile>
 </project>

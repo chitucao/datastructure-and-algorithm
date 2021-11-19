@@ -83,4 +83,12 @@ public class Main {
         MoneyChange moneyChange = new MoneyChange(coins, expected);
         System.out.println("最少找零数量：" + moneyChange.change());
     }
+
+    @Test
+    public void testLevenshteinCharMatch(){
+        String str1 = "mitcmu";
+        String str2 = "mtacnu";
+        LevenshteinCharDiff instance = new LevenshteinCharDiff(str1, str2);
+        System.out.println("两个字符串的莱文斯坦距离为："+instance.diffCount());
+    }
 }
