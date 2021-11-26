@@ -6,8 +6,8 @@ import top.dennyfly.datastructure.bobo.L02_Arrays.Array;
 /**
  * @author DennyFly
  * @since 2021/10/12 17:18
- * 基于动态数组实现的队列
- * #数组尾部入队、首部出队
+ * 基于动态数组实现的顺序队列
+ * ++操作数组尾部入队、首部出队
  */
 public class ArrayQueue<E> implements Queue<E> {
 

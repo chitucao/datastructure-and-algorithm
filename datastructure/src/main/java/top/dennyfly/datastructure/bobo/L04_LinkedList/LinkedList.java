@@ -137,6 +137,11 @@ public class LinkedList<E> {
         }
     }
 
+    public void clear() {
+        dummyHead.next = null;
+        size = 0;
+    }
+
     public Node<E> midNode() {
         if (dummyHead.next == null || dummyHead.next.next == null) {
             return dummyHead.next;

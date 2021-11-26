@@ -21,6 +21,10 @@ public class DynamicArray<E> {
         this.size = 0;
     }
 
+    public void addLast(E e) {
+        add(size, e);
+    }
+
     public void add(int index, E e) {
         if (index < 0 || index > size) {
             throw new IllegalArgumentException("add index is illegal");

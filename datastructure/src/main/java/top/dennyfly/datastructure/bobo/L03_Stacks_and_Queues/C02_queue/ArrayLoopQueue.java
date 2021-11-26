@@ -3,7 +3,7 @@ package top.dennyfly.datastructure.bobo.L03_Stacks_and_Queues.C02_queue;
 /**
  * @author DennyFly
  * @since 2021/9/6 15:38
- * 基于数组实现的循环队列
+ * 基于动态数组实现的循环队列
  * #维护front和tail两个指针
  * #会浪费一个空间，front==tail表示队列为空，tail本身不存储数据，tail+1%length == front表示队列满
  * <p>

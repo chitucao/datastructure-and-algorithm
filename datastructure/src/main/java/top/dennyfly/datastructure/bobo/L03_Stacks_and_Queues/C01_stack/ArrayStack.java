@@ -5,9 +5,8 @@ import top.dennyfly.datastructure.bobo.L02_Arrays.Array;
 /**
  * @author DennyFly
  * @since 2021/7/5 12:10
- * 基于动态数组实现的栈（顺序栈）
- * #入栈和出栈操作数组尾部
- * #基于动态数组的方式可以自动扩容
+ * 基于动态数组实现的顺序栈
+ * #操作数组尾部
  */
 public class ArrayStack<E> implements Stack<E> {
 
@@ -47,6 +46,11 @@ public class ArrayStack<E> implements Stack<E> {
     @Override
     public E peek() {
         return array.getLast();
+    }
+
+    @Override
+    public void clear() {
+        array.clear();
     }
 
     @Override

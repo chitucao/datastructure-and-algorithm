@@ -3,7 +3,7 @@ package top.dennyfly.datastructure.bobo.L03_Stacks_and_Queues.C02_queue;
 /**
  * @author DennyFly
  * @since 2021/10/22 15:08
- * 基于普通数组实现的队列
+ * 基于普通数组实现的顺序队列
  * #有数组容量的限制，不支持扩容，不支持移动元素
  * #维护front和tail两个指针
  */

@@ -3,9 +3,8 @@ package top.dennyfly.datastructure.bobo.L03_Stacks_and_Queues.C01_stack;
 /**
  * @author DennyFly
  * @since 2021/10/20 16:17
- * 基于普通数组实现的栈
- * #入栈出栈都是操作数组的尾部；
- * #普通数组实现的栈本身有capacity的容量限制
+ * 基于固定数组实现的顺序栈
+ * #操作数组尾部
  */
 public class ArrayStack2<E> implements Stack<E> {
 
@@ -57,5 +56,13 @@ public class ArrayStack2<E> implements Stack<E> {
             return null;
         }
         return data[size - 1];
+    }
+
+    @Override
+    public void clear() {
+        for (int i = 0; i < size; i++) {
+            data[i] = null;
+        }
+        size = 0;
     }
 }

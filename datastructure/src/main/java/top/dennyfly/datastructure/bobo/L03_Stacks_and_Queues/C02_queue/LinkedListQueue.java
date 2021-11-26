@@ -5,8 +5,8 @@ import top.dennyfly.datastructure.bobo.L04_LinkedList.Node;
 /**
  * @author DennyFly
  * @since 2021/9/8 17:35
- * 基于单链表实现的队列
- * 链表尾部入队，首部出队
+ * 基于单链表实现的链式队列
+ * #链表尾部入队，首部出队
  */
 public class LinkedListQueue<E> implements Queue<E> {
 
