@@ -3,9 +3,11 @@ package top.dennyfly.algorithm.elimination.C01_lru;
 /**
  * @author DennyFly
  * @since 2021/10/19 11:08
- * 基于链表实现LRU缓存策略
- * #本链表带虚拟头节点，维护capacity容量字段；
- * #最新的节点放到链表头部
+ * 基于单链表实现LRU
+ * <p>
+ * 本链表带虚拟头节点，维护capacity容量字段
+ * 最新的节点放到链表头部
+ * 这里的链表节点只有value属性
  * <p>
  * 插入一个元素的几种情况
  * 1.链表中包含该元素 ||删除该元素，然后将该元素加入到链表头部；
@@ -17,13 +19,13 @@ package top.dennyfly.algorithm.elimination.C01_lru;
  * 1.offer 添加一个元素
  * <p>
  * 内部方法
- * 1.findPreNode        查找元素的前一个节点；
+ * 1.findPreNode        查找节点的前一个节点；
  * 2.deleteByPreNode    根据前一个节点删除当前节点；
  * 3.addToHead          插入到头节点
  * 4.deleteEndNode      删除最后节点
- * 5.toString           重写该方法
+ * 5.toString           重写方法
  */
-public class LRULinkedList<E> {
+public class SingleLinkedListLRU<E> {
 
     class Node<E> {
         private E e;
@@ -49,11 +51,11 @@ public class LRULinkedList<E> {
     private int capacity;
     private int size;
 
-    public LRULinkedList() {
+    public SingleLinkedListLRU() {
         this(DEFAULT_CAPACITY);
     }
 
-    public LRULinkedList(int capacity) {
+    public SingleLinkedListLRU(int capacity) {
         this.dummyHead = new Node<>();
         this.size = 0;
         this.capacity = capacity;
@@ -61,10 +63,12 @@ public class LRULinkedList<E> {
 
     public void offer(E e) {
         Node<E> preNode = findPreNode(e);
+        // 如果元素已经存在，移动该元素到头部
         if (preNode != null) {
             deleteByPreNode(preNode);
             addToHead(e);
         } else {
+            // 如果元素不存在，判断链表是否已满，如果满了，需要淘汰末尾元素，然后将元素添加到头部
             if (size >= capacity) {
                 deleteEndNode();
             }

@@ -12,7 +12,7 @@ public class Main {
 
     @Test
     public void testLRULinkedList() {
-        LRULinkedList<Integer> lruList = new LRULinkedList<>(5);
+        SingleLinkedListLRU<Integer> lruList = new SingleLinkedListLRU<>(5);
         for (int i = 0; i < 5; i++) {
             lruList.offer(i);
         }
@@ -30,7 +30,7 @@ public class Main {
 
     @Test
     public void testDoublyLinkedListAndHashLRU() {
-        LRU1<Integer, Integer> lru = new LRU1<>(5);
+        DoubleListNodeHashMapLRU<Integer, Integer> lru = new DoubleListNodeHashMapLRU<>(5);
         for (int i = 0; i < 5; i++) {
             lru.put(i, i);
         }
@@ -53,7 +53,7 @@ public class Main {
 
     @Test
     public void testArrayAndHashLRU() {
-        LRU2<Integer> lru = new LRU2<>(5);
+        ArrayHashMapLRU<Integer> lru = new ArrayHashMapLRU<>(5);
         for (int i = 0; i < 5; i++) {
             lru.offer(i);
         }

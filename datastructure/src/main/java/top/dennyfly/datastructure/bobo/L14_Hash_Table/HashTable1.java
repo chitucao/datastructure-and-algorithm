@@ -20,7 +20,7 @@ import java.util.TreeMap;
  * 1.计算key的hashCode
  * 2.扩容缩容
  */
-public class HashTable<K, V> {
+public class HashTable1<K, V> {
 
     private static final int lowerTol = 2;
     private static final int upperTol = 10;
@@ -32,7 +32,7 @@ public class HashTable<K, V> {
     private int M;
 
     @SuppressWarnings({"SortedCollectionWithNonComparableKeys", "unchecked"})
-    public HashTable(int M) {
+    public HashTable1(int M) {
         this.M = M;
         this.size = 0;
         hashTable = new TreeMap[M];
@@ -41,7 +41,7 @@ public class HashTable<K, V> {
         }
     }
 
-    public HashTable() {
+    public HashTable1() {
         this(initCapacity);
     }
 

@@ -149,7 +149,7 @@ public class Main {
             // Test HashTable
             startTime = System.nanoTime();
 
-            HashTable<String, Integer> ht = new HashTable<>();
+            HashTable1<String, Integer> ht = new HashTable1<>();
 //            HashTable<String, Integer> ht = new HashTable<>(131071);
             for (String word : words) {
                 if (ht.contains(word)) {
@@ -170,5 +170,21 @@ public class Main {
         }
 
         System.out.println();
+    }
+
+    @Test
+    public void testHashTable2(){
+        HashTable2<Integer, Integer> table = new HashTable2<>();
+        table.put(1,1);
+        table.put(2,2);
+        table.put(3,3);
+        table.put(3,4);
+
+        Integer get = table.get(4);
+        System.out.println(get);
+
+        table.remove(1);
+
+        System.out.println(111);
     }
 }

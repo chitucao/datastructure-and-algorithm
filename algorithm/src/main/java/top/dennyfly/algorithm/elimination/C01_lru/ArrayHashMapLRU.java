@@ -6,20 +6,22 @@ import java.util.Map;
 /**
  * @author DennyFly
  * @since 2021/10/19 14:42
- * 基于数组和哈希表实现的LRU K
- * #最新的元素放在数组的前面
- * #使用一个hash表维护元素的值和在数组上索引的对应关系
+ * 基于数组和哈希表实现的LRU
+ * <p>
+ * 最新的元素放在数组头部
+ * 使用一个hash表维护元素的值和在数组上索引的对应关系
+ * 这里的数组只有value属性
  * <p>
  * 基本操作
  * 1.offer 添加一个元素；
  * <p>
  * 内部方法
- * 1.rightShift     将0到指定索引的前一位元素右移，同时维护map中的元素值和索引的对应关系；
+ * 1.removeLast     删除末尾元素，其实只是维护了size的大小和map关系；
  * 2.moveToHead     将节点移动到数组头部；
- * 3.removeLast     删除末尾元素，其实是维护了size的大小和map关系；
- * 4.addToHead      将元素添加到头部，这里需要将0到末尾（size-1）的元素全部右移；
+ * 3.addToHead      将元素添加到头部，这里需要将0到末尾（size-1）的元素全部右移；
+ * 4.rightSift      将0到指定索引的前一位元素右移，同时维护map中的元素值和索引的对应关系；
  */
-public class LRU2<E> {
+public class ArrayHashMapLRU<E> {
 
     private static final int DEFAULT_CAPACITY = 7;
 
@@ -29,13 +31,12 @@ public class LRU2<E> {
     private Map<E, Integer> map;
 
     @SuppressWarnings("unchecked")
-    public LRU2(int capacity) {
+    public ArrayHashMapLRU(int capacity) {
         this.capacity = capacity;
         this.size = 0;
         this.data = (E[]) new Object[capacity];
         this.map = new HashMap<>();
     }
-
 
     public void offer(E e) {
         if (e == null) {
@@ -51,7 +52,7 @@ public class LRU2<E> {
                 removeLast();
                 addToHead(e);
             } else {
-                // 直接添加到头部
+                // 直接添加到数组头部
                 addToHead(e);
             }
         }
@@ -69,7 +70,7 @@ public class LRU2<E> {
      * 将节点添加到数组的头部
      */
     private void addToHead(E e) {
-        rightShift(size);
+        rightSift(size);
         data[0] = e;
         map.put(e, 0);
         size++;
@@ -79,15 +80,15 @@ public class LRU2<E> {
      * 将节点移动到数组头部
      */
     private void moveToHead(E e, int index) {
-        rightShift(index);
+        rightSift(index);
         data[0] = e;
         map.put(e, 0);
     }
 
     /**
-     * 0到index-1的元素右移，同时维护map中的值和索引关系
+     * 0到index-1的元素右移，同时更新map中的值和索引关系
      */
-    private void rightShift(Integer index) {
+    private void rightSift(Integer index) {
         // 注意这里需要从后向前
         for (int i = index - 1; i >= 0; i--) {
             data[i + 1] = data[i];

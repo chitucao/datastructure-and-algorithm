@@ -68,7 +68,7 @@ public class BinarySearch {
     }
 
     /**
-     * 变形的二分查找1
+     * 变形的二分查找1.1
      * 查找第一个等于给定值的元素
      * #比较容易理解的写法
      */
@@ -83,9 +83,11 @@ public class BinarySearch {
             } else if (k < arr[mid]) {
                 high = mid - 1;
             } else {
+                // mid为第一个元素或者mid-1不等于该元素
                 if (mid == 0 || arr[mid - 1] != k) {
                     return mid;
                 } else {
+                    // 否则high-1
                     high = high - 1;
                 }
             }
@@ -94,7 +96,7 @@ public class BinarySearch {
     }
 
     /**
-     * 变形的二分查找1
+     * 变形的二分查找1.2
      * 查找第一个等于给定值的元素
      * #简洁写法，注意循环判断条件和推出条件
      */
@@ -119,7 +121,7 @@ public class BinarySearch {
     }
 
     /**
-     * 变形的二分查找2
+     * 变形的二分查找2.1
      * 查找最后一个等于给定值的元素
      * #容易理解的写法
      */
@@ -144,7 +146,7 @@ public class BinarySearch {
     }
 
     /**
-     * 变形的二分查找2
+     * 变形的二分查找2.2
      * 查找最后一个等于给定值的元素
      * #简洁写法，注意循环判断条件和推出条件
      */
