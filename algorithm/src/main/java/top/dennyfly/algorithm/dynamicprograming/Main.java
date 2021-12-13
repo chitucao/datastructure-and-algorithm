@@ -150,6 +150,5 @@ public class Main {
         int[] nums = {2, 9, 3, 6, 5, 1, 7};
         System.out.println("测试数据："+ Arrays.toString(nums));
         System.out.println("最大递增序列为：" + instance.countMaxLength(nums));
-
     }
 }

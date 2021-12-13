@@ -91,4 +91,10 @@ public class Main {
         LevenshteinCharDiff instance = new LevenshteinCharDiff(str1, str2);
         System.out.println("两个字符串的莱文斯坦距离为："+instance.diffCount());
     }
+
+    @Test
+    public void testFullArray() {
+        char[] arr = new char[]{'1', '2', '3', '4', '5', '6'};
+        FullArray.perm(arr, 0, 5);
+    }
 }

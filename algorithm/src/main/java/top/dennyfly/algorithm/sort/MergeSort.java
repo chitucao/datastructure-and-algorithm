@@ -4,30 +4,36 @@ package top.dennyfly.algorithm.sort;
  * @author DennyFly
  * @since 2021/10/25 15:08
  * 归并排序
- * #时间复杂度O(logn)，稳定的排序算法，空间复杂度O(n)，非原地排序
- * #基于分治思想，递归编程技巧
- * #涉及到合并两个有序数组，合并两个有序数组的时候可以使用到哨兵的思想简化
- * #由下到上，先解决子问题再合并
+ * <p>
+ * 时间复杂度O(nlogn)
+ * 空间复杂度O(n)
+ * 非原地排序
+ * 稳定的排序算法
+ * <p>
+ * #思路#
+ * 基于分治思想，递归编程技巧
+ * 由下到上，先解决子问题再合并
+ * 涉及到合并两个有序数组，合并两个有序数组的时候可以使用到哨兵的思想简化
  */
 public class MergeSort {
 
     // 归并排序
-    public static void mergeSort1(int[] arr) {
+    public static void mergeSort(int[] arr) {
         if (arr.length <= 1) {
             return;
         }
         int[] tempArr = new int[arr.length];
-        mergeSort1(arr, tempArr, 0, arr.length - 1);
+        mergeSort(arr, tempArr, 0, arr.length - 1);
     }
 
-    private static void mergeSort1(int[] arr, int[] tempArr, int p, int q) {
+    private static void mergeSort(int[] arr, int[] tempArr, int p, int q) {
         // 注意这里是>=
         if (p >= q) {
             return;
         }
         int mid = p + (q - p) / 2;
-        mergeSort1(arr, tempArr, p, mid);
-        mergeSort1(arr, tempArr, mid + 1, q);
+        mergeSort(arr, tempArr, p, mid);
+        mergeSort(arr, tempArr, mid + 1, q);
         // 注意这里是mid+1，如果是不加1，可能会导致下面代码mid<p=q的情况
         merge(arr, tempArr, p, mid + 1, q);
     }
@@ -64,6 +70,5 @@ public class MergeSort {
             arr[q - i] = tempArr[q - i];
         }
     }
-
 
 }
