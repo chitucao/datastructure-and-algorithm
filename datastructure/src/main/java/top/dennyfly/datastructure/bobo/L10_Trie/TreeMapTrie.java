@@ -15,7 +15,7 @@ import java.util.TreeMap;
  * <p>
  * 内部方法
  */
-public class Trie {
+public class TreeMapTrie {
 
     private class Node {
         public boolean isWord;
@@ -35,7 +35,7 @@ public class Trie {
     private Node root; // 根节点不保存数据
     private int size; // 这里指单词的数量
 
-    public Trie() {
+    public TreeMapTrie() {
         root = new Node();
         size = 0;
     }

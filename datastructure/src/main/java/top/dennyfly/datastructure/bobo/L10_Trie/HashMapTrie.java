@@ -15,7 +15,7 @@ import java.util.HashMap;
  * <p>
  * 内部方法
  */
-public class Trie2 {
+public class HashMapTrie {
 
     class Node {
 
@@ -35,7 +35,7 @@ public class Trie2 {
     private int size;
     private Node root;
 
-    public Trie2() {
+    public HashMapTrie() {
         this.size = 0;
         this.root = new Node();
     }

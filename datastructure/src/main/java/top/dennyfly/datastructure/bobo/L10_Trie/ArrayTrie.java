@@ -5,15 +5,16 @@ package top.dennyfly.datastructure.bobo.L10_Trie;
  * @since 2021/10/15 13:27
  * 基于单词数组实现的字典树
  * <p>
+ * 这里的单词数组只存储字母
+ * <p>
  * 基本操作
  * 1.添加一个单词；
  * 2.判断是否包含某个单词；
  * 3.判断是否包含某个前缀；
  * <p>
- * <p>
  * 内部方法
  */
-public class Trie3 {
+public class ArrayTrie {
 
     class Node {
         private boolean isWord;
@@ -32,7 +33,7 @@ public class Trie3 {
     private int size;
     private Node root;
 
-    public Trie3() {
+    public ArrayTrie() {
         this.size = 0;
         this.root = new Node();
     }

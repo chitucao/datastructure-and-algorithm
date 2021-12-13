@@ -43,7 +43,7 @@ public class Main {
             // Test TreeMap Trie
             startTime = System.nanoTime();
 
-            Trie trie = new Trie();
+            TreeMapTrie trie = new TreeMapTrie();
             for (String word : words) {
                 trie.add(word);
             }
@@ -62,7 +62,7 @@ public class Main {
             // Test HashMap Trie
             startTime = System.nanoTime();
 
-            Trie2 trie2 = new Trie2();
+            HashMapTrie trie2 = new HashMapTrie();
             for (String word : words) {
                 trie2.add(word);
             }
@@ -80,7 +80,7 @@ public class Main {
             // Test Array(Map) Trie
             startTime = System.nanoTime();
 
-            Trie3 trie3 = new Trie3();
+            ArrayTrie trie3 = new ArrayTrie();
             for (String word : words) {
                 trie3.add(word);
             }
@@ -125,7 +125,7 @@ public class Main {
 
             startTime = System.nanoTime();
 
-            Trie trie = new Trie();
+            TreeMapTrie trie = new TreeMapTrie();
             for (String word : words) {
                 trie.add(word);
             }
