@@ -138,4 +138,28 @@ public class Main {
 
         System.out.println();
     }
+
+    @Test
+    public void testParentPreNext() {
+        BST<Integer> bst = new BST<>();
+        int[] nums = {6, 1, 7, 5, 9, 3, 8, 10, 2, 4};
+        for (int num : nums) {
+            bst.add(num);
+        }
+
+        // 父节点
+        BST<Integer>.Node node = bst.find(5);
+        BST<Integer>.Node parent = bst.parent(node);
+        System.out.println("父节点 " + parent.e);
+
+        // 前驱节点
+        BST<Integer>.Node node1 = bst.find(6);
+        BST<Integer>.Node prev = bst.prev(node1);
+        System.out.println("前驱节点 " + prev.e);
+
+        // 后继节点
+        BST<Integer>.Node node2 = bst.find(2);
+        BST<Integer>.Node next = bst.next(node2);
+        System.out.println("前驱节点 " + next.e);
+    }
 }

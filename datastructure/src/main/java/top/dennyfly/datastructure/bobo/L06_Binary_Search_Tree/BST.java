@@ -8,8 +8,9 @@ import java.util.Stack;
  * @author DennyFly
  * @since 2021/9/15 13:39
  * 二叉查找树
- * #要求在树中的任意一个节点，其左子树中的每个节点的值，都要小于这个节点的值，而右子树节点的值都大于这个节点的值
- *
+ * <p>
+ * 要求在树中的任意一个节点，其左子树中的每个节点的值，都要小于这个节点的值，而右子树节点的值都大于这个节点的值
+ * 这里不维护父指针
  *
  * <p>
  * 基本操作
@@ -25,9 +26,9 @@ import java.util.Stack;
  */
 public class BST<E extends Comparable<E>> {
 
-    private class Node {
-        private E e;
-        private Node left, right;
+    public class Node {
+        public E e;
+        public Node left, right;
 
         public Node(E e) {
             this.e = e;
@@ -50,6 +51,23 @@ public class BST<E extends Comparable<E>> {
 
     public boolean isEmpty() {
         return size == 0;
+    }
+
+    public Node find(E e) {
+        return find(root, e);
+    }
+
+    private Node find(Node node, E e) {
+        if (node == null) {
+            return null;
+        }
+        if (e.compareTo(node.e) < 0) {
+            return find(node.left, e);
+        } else if (e.compareTo(node.e) > 0) {
+            return find(node.right, e);
+        } else {
+            return node;
+        }
     }
 
     public void add(E e) {
@@ -292,6 +310,89 @@ public class BST<E extends Comparable<E>> {
         }
     }
 
+    /**
+     * 查询父节点
+     * 递归方式
+     * 时间复杂度O(n)
+     * 空间复杂度O(logn) 这里是程序栈的开销
+     * 参考 https://blog.csdn.net/whispeImp/article/details/106051830
+     */
+    public Node parent(Node node) {
+        return parent(root, node);
+    }
+
+    private Node parent(Node root, Node node) {
+        if (root == null || root.left == node || root.right == node) {
+            return root;
+        }
+
+        // 左子树中查找
+        Node left = parent(root.left, node);
+        if (left != null) {
+            return left;
+        }
+
+        // 右子树中查找
+        Node right = parent(root.right, node);
+        if (right != null) {
+            return right;
+        }
+        return null;
+    }
+
+    /**
+     * 前驱节点
+     * 参考 https://www.cnblogs.com/xiejunzhao/p/f5f362c1a89da1663850df9fc4b80214.html?ivk_sa=1024320u
+     */
+    public Node prev(Node node) {
+        if (!contains(node.e)) {
+            throw new IllegalArgumentException("provide node is null");
+        }
+
+        // 有左子树，则前驱节点是左子树的最大元素
+        if (node.left != null) {
+            return maximum(node.left);
+        }
+
+        // 如果没有左子树，需要判断和父节点的关系
+        Node parent = parent(node);
+
+        // a.如果是父节点的左孩子，则需要向上查找，直到找到一个节点P，节点P是其父节点Q的右孩子
+        while (parent != null && node != parent.right) {
+            node = parent;
+            parent = parent(node);
+        }
+
+        // b.如果是父节点的右边孩子，则前驱节点是父节点
+        return parent;
+    }
+
+    /**
+     * 后继节点
+     * 参考 https://www.cnblogs.com/xiejunzhao/p/f5f362c1a89da1663850df9fc4b80214.html?ivk_sa=1024320u
+     */
+    public Node next(Node node) {
+        if (!contains(node.e)) {
+            throw new IllegalArgumentException("provide node is null");
+        }
+
+        // 有右子树，则后继节点是右子树中的最小元素
+        if (node.right != null) {
+            return minimum(node.right);
+        }
+
+        // 如果没有右子树，需要判断和父节点的关系
+        Node parent = parent(node);
+
+        // a.如果是父节点的右边，则需要向上查找，直到找到一个节点P，节点P是其父节点Q的左孩子
+        while (parent != null && node != parent.left) {
+            node = parent;
+            parent = parent(node);
+        }
+
+        // b.如果是父节点的左边孩子，则后继节点是父节点
+        return parent;
+    }
 
     @Override
     public String toString() {
