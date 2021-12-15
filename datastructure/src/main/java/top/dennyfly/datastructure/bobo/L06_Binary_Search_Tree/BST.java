@@ -342,6 +342,7 @@ public class BST<E extends Comparable<E>> {
 
     /**
      * 前驱节点
+     * 如果维护父节点的引用，查找父节点会简单很多，但是每个节点会多占用一个指针的空间
      * 参考 https://www.cnblogs.com/xiejunzhao/p/f5f362c1a89da1663850df9fc4b80214.html?ivk_sa=1024320u
      */
     public Node prev(Node node) {

@@ -10,7 +10,7 @@ import org.junit.Test;
 public class Main {
 
     @Test
-    public void testBasic() {
+    public void testMaxHeap() {
         int[] arr = {62, 41, 30, 28, 16, 22, 13, 19, 17, 15};
 
         MaxHeap<Integer> maxHeap = new MaxHeap<>();
@@ -31,5 +31,29 @@ public class Main {
         // 41, 28, 30, 19, 16, 22, 13, 15, 17
         maxHeap.removeMax();
         System.out.println(maxHeap);
+    }
+
+    @Test
+    public void testMinHeap() {
+        int[] arr = {10, 20, 15, 25, 50, 30, 40, 35, 45};
+
+        MinHeap<Integer> minHeap = new MinHeap<>();
+        for (int i : arr) {
+            minHeap.add(i);
+        }
+        // [10, 20, 15, 25, 50, 30, 40, 35, 45]
+        System.out.println(minHeap);
+
+        // 10,16,15,25,20,30,40,35,45,50
+        minHeap.add(16);
+        System.out.println(minHeap);
+
+        // 15, 16, 30, 25, 20, 50, 40, 35, 45
+        minHeap.removeMin();
+        System.out.println(minHeap);
+
+        // 16, 20, 30, 25, 45, 50, 40, 35
+        minHeap.removeMin();
+        System.out.println(minHeap);
     }
 }

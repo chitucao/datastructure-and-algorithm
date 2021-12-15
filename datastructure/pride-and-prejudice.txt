@@ -1215,7 +1215,7 @@ an exhibition.”
 
 “To walk three miles, or four miles, or five miles, or whatever it is,
 above her ankles in dirt, and alone, quite alone! What could she mean by
-it? It seems to me to show an abominable top.dennyfly.algorithm.sort of conceited independence,
+it? It seems to me to show an abominable top.dennyfly.algorithm.B01_Sort of conceited independence,
 a most country-town indifference to decorum.”
 
 “It shows an affection for her sister that is very pleasing,” said
@@ -1532,7 +1532,7 @@ important, and never open their mouths, quite mistake the matter.”
 “No, she would go home. I fancy she was wanted about the mince-pies. For
 my part, Mr. Bingley, I always keep servants that can do their own work;
 _my_ daughters are brought up very differently. But everybody is to
-judge for themselves, and the Lucases are a very good top.dennyfly.algorithm.sort of girls,
+judge for themselves, and the Lucases are a very good top.dennyfly.algorithm.B01_Sort of girls,
 I assure you. It is a pity they are not handsome! Not that I think
 Charlotte so _very_ plain--but then she is our particular friend.”
 
@@ -1555,7 +1555,7 @@ discovered the efficacy of poetry in driving away love!”
 “I have been used to consider poetry as the _food_ of love,” said Darcy.
 
 “Of a fine, stout, healthy love it may. Everything nourishes what is
-strong already. But if it be only a slight, thin top.dennyfly.algorithm.sort of inclination, I
+strong already. But if it be only a slight, thin top.dennyfly.algorithm.B01_Sort of inclination, I
 am convinced that one good sonnet will starve it entirely away.”
 
 Darcy only smiled; and the general pause which ensued made Elizabeth
@@ -1575,7 +1575,7 @@ into the country to give a ball at Netherfield.
 Lydia was a stout, well-grown girl of fifteen, with a fine complexion
 and good-humoured countenance; a favourite with her mother, whose
 affection had brought her into public at an early age. She had high
-animal spirits, and a top.dennyfly.algorithm.sort of natural self-consequence, which the
+animal spirits, and a top.dennyfly.algorithm.B01_Sort of natural self-consequence, which the
 attention of the officers, to whom her uncle's good dinners, and her own
 easy manners recommended her, had increased into assurance. She was very
 equal, therefore, to address Mr. Bingley on the subject of the ball, and
@@ -1690,7 +1690,7 @@ think at least highly interesting. The power of doing anything with
 quickness is always prized much by the possessor, and often without any
 attention to the imperfection of the performance. When you told Mrs.
 Bennet this morning that if you ever resolved upon quitting Netherfield
-you should be gone in five minutes, you meant it to be a top.dennyfly.algorithm.sort of
+you should be gone in five minutes, you meant it to be a top.dennyfly.algorithm.B01_Sort of
 panegyric, of compliment to yourself--and yet what is there so very
 laudable in a precipitance which must leave very necessary business
 undone, and can be of no real advantage to yourself or anyone else?”
@@ -2129,7 +2129,7 @@ Elizabeth.
 They found Mary, as usual, deep in the study of thorough-bass and human
 nature; and had some extracts to admire, and some new observations of
 threadbare morality to listen to. Catherine and Lydia had information
-for them of a different top.dennyfly.algorithm.sort. Much had been done and much had been said
+for them of a different top.dennyfly.algorithm.B01_Sort. Much had been done and much had been said
 in the regiment since the preceding Wednesday; several of the officers
 had dined lately with their uncle, a private had been flogged, and it
 had actually been hinted that Colonel Forster was going to be married.
@@ -2357,7 +2357,7 @@ from Rosings Park, her ladyship's residence.”
 extensive property.”
 
 “Ah!” said Mrs. Bennet, shaking her head, “then she is better off than
-many girls. And what top.dennyfly.algorithm.sort of young lady is she? Is she handsome?”
+many girls. And what top.dennyfly.algorithm.B01_Sort of young lady is she? Is she handsome?”
 
 “She is a most charming young lady indeed. Lady Catherine herself says
 that, in point of true beauty, Miss de Bourgh is far superior to the
@@ -2381,7 +2381,7 @@ to ladies. I have more than once observed to Lady Catherine, that
 her charming daughter seemed born to be a duchess, and that the most
 elevated rank, instead of giving her consequence, would be adorned by
 her. These are the kind of little things which please her ladyship, and
-it is a top.dennyfly.algorithm.sort of attention which I conceive myself peculiarly bound to
+it is a top.dennyfly.algorithm.B01_Sort of attention which I conceive myself peculiarly bound to
 pay.”
 
 “You judge very properly,” said Mr. Bennet, “and it is happy for you
@@ -2777,7 +2777,7 @@ of an age to hold it, and that it was given to another man; and no
 less certain is it, that I cannot accuse myself of having really done
 anything to deserve to lose it. I have a warm, unguarded temper, and
 I may have spoken my opinion _of_ him, and _to_ him, too freely. I can
-recall nothing worse. But the fact is, that we are very different top.dennyfly.algorithm.sort
+recall nothing worse. But the fact is, that we are very different top.dennyfly.algorithm.B01_Sort
 of men, and that he hates me.”
 
 “This is quite shocking! He deserves to be publicly disgraced.”
@@ -2795,7 +2795,7 @@ have induced him to behave so cruelly?”
 attribute in some measure to jealousy. Had the late Mr. Darcy liked me
 less, his son might have borne with me better; but his father's uncommon
 attachment to me irritated him, I believe, very early in life. He had
-not a temper to bear the top.dennyfly.algorithm.sort of competition in which we stood--the top.dennyfly.algorithm.sort
+not a temper to bear the top.dennyfly.algorithm.B01_Sort of competition in which we stood--the top.dennyfly.algorithm.B01_Sort
 of preference which was often given me.”
 
 “I had not thought Mr. Darcy so bad as this--though I have never liked
@@ -2855,7 +2855,7 @@ which, with _some_ brotherly affection, makes him a very kind and
 careful guardian of his sister, and you will hear him generally cried up
 as the most attentive and best of brothers.”
 
-“What top.dennyfly.algorithm.sort of girl is Miss Darcy?”
+“What top.dennyfly.algorithm.B01_Sort of girl is Miss Darcy?”
 
 He shook his head. “I wish I could call her amiable. It gives me pain to
 speak ill of a Darcy. But she is too much like her brother--very, very
@@ -3119,7 +3119,7 @@ feeling of displeasure against the former was so sharpened by immediate
 disappointment, that she could hardly reply with tolerable civility to
 the polite inquiries which he directly afterwards approached to make.
 Attendance, forbearance, patience with Darcy, was injury to Wickham. She
-was resolved against any top.dennyfly.algorithm.sort of conversation with him, and turned away
+was resolved against any top.dennyfly.algorithm.B01_Sort of conversation with him, and turned away
 with a degree of ill-humour which she could not wholly surmount even in
 speaking to Mr. Bingley, whose blind partiality provoked her.
 
@@ -3164,7 +3164,7 @@ be the greater punishment to her partner to oblige him to talk, she made
 some slight observation on the dance. He replied, and was again
 silent. After a pause of some minutes, she addressed him a second time
 with:--“It is _your_ turn to say something now, Mr. Darcy. I talked
-about the dance, and _you_ ought to make some top.dennyfly.algorithm.sort of remark on the size
+about the dance, and _you_ ought to make some top.dennyfly.algorithm.B01_Sort of remark on the size
 of the room, or the number of couples.”
 
 He smiled, and assured her that whatever she wished him to say should be
@@ -3383,7 +3383,7 @@ to make a most important discovery.
 in the room a near relation of my patroness. I happened to overhear the
 gentleman himself mentioning to the young lady who does the honours of
 the house the names of his cousin Miss de Bourgh, and of her mother Lady
-Catherine. How wonderfully these top.dennyfly.algorithm.sort of things occur! Who would have
+Catherine. How wonderfully these top.dennyfly.algorithm.B01_Sort of things occur! Who would have
 thought of my meeting with, perhaps, a nephew of Lady Catherine de
 Bourgh in this assembly! I am most thankful that the discovery is made
 in time for me to pay my respects to him, which I am now going to
@@ -3551,7 +3551,7 @@ expose themselves as much as they could during the evening, it would
 have been impossible for them to play their parts with more spirit or
 finer success; and happy did she think it for Bingley and her sister
 that some of the exhibition had escaped his notice, and that his
-feelings were not of a top.dennyfly.algorithm.sort to be much distressed by the folly which he
+feelings were not of a top.dennyfly.algorithm.B01_Sort to be much distressed by the folly which he
 must have witnessed. That his two sisters and Mr. Darcy, however, should
 have such an opportunity of ridiculing her relations, was bad enough,
 and she could not determine whether the silent contempt of the
@@ -3682,7 +3682,7 @@ left Hunsford--between our pools at quadrille, while Mrs. Jenkinson was
 arranging Miss de Bourgh's footstool, that she said, 'Mr. Collins, you
 must marry. A clergyman like you must marry. Choose properly, choose
 a gentlewoman for _my_ sake; and for your _own_, let her be an active,
-useful top.dennyfly.algorithm.sort of person, not brought up high, but able to make a small
+useful top.dennyfly.algorithm.B01_Sort of person, not brought up high, but able to make a small
 income go a good way. This is my advice. Find such a woman as soon as
 you can, bring her to Hunsford, and I will visit her.' Allow me, by the
 way, to observe, my fair cousin, that I do not reckon the notice
@@ -4411,7 +4411,7 @@ or Lady Lucas without being rude, and many months were gone before she
 could at all forgive their daughter.
 
 Mr. Bennet's emotions were much more tranquil on the occasion, and such
-as he did experience he pronounced to be of a most agreeable top.dennyfly.algorithm.sort; for
+as he did experience he pronounced to be of a most agreeable top.dennyfly.algorithm.B01_Sort; for
 it gratified him, he said, to discover that Charlotte Lucas, whom he had
 been used to think tolerably sensible, was as foolish as his wife, and
 more foolish than his daughter!
@@ -4712,7 +4712,7 @@ comfort was that Mr. Bingley must be down again in the summer.
 Mr. Bennet treated the matter differently. “So, Lizzy,” said he one day,
 “your sister is crossed in love, I find. I congratulate her. Next to
 being married, a girl likes to be crossed a little in love now and then.
-It is something to think of, and it gives her a top.dennyfly.algorithm.sort of distinction
+It is something to think of, and it gives her a top.dennyfly.algorithm.B01_Sort of distinction
 among her companions. When is your turn to come? You will hardly bear to
 be long outdone by Jane. Now is your time. Here are officers enough in
 Meryton to disappoint all the young ladies in the country. Let Wickham
@@ -4799,7 +4799,7 @@ seems likely to have been a desirable match for Jane,” said she. “I am
 sorry it went off. But these things happen so often! A young man, such
 as you describe Mr. Bingley, so easily falls in love with a pretty girl
 for a few weeks, and when accident separates them, so easily forgets
-her, that these top.dennyfly.algorithm.sort of inconsistencies are very frequent.”
+her, that these top.dennyfly.algorithm.B01_Sort of inconsistencies are very frequent.”
 
 “An excellent consolation in its way,” said Elizabeth, “but it will not
 do for _us_. We do not suffer by _accident_. It does not often
@@ -5116,7 +5116,7 @@ and elevating passion, I should at present detest his very name, and
 wish him all manner of evil. But my feelings are not only cordial
 towards _him_; they are even impartial towards Miss King. I cannot find
 out that I hate her at all, or that I am in the least unwilling to
-think her a very good top.dennyfly.algorithm.sort of girl. There can be no love in all this. My
+think her a very good top.dennyfly.algorithm.B01_Sort of girl. There can be no love in all this. My
 watchfulness has been effectual; and though I certainly should be a more
 interesting object to all my acquaintances were I distractedly in love
 with him, I cannot say that I regret my comparative insignificance.
@@ -5198,7 +5198,7 @@ acquaintance.
 Mrs. Gardiner then rallied her niece on Wickham's desertion, and
 complimented her on bearing it so well.
 
-“But my dear Elizabeth,” she added, “what top.dennyfly.algorithm.sort of girl is Miss King? I
+“But my dear Elizabeth,” she added, “what top.dennyfly.algorithm.B01_Sort of girl is Miss King? I
 should be sorry to think our friend mercenary.”
 
 “Pray, my dear aunt, what is the difference in matrimonial affairs,
@@ -5208,7 +5208,7 @@ because it would be imprudent; and now, because he is trying to get
 a girl with only ten thousand pounds, you want to find out that he is
 mercenary.”
 
-“If you will only tell me what top.dennyfly.algorithm.sort of girl Miss King is, I shall know
+“If you will only tell me what top.dennyfly.algorithm.B01_Sort of girl Miss King is, I shall know
 what to think.”
 
 “She is a very good kind of girl, I believe. I know no harm of her.”
@@ -5278,7 +5278,7 @@ seen her sister looking so well as to banish all fear for her health,
 and the prospect of her northern tour was a constant source of delight.
 
 When they left the high road for the lane to Hunsford, every eye was in
-top.dennyfly.algorithm.search of the Parsonage, and every turning expected to bring it in view.
+top.dennyfly.algorithm.B02_Search of the Parsonage, and every turning expected to bring it in view.
 The palings of Rosings Park was their boundary on one side. Elizabeth
 smiled at the recollection of all that she had heard of its inhabitants.
 
@@ -5359,7 +5359,7 @@ _should_ say, one of her ladyship's carriages, for she has several.”
 “Lady Catherine is a very respectable, sensible woman indeed,” added
 Charlotte, “and a most attentive neighbour.”
 
-“Very true, my dear, that is exactly what I say. She is the top.dennyfly.algorithm.sort of
+“Very true, my dear, that is exactly what I say. She is the top.dennyfly.algorithm.B01_Sort of
 woman whom one cannot regard with too much deference.”
 
 The evening was spent chiefly in talking over Hertfordshire news,
@@ -6063,7 +6063,7 @@ was settled _near_ her family.”
 “It is a proof of your own attachment to Hertfordshire. Anything beyond
 the very neighbourhood of Longbourn, I suppose, would appear far.”
 
-As he spoke there was a top.dennyfly.algorithm.sort of smile which Elizabeth fancied she
+As he spoke there was a top.dennyfly.algorithm.B01_Sort of smile which Elizabeth fancied she
 understood; he must be supposing her to be thinking of Jane and
 Netherfield, and she blushed as she answered:
 
@@ -6241,7 +6241,7 @@ likes with her.”
 “No,” said Colonel Fitzwilliam, “that is an advantage which he must
 divide with me. I am joined with him in the guardianship of Miss Darcy.”
 
-“Are you indeed? And pray what top.dennyfly.algorithm.sort of guardians do you make? Does your
+“Are you indeed? And pray what top.dennyfly.algorithm.B01_Sort of guardians do you make? Does your
 charge give you much trouble? Young ladies of her age are sometimes a
 little difficult to manage, and if she has the true Darcy spirit, she
 may like to have her own way.”
@@ -6281,7 +6281,7 @@ Bingley. What he told me was merely this: that he congratulated himself
 on having lately saved a friend from the inconveniences of a most
 imprudent marriage, but without mentioning names or any top.dennyfly.algorithm.other
 particulars, and I only suspected it to be Bingley from believing
-him the kind of young man to get into a scrape of that top.dennyfly.algorithm.sort, and from
+him the kind of young man to get into a scrape of that top.dennyfly.algorithm.B01_Sort, and from
 knowing them to have been together the whole of last summer.”
 
 “Did Mr. Darcy give you reasons for this interference?”
@@ -6522,7 +6522,7 @@ scruples that had long prevented my forming any serious design. These
 bitter accusations might have been suppressed, had I, with greater
 policy, concealed my struggles, and flattered you into the belief of
 my being impelled by unqualified, unalloyed inclination; by reason, by
-reflection, by everything. But disguise of every top.dennyfly.algorithm.sort is my abhorrence.
+reflection, by everything. But disguise of every top.dennyfly.algorithm.B01_Sort is my abhorrence.
 Nor am I ashamed of the feelings I related. They were natural and
 just. Could you expect me to rejoice in the inferiority of your
 connections?--to congratulate myself on the hope of relations, whose
@@ -6600,7 +6600,7 @@ tempted, by the pleasantness of the morning, to stop at the gates and
 look into the park. The five weeks which she had now passed in Kent had
 made a great difference in the country, and every day was adding to the
 verdure of the early trees. She was on the point of continuing her walk,
-when she caught a glimpse of a gentleman within the top.dennyfly.algorithm.sort of grove which
+when she caught a glimpse of a gentleman within the top.dennyfly.algorithm.B01_Sort of grove which
 edged the park; he was moving that way; and, fearful of its being Mr.
 Darcy, she was directly retreating. But the person who advanced was now
 near enough to see her, and stepping forward with eagerness, pronounced
@@ -6968,7 +6968,7 @@ but allow that Mr. Bingley, when questioned by Jane, had long ago
 asserted his blamelessness in the affair; that proud and repulsive as
 were his manners, she had never, in the whole course of their
 acquaintance--an acquaintance which had latterly brought them much
-together, and given her a top.dennyfly.algorithm.sort of intimacy with his ways--seen anything
+together, and given her a top.dennyfly.algorithm.B01_Sort of intimacy with his ways--seen anything
 that betrayed him to be unprincipled or unjust--anything that spoke him
 of irreligious or immoral habits; that among his own connections he was
 esteemed and valued--that even Wickham had allowed him merit as a
@@ -7105,7 +7105,7 @@ Lady Catherine seemed resigned. “Mrs. Collins, you must send a servant
 with them. You know I always speak my mind, and I cannot bear the idea
 of two young women travelling post by themselves. It is highly improper.
 You must contrive to send somebody. I have the greatest dislike in
-the world to that top.dennyfly.algorithm.sort of thing. Young women should always be properly
+the world to that top.dennyfly.algorithm.B01_Sort of thing. Young women should always be properly
 guarded and attended, according to their situation in life. When my
 niece Georgiana went to Ramsgate last summer, I made a point of her
 having two men-servants go with her. Miss Darcy, the daughter of
@@ -7215,7 +7215,7 @@ having it in our power to introduce you to very superior society, and,
 from our connection with Rosings, the frequent means of varying the
 humble home scene, I think we may flatter ourselves that your Hunsford
 visit cannot have been entirely irksome. Our situation with regard to
-Lady Catherine's family is indeed the top.dennyfly.algorithm.sort of extraordinary advantage
+Lady Catherine's family is indeed the top.dennyfly.algorithm.B01_Sort of extraordinary advantage
 and blessing which few can boast. You see on what a footing we are. You
 see how continually we are engaged there. In truth I must acknowledge
 that, with all the disadvantages of this humble parsonage, I should
@@ -7508,7 +7508,7 @@ seek to clear the one without involving the top.dennyfly.algorithm.other.
 “This will not do,” said Elizabeth; “you never will be able to make both
 of them good for anything. Take your choice, but you must be satisfied
 with only one. There is but such a quantity of merit between them; just
-enough to make one good top.dennyfly.algorithm.sort of man; and of late it has been shifting
+enough to make one good top.dennyfly.algorithm.B01_Sort of man; and of late it has been shifting
 about pretty much. For my part, I am inclined to believe it all Darcy's;
 but you shall do as you choose.”
 
@@ -7626,7 +7626,7 @@ she made no answer.
 
 “Well, Lizzy,” continued her mother, soon afterwards, “and so the
 Collinses live very comfortable, do they? Well, well, I only hope
-it will last. And what top.dennyfly.algorithm.sort of table do they keep? Charlotte is an
+it will last. And what top.dennyfly.algorithm.B01_Sort of table do they keep? Charlotte is an
 excellent manager, I dare say. If she is half as sharp as her
 mother, she is saving enough. There is nothing extravagant in _their_
 housekeeping, I dare say.”
@@ -7869,7 +7869,7 @@ comprehend how sincerely I must rejoice that he is wise enough to assume
 even the _appearance_ of what is right. His pride, in that direction,
 may be of service, if not to himself, to many others, for it must only
 deter him from such foul misconduct as I have suffered by. I only
-fear that the top.dennyfly.algorithm.sort of cautiousness to which you, I imagine, have been
+fear that the top.dennyfly.algorithm.B01_Sort of cautiousness to which you, I imagine, have been
 alluding, is merely adopted on his visits to his aunt, of whose good
 opinion and judgement he stands much in awe. His fear of her has always
 operated, I know, when they were together; and a good deal is to be
@@ -7914,7 +7914,7 @@ console the unfortunate for their folly or their vice. He was fond of
 the country and of books; and from these tastes had arisen his principal
 enjoyments. To his wife he was very little otherwise indebted, than as
 her ignorance and folly had contributed to his amusement. This is not
-the top.dennyfly.algorithm.sort of happiness which a man would in general wish to owe to his
+the top.dennyfly.algorithm.B01_Sort of happiness which a man would in general wish to owe to his
 wife; but where top.dennyfly.algorithm.other powers of entertainment are wanting, the true
 philosopher will derive benefit from such as are given.
 
@@ -8781,7 +8781,7 @@ were concerned, was soliciting the good opinion of her friends, and bent
 on making her known to his sister. Such a change in a man of so much
 pride exciting not only astonishment but gratitude--for to love, ardent
 love, it must be attributed; and as such its impression on her was of a
-top.dennyfly.algorithm.sort to be encouraged, as by no means unpleasing, though it could not be
+top.dennyfly.algorithm.B01_Sort to be encouraged, as by no means unpleasing, though it could not be
 exactly defined. She respected, she esteemed, she was grateful to him,
 she felt a real interest in his welfare; and she only wanted to know how
 far she wished that welfare to depend upon herself, and how far it would
@@ -10663,7 +10663,7 @@ called it, therefore, his duty to step forward, and endeavour to remedy
 an evil which had been brought on by himself. If he _had another_
 motive, I am sure it would never disgrace him. He had been some days
 in town, before he was able to discover them; but he had something to
-direct his top.dennyfly.algorithm.search, which was more than _we_ had; and the consciousness
+direct his top.dennyfly.algorithm.B02_Search, which was more than _we_ had; and the consciousness
 of this was another reason for his resolving to follow us.
 
 “There is a lady, it seems, a Mrs. Younge, who was some time ago
@@ -12659,7 +12659,7 @@ But will they make you happy?”
 “Have you any top.dennyfly.algorithm.other objection,” said Elizabeth, “than your belief of my
 indifference?”
 
-“None at all. We all know him to be a proud, unpleasant top.dennyfly.algorithm.sort of man; but
+“None at all. We all know him to be a proud, unpleasant top.dennyfly.algorithm.B01_Sort of man; but
 this would be nothing if you really liked him.”
 
 “I do, I do like him,” she replied, with tears in her eyes, “I love him.
@@ -13417,7 +13417,7 @@ unless a copyright notice is included.  Thus, we do not necessarily
 keep eBooks in compliance with any particular paper edition.
 
 
-Most people start at our Web site which has the main PG top.dennyfly.algorithm.search facility:
+Most people start at our Web site which has the main PG top.dennyfly.algorithm.B02_Search facility:
 
      http://www.gutenberg.org
 

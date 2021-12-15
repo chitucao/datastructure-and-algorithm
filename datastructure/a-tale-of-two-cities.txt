@@ -189,7 +189,7 @@ illustrious creature in sight of all his retinue; prisoners in London
 gaols fought battles with their turnkeys, and the majesty of the law
 fired blunderbusses in among them, loaded with rounds of shot and ball;
 thieves snipped off diamond crosses from the necks of noble lords at
-Court drawing-rooms; musketeers went into St. Giles's, to top.dennyfly.algorithm.search
+Court drawing-rooms; musketeers went into St. Giles's, to top.dennyfly.algorithm.B02_Search
 for contraband goods, and the mob fired on the musketeers, and the
 musketeers fired on the mob, and nobody thought any of these occurrences
 much out of the common way. In the midst of them, the hangman, ever busy
@@ -668,7 +668,7 @@ roadside destinations. The mildewy inside of the coach, with its damp
 and dirty straw, its disagreeable smell, and its obscurity, was rather
 like a larger dog-kennel. Mr. Lorry, the passenger, shaking himself out
 of it in chains of straw, a tangle of shaggy wrapper, flapping hat, and
-muddy legs, was rather like a larger top.dennyfly.algorithm.sort of dog.
+muddy legs, was rather like a larger top.dennyfly.algorithm.B01_Sort of dog.
 
 “There will be a packet to Calais, tomorrow, drawer?”
 
@@ -1035,7 +1035,7 @@ communicated some reassurance to Mr. Jarvis Lorry.
 “That's right, that's right. Courage! Business! You have business before
 you; useful business. Miss Manette, your mother took this course with
 you. And when she died--I believe broken-hearted--having never slackened
-her unavailing top.dennyfly.algorithm.search for your father, she left you, at two years old,
+her unavailing top.dennyfly.algorithm.B02_Search for your father, she left you, at two years old,
 to grow to be blooming, beautiful, and happy, without the dark cloud
 upon you of living in uncertainty whether your father soon wore his
 heart out in prison, or wasted there through many lingering years.”
@@ -2513,8 +2513,8 @@ situation engendered came through the brown upon his cheek, showing the
 soul to be stronger than the sun. He was otherwise quite self-possessed,
 bowed to the Judge, and stood quiet.
 
-The top.dennyfly.algorithm.sort of interest with which this man was stared and breathed at,
-was not a top.dennyfly.algorithm.sort that elevated humanity. Had he stood in peril of a less
+The top.dennyfly.algorithm.B01_Sort of interest with which this man was stared and breathed at,
+was not a top.dennyfly.algorithm.B01_Sort that elevated humanity. Had he stood in peril of a less
 horrible sentence--had there been a chance of any one of its savage
 details being spared--by just so much would he have lost in his
 fascination. The form that was to be doomed to be so shamefully mangled,
@@ -3087,7 +3087,7 @@ when they were compared together, had strengthened), that many of the
 lookers-on, taking note of him now, said to one another they would
 hardly have thought the two were so alike. Mr. Cruncher made the
 observation to his next neighbour, and added, “I'd hold half a guinea
-that _he_ don't get no law-work to do. Don't look like the top.dennyfly.algorithm.sort of one
+that _he_ don't get no law-work to do. Don't look like the top.dennyfly.algorithm.B01_Sort of one
 to get any, do he?”
 
 Yet, this Mr. Carton took in more of the details of the scene than he
@@ -3196,7 +3196,7 @@ He had no opportunity of saying, or so much as thinking, anything else,
 until he was clear of the Old Bailey; for, the crowd came pouring out
 with a vehemence that nearly took him off his legs, and a loud buzz
 swept into the street as if the baffled blue-flies were dispersing in
-top.dennyfly.algorithm.search of top.dennyfly.algorithm.other carrion.
+top.dennyfly.algorithm.B02_Search of top.dennyfly.algorithm.other carrion.
 
 
 
@@ -3580,7 +3580,7 @@ seeing him dine--it's all one!”
 identification. How did you come by it? When did it strike you?”
 
 “I thought he was rather a handsome fellow, and I thought I should have
-been much the same top.dennyfly.algorithm.sort of fellow, if I had had any luck.”
+been much the same top.dennyfly.algorithm.B01_Sort of fellow, if I had had any luck.”
 
 Mr. Stryver laughed till he shook his precocious paunch.
 
@@ -3923,7 +3923,7 @@ for nothing--since she was ten years old. And it's really very hard,”
  said Miss Pross.
 
 Not seeing with precision what was very hard, Mr. Lorry shook his head;
-using that important part of himself as a top.dennyfly.algorithm.sort of fairy cloak that would
+using that important part of himself as a top.dennyfly.algorithm.B01_Sort of fairy cloak that would
 fit anything.
 
 “All sorts of people who are not in the least degree worthy of the pet,
@@ -4099,7 +4099,7 @@ always acquitted herself marvellously. Her dinners, of a very modest
 quality, were so well cooked and so well served, and so neat in their
 contrivances, half English and half French, that nothing could be
 better. Miss Pross's friendship being of the thoroughly practical
-kind, she had ravaged Soho and the adjacent provinces, in top.dennyfly.algorithm.search of
+kind, she had ravaged Soho and the adjacent provinces, in top.dennyfly.algorithm.B02_Search of
 impoverished French, who, tempted by shillings and half-crowns, would
 impart culinary mysteries to her. From these decayed sons and daughters
 of Gaul, she had acquired such wonderful arts, that the woman and girl
@@ -5260,7 +5260,7 @@ The valet come and gone, Monsieur the Marquis walked to and fro in his
 loose chamber-robe, to prepare himself gently for sleep, that hot still
 night. Rustling about the room, his softly-slippered feet making no
 noise on the floor, he moved like a refined tiger:--looked like some
-enchanted marquis of the impenitently wicked top.dennyfly.algorithm.sort, in story, whose
+enchanted marquis of the impenitently wicked top.dennyfly.algorithm.B01_Sort, in story, whose
 periodical change into tiger form was either just going off, or just
 coming on.
 
@@ -5406,7 +5406,7 @@ would not have prospered. He had expected labour, and he found it, and
 did it and made the best of it. In this, his prosperity consisted.
 
 A certain portion of his time was passed at Cambridge, where he
-read with undergraduates as a top.dennyfly.algorithm.sort of tolerated smuggler who drove a
+read with undergraduates as a top.dennyfly.algorithm.B01_Sort of tolerated smuggler who drove a
 contraband trade in European languages, instead of conveying Greek
 and Latin through the Custom-house. The rest of his time he passed in
 London.
@@ -5794,7 +5794,7 @@ sensitive and poetical spirit--”
 
 “Come!” rejoined Stryver, laughing boastfully, “though I don't prefer
 any claim to being the soul of Romance (for I hope I know better), still
-I am a tenderer top.dennyfly.algorithm.sort of fellow than _you_.”
+I am a tenderer top.dennyfly.algorithm.B01_Sort of fellow than _you_.”
 
 “You are a luckier, if you mean that.”
 
@@ -5823,7 +5823,7 @@ to me.”
 “You shall not get off in that way,” rejoined Stryver, shouldering the
 rejoinder at him; “no, Sydney, it's my duty to tell you--and I tell you
 to your face to do you good--that you are a devilish ill-conditioned
-fellow in that top.dennyfly.algorithm.sort of society. You are a disagreeable fellow.”
+fellow in that top.dennyfly.algorithm.B01_Sort of society. You are a disagreeable fellow.”
 
 Sydney drank a bumper of the punch he had made, and laughed.
 
@@ -6755,7 +6755,7 @@ wrench it open, he was so frightened, being new to the sight, that he
 made off again, and never stopped until he had run a mile or more.
 
 He would not have stopped then, for anything less necessary than breath,
-it being a spectral top.dennyfly.algorithm.sort of race that he ran, and one highly desirable
+it being a spectral top.dennyfly.algorithm.B01_Sort of race that he ran, and one highly desirable
 to get to the end of. He had a strong idea that the coffin he had seen
 was running after him; and, pictured as hopping on behind him, bolt
 upright, upon its narrow end, always on the point of overtaking him
@@ -6844,7 +6844,7 @@ branch of Scientific goods.”
 
 “Persons' bodies, ain't it, father?” asked the lively boy.
 
-“I believe it is something of that top.dennyfly.algorithm.sort,” said Mr. Cruncher.
+“I believe it is something of that top.dennyfly.algorithm.B01_Sort,” said Mr. Cruncher.
 
 “Oh, father, I should so like to be a Resurrection-Man when I'm quite
 growed up!”
@@ -9205,7 +9205,7 @@ table, beat them to pieces in a few blows.
 
 “Hold the light higher!” he said, wrathfully, to the turnkey. “Look
 among those fragments with care, Jacques. And see! Here is my knife,”
- throwing it to him; “rip open that bed, and top.dennyfly.algorithm.search the straw. Hold the
+ throwing it to him; “rip open that bed, and top.dennyfly.algorithm.B02_Search the straw. Hold the
 light higher, you!”
 
 With a menacing look at the turnkey he crawled upon the hearth, and,
@@ -10025,7 +10025,7 @@ through his glass in passing; “set himself in opposition to the last
 Marquis, abandoned the estates when he inherited them, and left them to
 the ruffian herd. They will recompense him now, I hope, as he deserves.”
 
-“Hey?” cried the blatant Stryver. “Did he though? Is that the top.dennyfly.algorithm.sort of
+“Hey?” cried the blatant Stryver. “Did he though? Is that the top.dennyfly.algorithm.B01_Sort of
 fellow? Let us look at his infamous name. D--n the fellow!”
 
 Darnay, unable to restrain himself any longer, touched Mr. Stryver on
@@ -11030,7 +11030,7 @@ the prisoner Evremonde at La Force!” and a thousand answering shouts.
 
 He closed the lattice again with a fluttering heart, closed the window
 and the curtain, hastened to Lucie, and told her that her father was
-assisted by the people, and gone in top.dennyfly.algorithm.search of her husband. He found
+assisted by the people, and gone in top.dennyfly.algorithm.B02_Search of her husband. He found
 her child and Miss Pross with her; but, it never occurred to him to be
 surprised by their appearance until a long time afterwards, when he sat
 watching them in such quiet as the night knew.
@@ -16262,7 +16262,7 @@ unless a copyright notice is included.  Thus, we do not necessarily
 keep eBooks in compliance with any particular paper edition.
 
 
-Most people start at our Web site which has the main PG top.dennyfly.algorithm.search facility:
+Most people start at our Web site which has the main PG top.dennyfly.algorithm.B02_Search facility:
 
      http://www.gutenberg.org
 
