@@ -3,7 +3,8 @@ package top.dennyfly.algorithm.A05_DynamicPrograming;
 /**
  * @author DennyFly
  * @since 2021/11/15 16:21
- * 01背包问题（基于动态规划）
+ * 01背包问题（重量）
+ * <p>
  * #复杂度#
  * 时间复杂度 O(n*w)
  * 虽然时间复杂度比较低，但是空间复杂度比较高，需要额外申请一个 n 乘以 w+1 的二维数组
