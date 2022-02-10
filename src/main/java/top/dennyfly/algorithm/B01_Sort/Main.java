@@ -35,39 +35,36 @@ public class Main {
     @Test
     public void testInsertionSort() {
         int[] arr = arr1;
-        InsertionSort.insertionSort1(arr);
-        print(arr, "insertionSort1");
+        InsertionSort.insertionSort(arr);
+        print(arr, "insertionSort");
     }
 
     @Test
     public void testSelectionSort() {
         int[] arr = arr1;
-        SelectionSort.selectionSort1(arr);
-        print(arr, "selectionSort1");
+        SelectionSort.selectionSort(arr);
+        print(arr, "selectionSort");
     }
 
     @Test
     public void testMergeSort() {
         int[] arr = arr1;
         MergeSort.mergeSort(arr1);
-        print(arr, "mergeSort1");
+        print(arr, "mergeSort");
     }
 
     @Test
     public void testQuickSort() {
         int[] arr = arr1;
-        QuickSort1.quickSort(arr1);
-        print(arr, "quickSort1");
+        QuickSort.quickSort(arr1);
+        print(arr, "quickSort");
     }
 
     @Test
     public void testHeapSort() {
         int[] arr = arr3;
-        HeapSort1.heapSort(arr);
-        print(arr, "heapSort1");
-
-        HeapSort2.heapSort(arr);
-        print(arr, "heapSort2");
+        HeapSort.heapSort(arr);
+        print(arr, "heapSort");
     }
 
 
@@ -136,12 +133,12 @@ public class Main {
         System.out.println("归并排序1：" + (endTime - startTime));
 
         startTime = System.currentTimeMillis();
-        QuickSort1.quickSort(Arrays.copyOf(arr, arr.length));
+        QuickSort.quickSort(Arrays.copyOf(arr, arr.length));
         endTime = System.currentTimeMillis();
         System.out.println("快速排序1：" + (endTime - startTime));
 
         startTime = System.currentTimeMillis();
-        QuickSort2.quickSort(Arrays.copyOf(arr, arr.length));
+        QuickSort.quickSort(Arrays.copyOf(arr, arr.length));
         endTime = System.currentTimeMillis();
         System.out.println("快速排序2：" + (endTime - startTime));
     }

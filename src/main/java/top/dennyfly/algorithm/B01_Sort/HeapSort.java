@@ -4,8 +4,9 @@ package top.dennyfly.algorithm.B01_Sort;
  * @author DennyFly
  * @since 2021/11/2 16:14
  * 堆排序
- * 数组的0下标不存储数据
- * 包括建堆O(n)和排序(Onlog(n))过程
+ * #思路
+ * 1.建堆：（构造一个大顶堆）只需要将0到length/2-1的元素siftDown就行了(注意从下面元素到上面)，时间复杂度O(n)；
+ * 2.排序：依次将堆顶元素和数组末尾交换，然后对堆顶元素执行siftDown构造成新的大顶堆；
  * <p>
  * 时间复杂度O(nlogn)
  * 空间复杂度O(1)
@@ -14,46 +15,35 @@ package top.dennyfly.algorithm.B01_Sort;
  * <p>
  * 内部方法
  * 1.buildHeap  建堆
- * 2.heapfiy    向下堆化
+ * 2.siftDown   向下堆化
  * 3.swap       交换两个索引元素的位置
  */
-public class HeapSort1 {
+public class HeapSort {
 
     public static void heapSort(int[] arr) {
-        // 构建大顶堆
         buildHeap(arr);
 
-        // 排序过程，从后向前，时间复杂度O(nlog(n))
-        // 每次将堆顶元素（索引1）交换到数组的末尾，然后对堆顶的暂时元素（索引1）实现向下堆化，保证堆顶是最大元素
         int k = arr.length - 1;
-        while (k > 1) {
-            swap(arr, 1, k);
+        while (k > 0) {
+            swap(arr, 0, k);
             k--;
-            siftDown(arr, k, 1);
+            siftDown(arr, k, 0);
         }
     }
 
-    /**
-     * 建堆 数组第一个下标元素不考虑，建堆只需要考虑非叶子节点，所以从n/2开始到数组开头
-     * 时间复杂度 O(n)
-     * 每个元素的堆化复杂度是O(logn),但是n/2个元素的时间复杂度加一起是O(n)
-     */
+    // 建堆（下降操作） 考虑第一个元素
     private static void buildHeap(int[] arr) {
-        // 从n/2从后向前到1，依次siftDown
-        for (int i = arr.length / 2; i >= 1; i--) {
+        // 从n/2-1从后向前到0，依次siftDown
+        for (int i = arr.length / 2 - 1; i >= 0; i--) {
             siftDown(arr, arr.length, i);
         }
     }
 
-    /**
-     * 向下堆化 siftdown
-     *
-     * @param parent 执行堆化的索引
-     */
+    // 向下堆化 siftDown操作
     private static void siftDown(int[] arr, int length, int parent) {
         while (true) {
             int maxPos = parent;
-            int leftChild = 2 * parent;
+            int leftChild = 2 * parent + 1;
             if (leftChild < length && arr[leftChild] > arr[parent]) {
                 maxPos = leftChild;
             }
