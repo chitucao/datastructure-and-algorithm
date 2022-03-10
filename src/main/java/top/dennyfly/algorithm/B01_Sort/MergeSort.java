@@ -26,10 +26,10 @@ public class MergeSort {
         }
         // 用于存放合并数据的临时数组
         int[] tempArr = new int[arr.length];
-        mergeSort(arr, tempArr, 0, arr.length - 1);
+        merge(arr, tempArr, 0, arr.length - 1);
     }
 
-    private static void mergeSort(int[] arr, int[] tempArr, int p, int q) {
+    private static void merge(int[] arr, int[] tempArr, int p, int q) {
         // 下标相等表示同一个元素，也不用比较
         if (p >= q) {
             return;
@@ -38,8 +38,8 @@ public class MergeSort {
         int mid = p + ((q - p) >> 1);
 
         // 分 divide
-        mergeSort(arr, tempArr, p, mid);
-        mergeSort(arr, tempArr, mid + 1, q);
+        merge(arr, tempArr, p, mid);
+        merge(arr, tempArr, mid + 1, q);
 
         // 合 conquer
         // 注意这里mid的取值和下面mid的取值
