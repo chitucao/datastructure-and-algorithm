@@ -27,7 +27,7 @@ public class HeapSort {
         while (k > 0) {
             swap(arr, 0, k);
             k--;
-            siftDown(arr, k, 0);
+            maxHeapify(arr, k, 0);
         }
     }
 
@@ -35,12 +35,12 @@ public class HeapSort {
     private static void buildHeap(int[] arr) {
         // 从n/2-1从后向前到0，依次siftDown
         for (int i = arr.length / 2 - 1; i >= 0; i--) {
-            siftDown(arr, arr.length, i);
+            maxHeapify(arr, arr.length, i);
         }
     }
 
     // 向下堆化 siftDown操作
-    private static void siftDown(int[] arr, int length, int parent) {
+    private static void maxHeapify(int[] arr, int length, int parent) {
         while (true) {
             int maxPos = parent;
             int leftChild = 2 * parent + 1;

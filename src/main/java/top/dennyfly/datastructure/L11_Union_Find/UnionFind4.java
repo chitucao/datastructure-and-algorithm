@@ -1,16 +1,13 @@
 package top.dennyfly.datastructure.L11_Union_Find;
 
 /**
- * @author DennyFly
- * @since 2021/10/15 17:10
- * 维护一个rank[]数组，用于记录树的高度，来判断两个树的连接规则
+ * QuickUnion优化2
+ * 增加rank[]数组表示该索引处树的高度
+ * 优化思路：高度低的树加在高度高的树的根节点上
  * <p>
- * 这里的p和q对应根节点的索引
- * <p>
- * 基本操作
- * 1.根据索引查询；
- * 2.连接两个索引；
- * 3.根据索引判断是否连接；
+ * 查询复杂度 O(log(n)) 树的高度
+ * 连接复杂度 O(log(n))
+ * 增加一个rank[]数组，用于记录树的高度，默认初始化为1，两棵树的高度相等时，才会维护其中一棵树的高度；
  */
 public class UnionFind4 implements UF {
 
@@ -49,6 +46,7 @@ public class UnionFind4 implements UF {
         } else if (rank[pRoot] > rank[qRoot]) {
             parent[qRoot] = pRoot;
         } else {
+            // 注意只有rank相等的时候，其中一个高度才会增加
             parent[pRoot] = qRoot;
             rank[qRoot] += 1;
         }

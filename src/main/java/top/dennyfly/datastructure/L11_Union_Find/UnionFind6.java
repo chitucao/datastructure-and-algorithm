@@ -1,19 +1,14 @@
 package top.dennyfly.datastructure.L11_Union_Find;
 
 /**
- * @author DennyFly
- * @since 2021/10/17 9:50
- * 基于递归路径压缩优化，注意这里的rank并不是实际的树的高度
+ * QuickUnion优化3.2
+ * 基于循环路径压缩优化，rank可能不表示树的层数
  * <p>
- * 这里的p和q对应根节点的索引
- * <p>
- * 基本操作
- * 1.根据索引查询；
- * 2.连接两个索引；
- * 3.根据索引判断是否连接；
+ * 查询复杂度 O(log(n)) 树的高度
+ * 连接复杂度 O(log(n))
+ * 基于递归路径压缩优化，同3.1，注意这里的rank并不是实际的树的高度；
  */
 public class UnionFind6 implements UF {
-
 
     private int[] parent;
     private int[] rank;

@@ -14,8 +14,10 @@ public class Main {
         UF uf = new UnionFind1(10);
         uf.unionElements(1, 2);
         uf.unionElements(2, 3);
+        uf.unionElements(3,9);
         System.out.println(uf.isConnected(1, 3));
         System.out.println(uf.isConnected(1,4));
+        System.out.println(uf.isConnected(1,9));
     }
 
     @Test
@@ -23,8 +25,10 @@ public class Main {
         UF uf = new UnionFind2(10);
         uf.unionElements(1, 2);
         uf.unionElements(2, 3);
+        uf.unionElements(3,9);
         System.out.println(uf.isConnected(1, 3));
         System.out.println(uf.isConnected(1,4));
+        System.out.println(uf.isConnected(1,9));
     }
 
     @Test

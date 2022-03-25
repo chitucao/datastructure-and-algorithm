@@ -86,7 +86,7 @@ public class QuickSort {
 
         // i表示已处理区间的末尾（i<=j），最终i元素之前的元素都小于pivot
         int i = p;
-        for (int j = p; j < q; j++) {
+        for (int j = p; j < q; j++) {   // 因为q作为分区元素，所以这里是小于
             if (arr[j] < pivot) {
                 // 如果j处的元素小于pivot，将j处的元素放到已处理元素的位置，相应的已处理元素的末尾i+1
                 swap(arr, i, j);

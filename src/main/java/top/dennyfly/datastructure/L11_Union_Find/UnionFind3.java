@@ -1,17 +1,12 @@
 package top.dennyfly.datastructure.L11_Union_Find;
 
 /**
- * @author DennyFly
- * @since 2021/10/15 16:33
- * 使用sz[]数组表示该索引处树中元素的个数
- * 优化思路：元素数量少的树加到数量多的树后面
+ * QuickUnion优化1
+ * 优化思路：元素数量少的树加到数量多的树后面，
  * <p>
- * 这里的p和q对应根节点的索引
- * <p>
- * 基本操作
- * 1.根据索引查询；
- * 2.连接两个索引；
- * 3.根据索引判断是否连接；
+ * 查询复杂度 O(log(n)) 树的高度
+ * 连接复杂度 O(log(n))
+ * 增加sz[]数组表示该索引处树中元素的数量，每次给一棵树增加元素数量，但是数量并不能准确代表高度；
  */
 public class UnionFind3 implements UF {
 

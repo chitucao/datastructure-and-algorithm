@@ -1,27 +1,23 @@
 package top.dennyfly.datastructure.L11_Union_Find;
 
 /**
- * @author DennyFly
- * @since 2021/10/15 15:33
- * 基于parent数组实现的并查集（这里索引处存储的是当前索引根父节点的值，查询连接的复杂度都是O(h)）
+ * 基于父节点数组实现的并查集 QuickUnion
+ * 查询复杂度 O(log(n)) 树的高度
+ * 连接复杂度 O(log(n))
  * <p>
- * 这里的p和q对应根节点的索引
- * <p>
- * 基本操作
- * 1.根据索引查询；
- * 2.连接两个索引；
- * 3.根据索引判断是否连接；
+ * #思路
+ * 初始化时，数组的索引处存储其父节点的值，默认每个节点的父节点指向它自己（指向自己表示其是根节点）；
+ * 连接时，向上找到A，B这两个节点的父节点，然后将A节点的父节点指向B节点的父节点；
+ * 查询时，判断两个节点的父节点元素是否相等；
+ * 无论是连接还是查询，都需要先找到父节点的指向，所以时间复杂度都是O(log(n))，取决于树的高度；
  */
 public class UnionFind2 implements UF {
 
-    /**
-     * parent[i]表示i索引处元素的父节点值
-     */
     private int[] parent;
 
     public UnionFind2(int size) {
         this.parent = new int[size];
-        // 初始化的时候i索引处的父节点=i节点索引
+        // 初始化时指向自己，都是根节点
         for (int i = 0; i < size; i++) {
             parent[i] = i;
         }
@@ -38,9 +34,12 @@ public class UnionFind2 implements UF {
         return find(p) == find(q);
     }
 
-    // O(h)复杂度
-    // 这个地方存在问题，例如按照以下顺序，0-1，0-2，0-3... 则查找的高度依次为（左边1...n,右边1）,其中一个树的一个高度明显高于右边
-    // 因为要查询两次，所以可以考虑平均一下两棵树的高度
+    /**
+     * O(h)复杂度
+     * 这个地方存在问题，例如按照以下顺序，0-1，0-2，0-3... 则查找的高度依次为（左边1...n,右边1）,其中一个树的一个高度明显高于右边；
+     * 所以可以考虑平均一下两棵树的高度；
+     * 这里是需要查询两次；
+     */
     @Override
     public void unionElements(int p, int q) {
         int pRoot = find(p);
@@ -53,7 +52,7 @@ public class UnionFind2 implements UF {
         parent[pRoot] = qRoot;
     }
 
-    // O(h)复杂度
+    // 这里是找父节点的值，时间复杂度 O(h)
     private int find(int p) {
         if (p < 0 || p > parent.length) {
             throw new IllegalArgumentException("input is out of index");

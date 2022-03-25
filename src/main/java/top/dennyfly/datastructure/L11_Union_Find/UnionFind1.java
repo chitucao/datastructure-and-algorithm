@@ -1,33 +1,31 @@
 package top.dennyfly.datastructure.L11_Union_Find;
 
 /**
- * @author DennyFly
- * @since 2021/10/15 14:08
- * 基于id数组实现的并查集 (查询O(1),连接O(n))
+ * 基于数组实现的并查集 QuickFind
+ * 查询复杂度 O(1)
+ * 连接复杂度 O(n)
  * <p>
- * 这里的p和q对应数组的索引
- * <p>
- * 基本操作
- * 1.根据索引查询；
- * 2.连接两个索引；
- * 3.根据索引判断是否连接；
+ * #思路
+ * 初始化时，数组的值存储数组的索引，保证各不相同，（如果值相同则表示连接），这个p和q都是指的索引；
+ * 连接的时候，将下标值为A的一组元素对应索引值全部改成B的值，最终全部是等于B；
+ * 查询的时候只需要判断两个索引p、q对应的元素值是否相等；
  */
 public class UnionFind1 implements UF {
 
-    private int[] id;
+    private int[] data;
 
 
     public UnionFind1(int size) {
-        id = new int[size];
+        data = new int[size];
         // 初始化，每一个id[i]指向自己，没有合并的元素
         for (int i = 0; i < size; i++) {
-            id[i] = i;
+            data[i] = i;
         }
     }
 
     @Override
     public int getSize() {
-        return id.length;
+        return data.length;
     }
 
     /**
@@ -39,7 +37,10 @@ public class UnionFind1 implements UF {
         return find(p) == find(q);
     }
 
-    // O(n) 复杂度
+    /**
+     * 连接元素
+     * O(n) 复杂度
+     */
     @Override
     public void unionElements(int p, int q) {
         int pID = find(p);
@@ -47,25 +48,18 @@ public class UnionFind1 implements UF {
         if (pID == qID) {
             return;
         }
-        for (int i = 0; i < id.length; i++) {
-            // 将所有的等于pID的索引处的值，改成qID
-            if (id[i] == pID) {
-                id[i] = qID;
+        for (int i = 0; i < data.length; i++) {
+            if (data[i] == pID) {
+                data[i] = qID;
             }
         }
     }
 
-    /**
-     * 根据索引查找元素
-     * O(1) 复杂度
-     *
-     * @param p 数组索引
-     * @return 索引位置的值
-     */
+    // 这里是找当前节点的值，时间复杂度 O(1)
     private int find(int p) {
-        if (p < 0 || p >= id.length) {
+        if (p < 0 || p >= data.length) {
             throw new IllegalArgumentException("index is illegal! p is out of index");
         }
-        return id[p];
+        return data[p];
     }
 }
