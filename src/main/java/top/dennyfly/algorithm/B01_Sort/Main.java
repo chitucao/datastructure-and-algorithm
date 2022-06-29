@@ -28,8 +28,8 @@ public class Main {
     @Test
     public void testBubbleSort() {
         int[] arr = arr2;
-        BubbleSort.bubbleSort2(arr);
-        print(arr, "bubbleSort2");
+        BubbleSort.bubbleSort1(arr);
+        print(arr, "bubbleSort1");
     }
 
     @Test

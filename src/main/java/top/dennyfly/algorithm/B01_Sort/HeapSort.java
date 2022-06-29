@@ -20,49 +20,52 @@ package top.dennyfly.algorithm.B01_Sort;
  */
 public class HeapSort {
 
-    public static void heapSort(int[] arr) {
-        buildHeap(arr);
+    public static void heapSort(int[] nums) {
+        if (nums == null || nums.length <= 1) {
+            return;
+        }
+        buildMaxHeap(nums);
 
-        int k = arr.length - 1;
-        while (k > 0) {
-            swap(arr, 0, k);
+        int k = nums.length - 1;
+        for (int i = k; i > 0; i--) {
+            swap(nums, 0, i);
+            maxHeapify(nums, k, 0);
             k--;
-            maxHeapify(arr, k, 0);
         }
     }
 
-    // 建堆（下降操作） 考虑第一个元素
-    private static void buildHeap(int[] arr) {
-        // 从n/2-1从后向前到0，依次siftDown
-        for (int i = arr.length / 2 - 1; i >= 0; i--) {
-            maxHeapify(arr, arr.length, i);
+    // 建堆 O(n)
+    private static void buildMaxHeap(int[] nums) {
+        int n = nums.length;
+        for (int i = n / 2 - 1; i >= 0; i--) {
+            maxHeapify(nums, n, i);
         }
     }
 
-    // 向下堆化 siftDown操作
-    private static void maxHeapify(int[] arr, int length, int parent) {
+    // 向下堆化，注意这里的n是最后一个元素的位置
+    private static void maxHeapify(int[] nums, int n, int parent) {
         while (true) {
             int maxPos = parent;
             int leftChild = 2 * parent + 1;
-            if (leftChild < length && arr[leftChild] > arr[parent]) {
+            if (leftChild < n && nums[leftChild] > nums[maxPos]) {
                 maxPos = leftChild;
             }
-            // 注意这里是和maxPos比较
-            if (leftChild + 1 < length && arr[leftChild + 1] > arr[maxPos]) {
-                maxPos = leftChild + 1;
+            int rightChild = 2 * parent + 2;
+            if (rightChild < n && nums[rightChild] > nums[maxPos]) {
+                maxPos = rightChild;
             }
             if (maxPos == parent) {
                 break;
             }
-            swap(arr, maxPos, parent);
+            swap(nums, maxPos, parent);
             parent = maxPos;
         }
     }
 
-    private static void swap(int[] arr, int p, int q) {
-        int temp = arr[p];
-        arr[p] = arr[q];
-        arr[q] = temp;
+    private static void swap(int[] nums, int i, int j) {
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
     }
 
 }

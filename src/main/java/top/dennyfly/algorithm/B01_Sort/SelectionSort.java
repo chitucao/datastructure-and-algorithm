@@ -13,29 +13,46 @@ package top.dennyfly.algorithm.B01_Sort;
  */
 public class SelectionSort {
 
-    public static void selectionSort(int[] arr) {
-        if (arr == null || arr.length <= 1) {
-            return;
+    public static void selectionSort(int[] nums) {
+//        if (arr == null || arr.length <= 1) {
+//            return;
+//        }
+//
+//        // 外层遍历n-1次
+//        for (int i = 0; i < arr.length - 1; i++) {
+//            // 已排序区间末尾下标
+//            int min = i;
+//
+//            // 找到未排序区间最小元素下标
+//            for (int j = i + 1; j < arr.length; j++) {
+//                if (arr[j] < arr[min]) {
+//                    min = j;
+//                }
+//            }
+//
+//            // 将未排序区间最小元素放到已排序区间的末尾
+//            if (i != min) {
+//                swap(arr, i, min);
+//            }
+//        }
+
+        if (nums == null || nums.length <= 1) {
+            return ;
         }
+        int n = nums.length;
+        for (int i = 0; i < n; i++) {
+            int min = i;    // 找到未排序区间最小的元素下标，用于和已排序区间的末尾作交换
 
-        // 外层遍历n-1次
-        for (int i = 0; i < arr.length - 1; i++) {
-            // 已排序区间末尾下标
-            int min = i;
-
-            // 找到未排序区间最小元素下标
-            for (int j = i + 1; j < arr.length; j++) {
-                if (arr[j] < arr[min]) {
+            for (int j = i + 1; j < n; j++) {
+                if (nums[j] < nums[min]) {
                     min = j;
                 }
             }
 
-            // 将未排序区间最小元素放到已排序区间的末尾
             if (i != min) {
-                swap(arr, i, min);
+                swap(nums, i, min);
             }
         }
-
     }
 
     // 交换两个元素的位置

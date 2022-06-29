@@ -19,6 +19,9 @@ package top.dennyfly.algorithm.B02_Search;
  * 2.查找最后一个值等于给定值的元素；
  * 3.查找第一个大于等于该值的元素；
  * 4.查找最后一个小于等于该值的元素；
+ * <p>
+ * Plus
+ * 1.寻找第一个小于该值的元素   leetcode300
  */
 public class BinarySearch {
 
