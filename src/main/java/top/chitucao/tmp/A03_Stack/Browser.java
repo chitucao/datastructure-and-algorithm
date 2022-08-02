@@ -2,8 +2,8 @@ package top.chitucao.tmp.A03_Stack;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import top.chitucao.datastructure.L03_Stacks_and_Queues.C01_stack.LinkedListStack;
-import top.chitucao.datastructure.L03_Stacks_and_Queues.C01_stack.Stack;
+import top.chitucao.datastructure.Stack_and_Queue.C01_stack.LinkedListStack;
+import top.chitucao.datastructure.Stack_and_Queue.C01_stack.Stack;
 
 /**
  * @author dennyfly
