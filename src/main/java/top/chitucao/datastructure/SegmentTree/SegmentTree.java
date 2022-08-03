@@ -16,7 +16,7 @@ package top.chitucao.datastructure.SegmentTree;
  * 内部方法
  * 1.计算左孩子索引；
  * 2.计算右孩子索引；
- *
+ * <p>
  * 奇数个拆分时优先左边多分一个；
  */
 public class SegmentTree<E> {
@@ -48,7 +48,7 @@ public class SegmentTree<E> {
         // 递归终止条件，切割至左右孩子相等
         if (l == r) {
             tree[treeIndex] = data[l];
-            return;
+            return; // 注意return
         }
         int leftTreeIndex = leftChild(treeIndex);
         int rightTreeeIndex = rightChild(treeIndex);
@@ -78,7 +78,7 @@ public class SegmentTree<E> {
 
     // 在以treeIndex为根的线段树中[l...r]的范围里，搜索区间[queryL...queryR]的值
     private E query(int treeIndex, int l, int r, int queryL, int queryR) {
-        // 递归终止条件1（提前终止）
+        // 包含两种情况，一种是递归到底到叶子节点，一种是合并回来到指定区间
         if (l == queryL && r == queryR) {
             return tree[treeIndex];
         }
@@ -88,7 +88,7 @@ public class SegmentTree<E> {
         int leftTreeIndex = leftChild(treeIndex);
         int rightTreeIndex = rightChild(treeIndex);
 
-        // 向下递归，判断是否只需要在一侧区间查询
+        // 向下递归，判断是否只需要在一侧区间查询，注意这里的大于等于和小于等于
         if (queryL >= mid + 1) {
             return query(rightTreeIndex, mid + 1, r, queryL, queryR);
         } else if (queryR <= mid) {
@@ -110,7 +110,7 @@ public class SegmentTree<E> {
     }
 
     private void set(int treeIndex, int l, int r, int index, E e) {
-        // 递归终止条件
+        // 递归终止条件，一个元素
         if (l == r) {
             tree[treeIndex] = e;
             return;
@@ -121,7 +121,7 @@ public class SegmentTree<E> {
         int leftTreeIndex = leftChild(treeIndex);
         int rightTreeIndex = rightChild(treeIndex);
 
-        // 向下递归，在左侧或者右侧设置
+        // 向下递归，判断是否在一侧设置
         if (index >= mid + 1) {
             set(rightTreeIndex, mid + 1, r, index, e);
         } else {
