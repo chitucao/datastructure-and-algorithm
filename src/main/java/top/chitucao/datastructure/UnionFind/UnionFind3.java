@@ -38,6 +38,7 @@ public class UnionFind3 implements UF {
         int pParent = find(p);
         int qParent = find(q);
 
+        // 将数量小的树节点的父节点指向数量大的节点的父节点，合并成一棵树后需要维护增加元素的数量
         if (sz[pParent] < sz[qParent]) {
             parent[pParent] = qParent;
             sz[qParent] += sz[pParent];

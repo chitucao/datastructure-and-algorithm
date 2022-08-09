@@ -1,26 +1,23 @@
-package top.chitucao.datastructure.UnionFind;
+package top.chitucao.tmp.structure;
 
 /**
- * QuickUnion优化3.1
- * 基于循环路径压缩优化，rank可能不表示树的层数
- * 在find操作中优化维护树的高度
- * <p>
- * 查询复杂度 O(log(n)) 树的高度
- * 连接复杂度 O(log(n))
- * 主要是find方法中，赋值给p节点之前，parent(p)也先赋值一次；
+ * @author chitucao
+ * @since 2022/8/9 17:44
  */
-public class UnionFind5 implements UF {
+public class RankOptimizeUnionFind implements UFT {
 
     private int[] parent;
     private int[] rank;
 
-    public UnionFind5(int size) {
-        parent = new int[size];
-        rank = new int[size];
+
+    public RankOptimizeUnionFind(int size) {
+        this.parent = new int[size];
+        this.rank = new int[size];
         for (int i = 0; i < size; i++) {
             parent[i] = i;
             rank[i] = 1;
         }
+
     }
 
     @Override
@@ -41,25 +38,35 @@ public class UnionFind5 implements UF {
             return;
         }
 
-        if (rank[pRoot] < rank[qRoot]) {
+        int pRank = rank[p];
+        int qRank = rank[q];
+
+        if (pRank < qRank) {
             parent[pRoot] = qRoot;
-        } else if (rank[qRoot] < rank[pRoot]) {
+        } else if (qRank < pRank) {
             parent[qRoot] = pRoot;
         } else {
             parent[pRoot] = qRoot;
             rank[qRoot] += 1;
         }
+
     }
 
     private int find(int p) {
-        if (p < 0 || p >= parent.length) {
-            throw new IllegalArgumentException("input is illeagal");
-        }
-
         while (p != parent[p]) {
-            parent[p] = parent[parent[p]];
             p = parent[p];
         }
         return p;
+    }
+
+    public static void main(String[] args) {
+        UFT uft = new PlainArrayUnionFind(5);
+        System.out.println("size：" + uft.getSize());
+
+        uft.unionElements(1, 2);
+        uft.unionElements(2, 4);
+
+        System.out.println("isConnected：" + uft.isConnected(1, 3));
+        System.out.println("isConnected：" + uft.isConnected(1, 4));
     }
 }

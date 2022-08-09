@@ -3,6 +3,7 @@ package top.chitucao.datastructure.UnionFind;
 /**
  * QuickUnion优化3.2
  * 基于循环路径压缩优化，rank可能不表示树的层数
+ * 在find操作中维护优化树的高度
  * <p>
  * 查询复杂度 O(log(n)) 树的高度
  * 连接复杂度 O(log(n))

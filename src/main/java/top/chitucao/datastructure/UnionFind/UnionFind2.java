@@ -37,8 +37,10 @@ public class UnionFind2 implements UF {
     /**
      * O(h)复杂度
      * 这个地方存在问题，例如按照以下顺序，0-1，0-2，0-3... 则查找的高度依次为（左边1...n,右边1）,其中一个树的一个高度明显高于右边；
+     * 这样下去查找左边的parent的复杂度就会变成线性的n；
      * 所以可以考虑平均一下两棵树的高度；
      * 这里是需要查询两次；
+     * 找到p的根节点指向q的根节点
      */
     @Override
     public void unionElements(int p, int q) {
