@@ -17,12 +17,12 @@ package top.chitucao.datastructure.Trie;
 public class ArrayTrie {
 
     class Node {
-        private boolean isWord;
-        private Node[] next;
+        private boolean isWord;  // 当前位置是否对应一个单词的结束
+        private Node[] next;     // 数组索引对应字母的位置，元素是下一个节点
 
         public Node(boolean isWord) {
             this.isWord = isWord;
-            this.next = new Node[6666];
+            this.next = new Node[666];
         }
 
         public Node() {
@@ -38,6 +38,8 @@ public class ArrayTrie {
         this.root = new Node();
     }
 
+    // 遍历单词在树中插入新节点，在末尾的时候比较这个字母是单词的结束
+    // 时间复杂度 O(w) w表示单词的长度
     public void add(String word) {
 
         Node cur = root;
@@ -55,6 +57,7 @@ public class ArrayTrie {
         }
     }
 
+    // 时间复杂度O(w) w表示单词的长度
     public boolean contains(String word) {
         Node cur = root;
         for (int i = 0; i < word.length(); i++) {
