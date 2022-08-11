@@ -88,6 +88,7 @@ public class AVLTree<K extends Comparable<K>, V> {
     }
 
     // 判断是否平衡
+    // 注意不仅要判断当前节点平衡，也要求子节点平衡
     // 平衡因子等于左子树和右子树的高度差
     public boolean isBalanced() {
         return isBalanced(root);
@@ -250,6 +251,7 @@ public class AVLTree<K extends Comparable<K>, V> {
     }
 
     // 这里返回值就是输入值
+    // 找到最小的节点，并且将其右节点返回代替原来的节点
     private Node removeMin(Node node) {
         // 递归终止条件
         // 这时可能right不为null，需要将right作为最小节点返回
@@ -267,6 +269,8 @@ public class AVLTree<K extends Comparable<K>, V> {
         return node;
     }
 
+    // 删除的时候先查询一遍判断key是否存在，如果不存在则不需要后续处理
+    // 如果存在则需要删除后返回删除前的值
     public V remove(K key) {
         Node node = getNode(root, key);
         if (node != null) {
@@ -324,30 +328,32 @@ public class AVLTree<K extends Comparable<K>, V> {
             return null;
         }
 
+
         // 维护高度、平衡因子
+        // 注意治理是维护返回对象的
         retNode.height = 1 + Math.max(getHeight(retNode.left), getHeight(retNode.right));
         int balanceFactor = getBalanceFactor(retNode);
 
         // LL 执行右旋
-        if (balanceFactor > 1 && getBalanceFactor(node.left) >= 0) {
+        if (balanceFactor > 1 && getBalanceFactor(retNode.left) >= 0) {
             return rightRotate(retNode);
         }
 
         // RR 执行左旋
-        if (balanceFactor < -1 && getBalanceFactor(node.right) <= 0) {
+        if (balanceFactor < -1 && getBalanceFactor(retNode.right) <= 0) {
             return leftRotate(retNode);
         }
 
         // LR，先对左孩子执行左旋转换成LL，然后对该节点执行右旋
-        if (balanceFactor > 1 && getBalanceFactor(node.left) < 0) {
-            node.left = leftRotate(node.left);
-            return rightRotate(node);
+        if (balanceFactor > 1 && getBalanceFactor(retNode.left) < 0) {
+            retNode.left = leftRotate(retNode.left);
+            return rightRotate(retNode);
         }
 
         // RL,先对右孩子执行右旋转换成RR，然后对该节点执行左旋
-        if (balanceFactor < -1 && getBalanceFactor(node.right) > 0) {
-            node.right = rightRotate(node.right);
-            return leftRotate(node);
+        if (balanceFactor < -1 && getBalanceFactor(retNode.right) > 0) {
+            retNode.right = rightRotate(retNode.right);
+            return leftRotate(retNode);
         }
 
         return retNode;
