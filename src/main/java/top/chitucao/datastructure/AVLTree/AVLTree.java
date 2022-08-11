@@ -17,7 +17,7 @@ import java.util.List;
  * 2.根据key获取value
  * 3.是否包含key
  * 4.根据key更新value （如果找不到抛出异常）
- * 5.根据key删除，返回value（hibbard deletion，+维护平衡）
+ * 5.根据key删除，返回value（hibbard deletion + 维护平衡）
  * 6.是否平衡
  * 7.是否是二分搜索树（不严谨）
  * <p>
@@ -64,6 +64,8 @@ public class AVLTree<K extends Comparable<K>, V> {
         return size == 0;
     }
 
+    // 判断是否是二叉搜索树
+    // 中序遍历，判断是否是有序的
     public boolean isBST() {
         List<K> keys = new ArrayList<>();
         inOrder(root, keys);
@@ -85,6 +87,8 @@ public class AVLTree<K extends Comparable<K>, V> {
         inOrder(node.right, keys);
     }
 
+    // 判断是否平衡
+    // 平衡因子等于左子树和右子树的高度差
     public boolean isBalanced() {
         return isBalanced(root);
     }
@@ -98,6 +102,7 @@ public class AVLTree<K extends Comparable<K>, V> {
         if (Math.abs(balanceFactor) > 1) {
             return false;
         }
+
         return isBalanced(node.left) && isBalanced(node.right);
     }
 
@@ -130,22 +135,26 @@ public class AVLTree<K extends Comparable<K>, V> {
 //        }
 
         // 维护平衡，四种情况
+        // LL 当前节点的平衡因子>1并且左节点的平衡因子>=0
         // LL 右旋
         if (balanceFactor > 1 && getBalanceFactor(node.left) >= 0) {
             return rightRotate(node);
         }
 
+        // RR 当前节点的平衡因子<-1并且右节点的平衡因子<=0
         // RR 左旋
         if (balanceFactor < -1 && getBalanceFactor(node.right) <= 0) {
             return leftRotate(node);
         }
 
+        // LR 当前节点的平衡因子大于1并且左节点的平衡因子<0
         // LR 先对左孩子左旋转换成LL，然后右旋
         if (balanceFactor > 1 && getBalanceFactor(node.left) < 0) {
             node.left = leftRotate(node.left);
             return rightRotate(node);
         }
 
+        // RR 当前节点的平衡因子小于-1并且右节点的平衡因子>0
         // RL 先对右孩子右旋转换成RR，然后左旋
         if (balanceFactor < -1 && getBalanceFactor(node.right) > 0) {
             node.right = rightRotate(node.right);
@@ -243,13 +252,18 @@ public class AVLTree<K extends Comparable<K>, V> {
     // 这里返回值就是输入值
     private Node removeMin(Node node) {
         // 递归终止条件
+        // 这时可能right不为null，需要将right作为最小节点返回
         if (node.left == null) {
             Node rightNode = node.right;
             node.right = null;
             size--;
             return rightNode;
         }
+
+        // 递归执行逻辑
         node.left = removeMin(node.left);
+
+        // 正常情况，原样返回操作后的节点
         return node;
     }
 

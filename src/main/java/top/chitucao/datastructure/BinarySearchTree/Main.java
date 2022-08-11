@@ -160,6 +160,6 @@ public class Main {
         // 后继节点
         BST<Integer>.Node node2 = bst.find(2);
         BST<Integer>.Node next = bst.next(node2);
-        System.out.println("前驱节点 " + next.e);
+        System.out.println("后继节点 " + next.e);
     }
 }
