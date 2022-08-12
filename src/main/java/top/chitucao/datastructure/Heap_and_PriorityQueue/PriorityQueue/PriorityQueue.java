@@ -1,7 +1,7 @@
 package top.chitucao.datastructure.Heap_and_PriorityQueue.PriorityQueue;
 
 import top.chitucao.datastructure.Heap_and_PriorityQueue.Heap.MaxHeap;
-import top.chitucao.datastructure.Stack_and_Queue.C02_queue.Queue;
+import top.chitucao.datastructure.Stack_and_Queue.Queue.Queue;
 
 /**
  * @author DennyFly

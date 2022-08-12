@@ -1,25 +1,25 @@
-package top.chitucao.datastructure.Stack_and_Queue.C01_stack;
+package top.chitucao.datastructure.Stack_and_Queue.Queue;
 
 import top.chitucao.datastructure.Array.Array;
 
+
 /**
  * @author DennyFly
- * @since 2021/7/5 12:10
- * 基于动态数组实现的顺序栈
- * #操作数组尾部
+ * @since 2021/10/12 17:18
+ * 基于动态数组实现的顺序队列
+ * ++操作数组尾部入队、首部出队
  */
-public class ArrayStack<E> implements Stack<E> {
+public class ArrayQueue<E> implements Queue<E> {
 
     private Array<E> array;
 
-    public ArrayStack() {
-        array = new Array<>();
+    public ArrayQueue() {
+        this.array = new Array<>();
     }
 
-    public ArrayStack(int capacity) {
-        array = new Array<>(capacity);
+    public ArrayQueue(int capacity) {
+        this.array = new Array<>(capacity);
     }
-
 
     @Override
     public int getSize() {
@@ -31,40 +31,34 @@ public class ArrayStack<E> implements Stack<E> {
         return array.isEmpty();
     }
 
-    // 入栈O(1)
     @Override
-    public void push(E e) {
+    public void enqueue(E e) {
         array.addLast(e);
     }
 
-    // 出栈O(1)
     @Override
-    public E pop() {
-        return array.removeLast();
+    public E dequeue() {
+        return array.removeFirst();
     }
 
     @Override
-    public E peek() {
-        return array.getLast();
-    }
-
-    @Override
-    public void clear() {
-        array.clear();
+    public E getFront() {
+        return array.getFirst();
     }
 
     @Override
     public String toString() {
         StringBuilder res = new StringBuilder();
-        res.append("ArrayStack: ");
-        res.append('[');
+        res.append("Queue: ");
+        res.append("front [");
         for (int i = 0; i < array.getSize(); i++) {
             res.append(array.get(i));
             if (i != array.getSize() - 1) {
                 res.append(", ");
             }
         }
-        res.append("] top");
+        res.append("] tail");
         return res.toString();
     }
+
 }

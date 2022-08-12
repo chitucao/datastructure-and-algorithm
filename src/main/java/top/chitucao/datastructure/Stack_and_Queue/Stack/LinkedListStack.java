@@ -1,4 +1,4 @@
-package top.chitucao.datastructure.Stack_and_Queue.C01_stack;
+package top.chitucao.datastructure.Stack_and_Queue.Stack;
 
 import top.chitucao.datastructure.LinkedList.LinkedList;
 

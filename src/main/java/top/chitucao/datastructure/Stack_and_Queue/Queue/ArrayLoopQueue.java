@@ -1,4 +1,4 @@
-package top.chitucao.datastructure.Stack_and_Queue.C02_queue;
+package top.chitucao.datastructure.Stack_and_Queue.Queue;
 
 /**
  * @author DennyFly
@@ -49,10 +49,12 @@ public class ArrayLoopQueue<E> implements Queue<E> {
 
     @Override
     public void enqueue(E e) {
+        // 队列满则扩容
         if ((tail + 1) % data.length == front) {
             resize(getCapacity() * 2);
         }
 
+        // tail先赋值后增加，tail位置不存储元素
         data[tail] = e;
         tail = (tail + 1) % data.length;
         size++;
@@ -65,11 +67,13 @@ public class ArrayLoopQueue<E> implements Queue<E> {
             throw new IllegalArgumentException("Cannot dequeue from an empty queue.");
         }
 
+        // front先赋值后增加
         E ret = data[front];
         data[front] = null;
         front = (front + 1) % data.length;
         size--;
 
+        // 缩容
         if (size == getCapacity() / 4 && getCapacity() / 2 != 0) {
             resize(getCapacity() / 2);
         }
@@ -100,7 +104,7 @@ public class ArrayLoopQueue<E> implements Queue<E> {
 
         data = newData;
         front = 0;
-        tail = size;
+        tail = size;    // tail位置不存储元素
     }
 
     @Override
