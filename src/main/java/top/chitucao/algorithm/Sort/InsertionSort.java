@@ -47,7 +47,7 @@ public class InsertionSort {
             for (; j >= 0 && nums[j] > num; j--) {  // 所有比当前元素大的元素后移一位空出位置，这里比较的核心元素是相邻的后一个元素
                 nums[j + 1] = nums[j];
             }
-            nums[j + 1] = num;  // 注意j=0并且j--之后j=-1，所以这里使用j+1
+            nums[j + 1] = num;  // 注意j=0并且j--之后j=-1，所以这里使用j+1  // 注意边界
         }
 //        return nums;
     }

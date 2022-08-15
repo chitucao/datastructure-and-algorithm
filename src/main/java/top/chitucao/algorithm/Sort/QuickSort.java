@@ -30,8 +30,7 @@ public class QuickSort {
     }
 
     private static void quickSort(int[] arr, int p, int q) {
-        // 注意这里不能等于
-        if (p >= q) {
+        if (p >= q) {   // 注意判断边界
             return;
         }
 
@@ -45,7 +44,7 @@ public class QuickSort {
     private static int partition1(int[] arr, int p, int q) {
         int pivot = arr[p];
         while (p < q) {
-            while (p < q && arr[q] >= pivot) {
+            while (p < q && arr[q] >= pivot) {  // 注意判断边界
                 q--;
             }
             arr[p] = arr[q];
@@ -75,7 +74,7 @@ public class QuickSort {
     }
 
     /**
-     * p到i-1为已处理区间，i为已处理区间的末尾，i+1到q为未处理区间
+     * p到i-1为已处理区间，i为已处理区间的末尾(即分区元素)，i+1到q为未处理区间
      * 时间复杂度O(n)
      *
      * @return 最终i即为正确索引位置的元素，值就是我们选择的pivot
@@ -87,7 +86,7 @@ public class QuickSort {
         // i表示已处理区间的末尾（i<=j），最终i元素之前的元素都小于pivot
         int i = p;
         for (int j = p; j < q; j++) {   // 因为q作为分区元素，所以这里是小于
-            if (arr[j] < pivot) {
+            if (arr[j] < pivot) {   // 注意判断边界
                 // 如果j处的元素小于pivot，将j处的元素放到已处理元素的位置，相应的已处理元素的末尾i+1
                 swap(arr, i, j);
                 i++;

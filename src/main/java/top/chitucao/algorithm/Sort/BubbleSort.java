@@ -24,7 +24,7 @@ package top.chitucao.algorithm.Sort;
  */
 public class BubbleSort {
 
-    public static void bubbleSort(int[] arr){
+    public static void bubbleSort(int[] arr) {
         bubbleSort2(arr);
     }
 
@@ -38,7 +38,7 @@ public class BubbleSort {
         }
 
         for (int i = 0; i < arr.length - 1; i++) {          // 两两相邻比较，最多比较n-1次
-            for (int j = 0; j < arr.length - i - 1; j++) {  // 比较的元素从后向前越来越少
+            for (int j = 0; j < arr.length - i - 1; j++) {  // 从头到尾这个方向，所以末尾那个是比较后最大的，后面不需要参与
                 if (arr[j] > arr[j + 1]) {
                     swap(arr, j, j + 1);
                 }

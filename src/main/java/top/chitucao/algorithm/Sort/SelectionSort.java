@@ -37,7 +37,7 @@ public class SelectionSort {
 //        }
 
         if (nums == null || nums.length <= 1) {
-            return ;
+            return;
         }
         int n = nums.length;
         for (int i = 0; i < n; i++) {

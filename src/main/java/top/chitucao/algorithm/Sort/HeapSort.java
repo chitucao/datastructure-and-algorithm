@@ -26,18 +26,18 @@ public class HeapSort {
         }
         buildMaxHeap(nums);
 
-        int k = nums.length - 1;
-        for (int i = k; i > 0; i--) {
-            swap(nums, 0, i);
-            maxHeapify(nums, k, 0);
-            k--;
+        int len = nums.length - 1;
+        for (int i = 0; i < nums.length - 1; i++) {
+            swap(nums, 0, len);
+            maxHeapify(nums, len, 0);
+            len--;
         }
     }
 
     // 建堆 O(n)
     private static void buildMaxHeap(int[] nums) {
         int n = nums.length;
-        for (int i = n / 2 - 1; i >= 0; i--) {
+        for (int i = n / 2 - 1; i >= 0; i--) {  // 注意边界
             maxHeapify(nums, n, i);
         }
     }

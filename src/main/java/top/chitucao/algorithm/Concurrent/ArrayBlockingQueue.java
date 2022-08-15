@@ -101,6 +101,7 @@ public class ArrayBlockingQueue {
         return null;
     }
 
+    @SuppressWarnings("AlibabaAvoidManuallyCreateThread")
     public static void main(String[] args) {
         Random random = new Random(100);
         ArrayBlockingQueue queue = new ArrayBlockingQueue(5);
