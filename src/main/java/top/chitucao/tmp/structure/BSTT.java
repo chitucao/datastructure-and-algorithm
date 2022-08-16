@@ -510,4 +510,5 @@ public class BSTT<E extends Comparable<E>> {
         BSTT<Integer>.Node next = bst.next(node2);
         System.out.println("后继节点 " + next.e);
     }
+
 }

@@ -128,15 +128,6 @@ public class RBTree<K extends Comparable<K>, V> {
         return node;
     }
 
-
-    // 判断节点的颜色
-    private boolean isRed(Node node) {
-        if (node == null) {
-            return BLACK;
-        }
-        return node.color;
-    }
-
     private Node getNode(Node node, K key) {
         if (node == null) {
             return null;
@@ -179,6 +170,7 @@ public class RBTree<K extends Comparable<K>, V> {
         return null;
     }
 
+    // 这里没有写完整，红黑树的删除比添加复杂
     private Node remove(Node node, K key) {
         if (node == null) {
             return null;
@@ -251,6 +243,14 @@ public class RBTree<K extends Comparable<K>, V> {
         node.color = RED;
         node.left.color = BLACK;
         node.right.color = BLACK;
+    }
+
+    // 判断节点的颜色
+    private boolean isRed(Node node) {
+        if (node == null) {
+            return BLACK;
+        }
+        return node.color;
     }
 
 
