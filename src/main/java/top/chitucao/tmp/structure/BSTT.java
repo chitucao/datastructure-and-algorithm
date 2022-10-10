@@ -287,6 +287,8 @@ public class BSTT<E extends Comparable<E>> {
     }
 
     private Node parent(Node root, Node node) {
+        // 1.父节点为空没找到；
+        // 2.找到对应孩子的父节点；
         if (root == null || root.left == node || root.right == node) {
             return root;
         }

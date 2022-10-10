@@ -21,6 +21,8 @@ import java.util.Comparator;
  * 1.randomLevel    获取随机层数
  * 2.keyCheck       校验key的有效性（不能为null）
  * 3.compare        比较两个key的大小
+ * <p>
+ * 跳表的时间复杂度 https://blog.csdn.net/qq_34412579/article/details/101731935
  */
 @SuppressWarnings("unchecked")
 public class SkipList<K, V> {
@@ -48,7 +50,7 @@ public class SkipList<K, V> {
 
     // 最大层数限制
     public static final int MAX_LEVEL = 32;
-    // 抛硬币的概率
+    // 抛硬币的概率，可以理解成向上一层的概率
     public static final double P = 0.25;
     // 当前元素个数
     private int size;
@@ -62,6 +64,7 @@ public class SkipList<K, V> {
 
     /**
      * 头节点，不存放任何K、V
+     * 可以理解为一个虚拟头节点吧
      */
     private Node<K, V> first;
 
@@ -85,7 +88,8 @@ public class SkipList<K, V> {
 
     public V get(K key) {
         keyCheck(key);
-        Node<K, V> node = first;
+        Node<K, V> node = first;    // 可以理解为比查找元素小的那个最大节点
+
         for (int i = level - 1; i >= 0; i--) {
             int cmp = -1;
             while (node.nexts[i] != null && (cmp = compare(key, node.nexts[i].key)) > 0) {
@@ -94,11 +98,16 @@ public class SkipList<K, V> {
             if (cmp == 0) {
                 return node.nexts[i].value;
             }
-            // 执行到这里，表示进入下一层
+            // 执行到这里，进入下一层
         }
         return null;
     }
 
+    /**
+     * 判断是更新还是添加
+     * 如果是添加需要记录添加每层对应的前驱节点，最后根据层数遍历连接当前节点
+     * 需要判断更新有效层数
+     */
     public V put(K key, V value) {
         keyCheck(key);
 
@@ -127,6 +136,7 @@ public class SkipList<K, V> {
                 // first指向高出的层数
                 first.nexts[i] = newNode;
             } else {
+                // 先连接后面节点，再和前面节点相连
                 newNode.nexts[i] = prevs[i].nexts[i];
                 prevs[i].nexts[i] = newNode;
             }
@@ -140,6 +150,10 @@ public class SkipList<K, V> {
         return null;
     }
 
+    /**
+     * 通过一个exist变量记录是否存在该元素，没有返回null
+     * 记录当前元素的所有前驱节点，通过前驱节点断开
+     */
     public V remove(K key) {
         keyCheck(key);
         Node<K, V> node = first;
@@ -170,7 +184,7 @@ public class SkipList<K, V> {
             prevs[i].nexts[i] = removeNode.nexts[i];
         }
 
-        // 更新有效层数（只需要考虑该节点层数比新的有效层数大的情况）
+        // 更新有效层数，从最高层遍历，判断后驱是否为null
         int newLevel = level;
         while (--newLevel >= 0 && first.nexts[newLevel] == null) {
             level = newLevel;
