@@ -54,18 +54,18 @@ public class PackageWeight2 {
             // 第二次组合两个值...
             // 第三次组合三个值...
             // 其实就是一个从后向前组合所有情况的过程，相应的问题规模就是次数x情况数
-            for (int j = maxWeight - items[i]; j >= 0; j--) {
-                if (states[j] == true) {
-                    states[j + items[i]] = true;
-                }
-            }
-
-            // 如果是从前开始，states[j + items[i]]会再计算一次，这里的i其实是不合理的
-//            for (int j = 0; j <= maxWeight - items[i]; j++) {
+//            for (int j = maxWeight - items[i]; j >= 0; j--) {
 //                if (states[j] == true) {
 //                    states[j + items[i]] = true;
 //                }
 //            }
+
+            // 如果是从前开始，states[j + items[i]]会再计算一次，这里的i其实是不合理的
+            for (int j = 0; j <= maxWeight - items[i]; j++) {
+                if (states[j] == true) {
+                    states[j + items[i]] = true;
+                }
+            }
         }
 
         // 重量从大到小遍历

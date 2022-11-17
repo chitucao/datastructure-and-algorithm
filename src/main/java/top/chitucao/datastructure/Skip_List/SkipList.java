@@ -86,16 +86,25 @@ public class SkipList<K, V> {
         return size == 0;
     }
 
+    /**
+     * 查找
+     * <p>
+     * ①从顶层链表的首元素开始，左往右搜索直至找到一个大于或等目标者达当前尾部；
+     * ②如果该元素等于目标，则表明已被找到；
+     * ③如果该元素大于目标或已到达链表的尾部，则退回当前层一个然后转入下进行搜索；
+     */
     public V get(K key) {
         keyCheck(key);
-        Node<K, V> node = first;    // 可以理解为比查找元素小的那个最大节点
+        Node<K, V> node = first;
 
         for (int i = level - 1; i >= 0; i--) {
             int cmp = -1;
+
+            // 比较同一层，node是比查找元素小的那个最大节点，next[i]大于或者等于要查找的节点
             while (node.nexts[i] != null && (cmp = compare(key, node.nexts[i].key)) > 0) {
                 node = node.nexts[i];
             }
-            if (cmp == 0) {
+            if (cmp == 0) {     // 等于的情况直接返回，所以要提前定义这个变量
                 return node.nexts[i].value;
             }
             // 执行到这里，进入下一层
@@ -104,9 +113,12 @@ public class SkipList<K, V> {
     }
 
     /**
+     * 添加
+     * <p>
      * 判断是更新还是添加
-     * 如果是添加需要记录添加每层对应的前驱节点，最后根据层数遍历连接当前节点
-     * 需要判断更新有效层数
+     * 1.如果是更新，直接更新返回即可
+     * 2.如果是添加，需要记录插入节点的所有前驱节点，最后随机生成层数，遍历生成的层数连接前面的节点和后面的节点；
+     * 3.更新size和新的level
      */
     public V put(K key, V value) {
         keyCheck(key);
@@ -151,8 +163,12 @@ public class SkipList<K, V> {
     }
 
     /**
-     * 通过一个exist变量记录是否存在该元素，没有返回null
-     * 记录当前元素的所有前驱节点，通过前驱节点断开
+     * 删除
+     * <p>
+     * 通过一个exist变量记录是否存在该元素
+     * 1.没有返回null
+     * 2.记录当前元素的所有前驱节点，遍历连接当前节点的前驱和后驱来删除当前节点；
+     * 3.遍历first节点，从高到底判断next是否为null，更新level的值；
      */
     public V remove(K key) {
         keyCheck(key);

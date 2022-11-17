@@ -23,7 +23,7 @@ public class Main {
     public void testPackageWeight2() {
         int[] items = new int[]{10, 20, 30, 40, 35, 45, 55, 75};
 
-        PackageWeight2 pkg = new PackageWeight2(items, 2, 60);
+        PackageWeight2 pkg = new PackageWeight2(items, 4, 60);
         System.out.println(pkg.countMaxWeight());
     }
 

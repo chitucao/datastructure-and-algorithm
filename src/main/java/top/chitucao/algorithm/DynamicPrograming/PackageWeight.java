@@ -4,6 +4,7 @@ package top.chitucao.algorithm.DynamicPrograming;
  * @author DennyFly
  * @since 2021/11/15 16:21
  * 01背包问题（重量）
+ * 限制最大重量，求最大重量
  * <p>
  * #复杂度#
  * 时间复杂度 O(n*w)
@@ -17,7 +18,7 @@ public class PackageWeight {
     /**
      * 物品清单
      */
-    public int[] items;
+    public  int[] items;
 
     /**
      * 最大数量限制
@@ -31,8 +32,8 @@ public class PackageWeight {
 
     /**
      * 背包状态二维数组
-     * 下标1 -> 总数量
-     * 下标2 -> 总重量
+     * 纵向 是否选择第i件物品
+     * 横向 当前重量
      */
     private boolean[][] states;
 

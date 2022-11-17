@@ -37,7 +37,7 @@ public class HeapSort {
     // 建堆 O(n)
     private static void buildMaxHeap(int[] nums) {
         int n = nums.length;
-        for (int i = n / 2 - 1; i >= 0; i--) {  // 注意边界
+        for (int i = n / 2 - 1; i >= 0; i--) {
             maxHeapify(nums, n, i);
         }
     }
@@ -46,17 +46,19 @@ public class HeapSort {
     private static void maxHeapify(int[] nums, int n, int parent) {
         while (true) {
             int maxPos = parent;
-            int leftChild = 2 * parent + 1;
-            if (leftChild < n && nums[leftChild] > nums[maxPos]) {
-                maxPos = leftChild;
+            int left = parent * 2 + 1;
+            if (left < n && nums[left] > nums[maxPos]) {
+                maxPos = left;
             }
-            int rightChild = 2 * parent + 2;
-            if (rightChild < n && nums[rightChild] > nums[maxPos]) {
-                maxPos = rightChild;
+            int right = parent * 2 + 2;
+            if (right < n && nums[right] > nums[maxPos]) {
+                maxPos = right;
             }
+
             if (maxPos == parent) {
                 break;
             }
+
             swap(nums, maxPos, parent);
             parent = maxPos;
         }

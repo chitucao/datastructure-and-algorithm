@@ -53,7 +53,7 @@ public class QuickSort {
             }
             arr[q] = arr[p];
         }
-        arr[p] = pivot;
+        arr[p] = pivot; // 这个地方有点区别
         return p;
     }
 
