@@ -10,8 +10,8 @@ import java.util.Objects;
 public class LargeNumber {
 
     public static void main(String[] args) {
-        String num1 = "0";
-        String num2 = "-458";
+        String num1 = "123";
+        String num2 = "-123";
         System.out.println(new LargeNumber().add(num1, num2));
     }
 
@@ -81,7 +81,7 @@ public class LargeNumber {
         // 反转后去掉前导0
         sb.reverse();
         int idx = 0;
-        while (idx < sb.length() && sb.charAt(idx) == 0) {
+        while (idx < sb.length() && sb.charAt(idx) == '0') {
             idx++;
         }
         // 等于0的特殊情况
@@ -92,10 +92,17 @@ public class LargeNumber {
         return sb.substring(idx);
     }
 
-    // num1是否大于num2
+    // num1是否大于等于num2
     private boolean compare(String num1, String num2) {
         if (num1.length() == num2.length()) {
-            return num1.compareTo(num2) > 0;
+//            return num1.compareTo(num2) >= 0;
+            int n = num1.length();
+            for (int i = 0; i < n; i++) {
+                if (num1.charAt(i) < num2.charAt(i)) {
+                    return false;
+                }
+            }
+            return true;
         } else {
             return num1.length() > num2.length();
         }
