@@ -23,10 +23,11 @@ package top.chitucao.algorithm.Sort;
 public class QuickSort {
 
     public static void quickSort(int[] arr) {
-        if (arr == null || arr.length <= 1) {
-            return;
-        }
-        quickSort(arr, 0, arr.length - 1);
+//        if (arr == null || arr.length <= 1) {
+//            return;
+//        }
+//        quickSort(arr, 0, arr.length - 1);
+        solution1(arr);
     }
 
     private static void quickSort(int[] arr, int p, int q) {
@@ -103,5 +104,39 @@ public class QuickSort {
         int temp = arr[q];
         arr[q] = arr[p];
         arr[p] = temp;
+    }
+
+    private static void solution1(int[] nums) {
+        if (nums == null || nums.length <= 1) {
+            return;
+        }
+        qs0(nums, 0, nums.length - 1);
+    }
+
+    private static void qs0(int[] nums, int l, int r) {
+        if (l >= r) {
+            return;
+        }
+        int pivot = pt(nums, l, r);
+        qs0(nums, l, pivot - 1);
+        qs0(nums, pivot + 1, r);
+    }
+
+    private static int pt(int[] nums, int l, int r) {
+        int num = nums[l];
+        while (l < r) {
+            while (l < r && nums[r] >= num) {
+                r--;
+            }
+            nums[l] = nums[r];
+
+            while (l < r && nums[l] <= num) {
+                l++;
+            }
+            nums[r] = nums[l];
+        }
+
+        nums[l] = num;
+        return l;
     }
 }

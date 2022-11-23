@@ -18,29 +18,35 @@ public class ReplaceOneChar {
 
     @Test
     public void testSearch() {
-        String s = "ballo";
-        System.out.println(search(s));
+        String s = "aallo";
+        System.out.println(solution1(s));
     }
 
     /**
      * 解法1：遍历统计
+     * 时间复杂度 O(mn)  m表示单个字符串长度，n表示字符串数量
+     * 空间复杂度 O(1)
+     * <p>
+     * #思路
+     * 1.遍历所有的字符串和所给字符串比较，长度不同的直接排除；
+     * 2.长度相同的，遍历字符串，定义一个变量记录不同字符的数量，注意可以count>1可以提前退出
      */
     public static boolean search(String s) {
 
         for (int i = 0; i < STRS.length; i++) {
-            int count = 0;
             String str = STRS[i];
 
             if (str.length() != s.length()) {
-                return false;
+                continue;
             }
 
+            int count = 0;
             for (int j = 0; j < str.length(); j++) {
                 if (str.charAt(j) != s.charAt(j)) {
                     if (count == 0) {
                         count++;
                     } else {
-                        count++;
+                        count++;    // 此时count==2
                         break;
                     }
                 }
@@ -53,4 +59,34 @@ public class ReplaceOneChar {
 
         return false;
     }
+
+    private boolean solution1(String s) {
+        if (s == null || s.length() == 1) {
+            return false;
+        }
+
+        for (int i = 0; i < STRS.length; i++) {
+            String curStr = STRS[i];
+            if (curStr.length() != s.length()) {
+                continue;
+            }
+
+            int count = 0;
+            for (int j = 0; j < s.length(); j++) {
+                if (s.charAt(j) != curStr.charAt(j)) {
+                    if (count == 0) {
+                        count++;
+                    } else {
+                        count++;
+                        break;
+                    }
+                }
+            }
+            if (count == 1) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }

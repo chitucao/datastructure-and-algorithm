@@ -5,8 +5,9 @@ import org.junit.Test;
 /**
  * @author dennyfly
  * @since 2022/7/26 14:42
+ * longest common string
  */
-public class StringSolution {
+public class LCS {
 
     @Test
     public void testLcs() {
