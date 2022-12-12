@@ -23,6 +23,9 @@ import java.util.Stack;
  * 7.remove         删除任意节点
  * <p>
  * 内部方法
+ *
+ * @leetcode
+ * 1.无序数组转二叉搜索树  第一个节点作为根节点，然后调用add方法就好了
  */
 public class BST<E extends Comparable<E>> {
 

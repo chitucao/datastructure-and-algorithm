@@ -31,6 +31,9 @@ import java.util.List;
  * 6.重写toString()方法
  * 7.中序遍历
  * 8.左旋转和右旋转
+ *
+ * @leetcode
+ * 1.无序数组转平衡二叉搜索树（不能先对数组进行排序）  就是AVL的add方法
  */
 public class AVLTree<K extends Comparable<K>, V> {
 
@@ -131,9 +134,6 @@ public class AVLTree<K extends Comparable<K>, V> {
 
         // 判断平衡因子
         int balanceFactor = getBalanceFactor(node);
-//        if (Math.abs(balanceFactor) > 1) {
-//            System.out.println("unbalanced: " + balanceFactor);
-//        }
 
         // 维护平衡，四种情况
         // LL 当前节点的平衡因子>1并且左节点的平衡因子>=0
