@@ -26,10 +26,17 @@ public class Main {
     private static int[] arr4 = {7,1,2,3,4,5,6};
 
     @Test
-    public void testBubbleSort() {
+    public void testBubbleSort1() {
         int[] arr = arr2;
         BubbleSort.bubbleSort1(arr);
         print(arr, "bubbleSort1");
+    }
+
+    @Test
+    public void testBubbleSort2() {
+        int[] arr = arr2;
+        BubbleSort.bubbleSort2(arr);
+        print(arr, "bubbleSort2");
     }
 
     @Test

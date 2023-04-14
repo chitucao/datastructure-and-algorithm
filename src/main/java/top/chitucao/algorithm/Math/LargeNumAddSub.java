@@ -8,24 +8,22 @@ import java.util.Objects;
  * 大数加法，包括正负的情况
  * 参考 https://developer.aliyun.com/article/1057265
  */
-public class LargeNumber {
+public class LargeNumAddSub {
 
     public static void main(String[] args) {
-        String num1 = "123";
-        String num2 = "-456";
-        System.out.println(new LargeNumber().add(num1, num2));
+        String num1 = "-123";
+        String num2 = "456";
+        System.out.println(new LargeNumAddSub().add(num1, num2));
     }
 
     public String add(String num1, String num2) {
-
-        boolean isPositiveNum1 = num1.charAt(0) != '-';
-        boolean isPositiveNum2 = num2.charAt(0) != '-';
-
-        if (isPositiveNum1 && isPositiveNum2) {
+        boolean isPostiveNum1 = !num1.startsWith("-");
+        boolean isPositveNum2 = !num2.startsWith("-");
+        if (isPostiveNum1 && isPositveNum2) {
             return doAdd(num1, num2);
-        } else if (!isPositiveNum1 && !isPositiveNum2) {
+        } else if (!isPostiveNum1 && !isPositveNum2) {
             return negate(doAdd(num1.substring(1), num2.substring(1)));
-        } else if (isPositiveNum1 && !isPositiveNum2) {
+        } else if (isPostiveNum1 && !isPositveNum2) {
             return doSub(num1, num2.substring(1));
         } else {
             return doSub(num2, num1.substring(1));
@@ -34,73 +32,60 @@ public class LargeNumber {
 
     // 相加
     private String doAdd(String num1, String num2) {
-        int len1 = num1.length() - 1;
-        int len2 = num2.length() - 1;
-        int carry = 0;
+        int tail1 = num1.length() - 1;
+        int tail2 = num2.length() - 1;
 
         StringBuilder sb = new StringBuilder();
-
-        while (len1 >= 0 || len2 >= 0) {
-            int n1 = len1 >= 0 ? num1.charAt(len1--) - '0' : 0;
-            int n2 = len2 >= 0 ? num2.charAt(len2--) - '0' : 0;
+        int carry = 0;
+        while (tail1 >= 0 || tail2 >= 0) {
+            int n1 = tail1 >= 0 ? num1.charAt(tail1--) - '0' : 0;
+            int n2 = tail2 >= 0 ? num2.charAt(tail2--) - '0' : 0;
             int sum = n1 + n2 + carry;
-            carry = sum / 10;
             sb.append(sum % 10);
+            carry = sum / 10;
         }
-
-        // 这里注意进位
-        if (carry > 0) {
-            sb.append(1);
+        if (carry == 1) {
+            sb.append(carry);
         }
-
         return sb.reverse().toString();
     }
 
     // 相减
     private String doSub(String num1, String num2) {
         if (!compare(num1, num2)) {
-            return negate(doSub(num2, num1));   // 保证num1>=num2
+            return negate(doSub(num2, num1));
         }
 
-        int len1 = num1.length() - 1;
-        int len2 = num2.length() - 1;
-        int borrow = 0;
-
+        int tail1 = num1.length()-1;
+        int tail2 = num2.length()-1;
         StringBuilder sb = new StringBuilder();
-
-        while (len1 >= 0 || len2 >= 0) {
-            int n1 = len1 >= 0 ? num1.charAt(len1--) - '0' : 0;
-            int n2 = len2 >= 0 ? num2.charAt(len2--) - '0' : 0;
-            int num = n1 - n2 - borrow;
-
-            // 借位
-            if (num < 0) {
+        int borrow = 0;
+        while (tail1 >= 0 || tail2 >= 0) {
+            int n1 = tail1 >= 0 ? num1.charAt(tail1--) - '0' : 0;
+            int n2 = tail2 >= 0 ? num2.charAt(tail2--) - '0' : 0;
+            int sub = n1 - n2 - borrow;
+            if (sub < 0) {
+                sub += 10;
                 borrow = 1;
-                num += 10;
             }
-            sb.append(num);
+            sb.append(sub);
         }
 
-        // 反转后去掉前导0  22-14=08
         sb.reverse();
 
-        // 注意这里是个while循环，并且不能中断
         int idx = 0;
         while (idx < sb.length() && sb.charAt(idx) == '0') {
             idx++;
         }
-        // 等于0的特殊情况
         if (idx == sb.length()) {
             return "0";
         }
-
         return sb.substring(idx);
     }
 
     // num1是否大于等于num2
     private boolean compare(String num1, String num2) {
         if (num1.length() == num2.length()) {
-//            return num1.compareTo(num2) >= 0;
             for (int i = 0; i < num1.length(); i++) {
                 if (num1.charAt(i) < num2.charAt(i)) {
                     return false;
@@ -114,10 +99,10 @@ public class LargeNumber {
 
     // 反转正负情况
     private String negate(String num) {
-        if (num.charAt(0) == '-') {
-            return num.substring(1);
-        } else if (Objects.equals(num, "0")) {
+        if (Objects.equals(num, "0")) {
             return num;
+        } else if (num.startsWith("-")) {
+            return num.substring(1);
         } else {
             return "-" + num;
         }

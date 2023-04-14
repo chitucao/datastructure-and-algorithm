@@ -36,21 +36,19 @@ public class SelectionSort {
 //            }
 //        }
 
-        if (nums == null || nums.length <= 1) {
+        if (nums == null || nums.length == 0) {
             return;
         }
         int n = nums.length;
         for (int i = 0; i < n; i++) {
-            int min = i;    // 找到未排序区间最小的元素下标，用于和已排序区间的末尾作交换
-
+            int min = i;
             for (int j = i + 1; j < n; j++) {
                 if (nums[j] < nums[min]) {
                     min = j;
                 }
             }
-
-            if (i != min) {
-                swap(nums, i, min);
+            if (min != i) {
+                swap(nums,min,i);
             }
         }
     }

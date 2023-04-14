@@ -71,26 +71,23 @@ public class BinarySearch {
     }
 
     /**
-     * 变形的二分查找1.1
+     * 变形的二分查找1.1 存在重复元素
      * 查找第一个等于给定值的元素
      * #比较容易理解的写法
      */
-    public static int binarySearch3(int[] arr, int k) {
+    public static int binarySearch3(int[] arr, int target) {
         int low = 0;
         int high = arr.length - 1;
         while (low <= high) {
-            int mid = low + ((high - low) >> 1);
-
-            if (k > arr[mid]) {
+            int mid = low + (high - low) / 2;
+            if (target > arr[mid]) {
                 low = mid + 1;
-            } else if (k < arr[mid]) {
+            } else if (target < arr[mid]) {
                 high = mid - 1;
             } else {
-                // mid为第一个元素或者mid-1不等于该元素
-                if (mid == 0 || arr[mid - 1] != k) {
+                if (mid == 0 || arr[mid - 1] != target) {
                     return mid;
                 } else {
-                    // 否则high-1
                     high = high - 1;
                 }
             }
@@ -103,20 +100,20 @@ public class BinarySearch {
      * 查找第一个等于给定值的元素
      * #简洁写法，注意循环判断条件和推出条件
      */
-    public static int binarySearch4(int[] arr, int k) {
+    public static int binarySearch4(int[] arr, int target) {
         int low = 0;
         int high = arr.length - 1;
         while (low <= high) {
             int mid = low + ((high - low) >> 1);
 
             // 这里是最终high会一直回退，直到到达low，也就是等于该值的第一个元素
-            if (k <= arr[mid]) {
+            if (target <= arr[mid]) {
                 high = mid - 1;
             } else {
                 low = mid + 1;
             }
         }
-        if (low < arr.length && arr[low] == k) {
+        if (low < arr.length && arr[low] == target) {
             return low;
         } else {
             return -1;
@@ -128,17 +125,34 @@ public class BinarySearch {
      * 查找最后一个等于给定值的元素
      * #容易理解的写法
      */
-    public static int binarySearch5(int[] arr, int k) {
+    public static int binarySearch5(int[] arr, int target) {
+//        int low = 0;
+//        int high = arr.length - 1;
+//        while (low <= high) {
+//            int mid = low + ((high - low) >> 1);
+//            if (k < arr[mid]) {
+//                high = mid - 1;
+//            } else if (k > arr[mid]) {
+//                low = mid + 1;
+//            } else {
+//                if (mid == arr.length - 1 || arr[mid + 1] != k) {
+//                    return mid;
+//                } else {
+//                    low = low + 1;
+//                }
+//            }
+//        }
+//        return -1;
         int low = 0;
         int high = arr.length - 1;
         while (low <= high) {
-            int mid = low + ((high - low) >> 1);
-            if (k < arr[mid]) {
-                high = mid - 1;
-            } else if (k > arr[mid]) {
+            int mid = low + (high - low) / 2;
+            if (target > arr[mid]) {
                 low = mid + 1;
+            } else if (target < mid - 1) {
+                high = mid - 1;
             } else {
-                if (mid == arr.length - 1 || arr[mid + 1] != k) {
+                if (mid == arr.length - 1 || arr[mid + 1] != target) {
                     return mid;
                 } else {
                     low = low + 1;
@@ -153,21 +167,21 @@ public class BinarySearch {
      * 查找最后一个等于给定值的元素
      * #简洁写法，注意循环判断条件和推出条件
      */
-    public static int binarySearch6(int[] arr, int k) {
+    public static int binarySearch6(int[] arr, int target) {
         int low = 0;
         int high = arr.length - 1;
         while (low <= high) {
             int mid = low + ((high - low) >> 1);
 
             // 这里是最终low会一直前进，直到到达high，也就是等于该值的最后一个元素
-            if (k >= arr[mid]) {
+            if (target >= arr[mid]) {
                 low = mid + 1;
             } else {
                 high = mid - 1;
             }
         }
 
-        if (high > 0 && arr[high] == k) {
+        if (high > 0 && arr[high] == target) {
             return high;
         } else {
             return -1;
@@ -178,13 +192,30 @@ public class BinarySearch {
      * 变形的二分查找3
      * 查找第一个大于等于该值的元素
      */
-    public static int binarySearch7(int[] arr, int k) {
+    public static int binarySearch7(int[] arr, int target) {
+//        int low = 0;
+//        int high = arr.length - 1;
+//        while (low <= high) {
+//            int mid = low + ((high - low) >> 1);
+//            if (arr[mid] >= target) {
+//                if (mid == 0 || arr[mid - 1] < target) {
+//                    return mid;
+//                } else {
+//                    high = mid - 1;
+//                }
+//            } else {
+//                low = mid + 1;
+//            }
+//        }
+//        return -1;
+
         int low = 0;
         int high = arr.length - 1;
+
         while (low <= high) {
-            int mid = low + ((high - low) >> 1);
-            if (arr[mid] >= k) {
-                if (mid == 0 || arr[mid - 1] < k) {
+            int mid = low + (high - low) / 2;
+            if (arr[mid] >= target) {
+                if (mid == 0 || arr[mid - 1] < target) {
                     return mid;
                 } else {
                     high = mid - 1;
@@ -200,20 +231,35 @@ public class BinarySearch {
      * 变形的二分查找4
      * 查找最后一个小于等于该值的元素
      */
-    public static int binarySearch8(int[] arr, int k) {
+    public static int binarySearch8(int[] arr, int target) {
+//        int low = 0;
+//        int high = arr.length - 1;
+//        while (low <= high) {
+//            int mid = low + ((high - low) >> 1);
+//
+//            if (arr[mid] <= target) {
+//                if (mid == arr.length - 1 || arr[mid + 1] > target) {
+//                    return mid;
+//                } else {
+//                    low = mid + 1;
+//                }
+//            } else {
+//                high = high - 1;
+//            }
+//        }
+//        return -1;
         int low = 0;
         int high = arr.length - 1;
         while (low <= high) {
-            int mid = low + ((high - low) >> 1);
-
-            if (arr[mid] <= k) {
-                if (mid == arr.length - 1 || arr[mid + 1] > k) {
+            int mid = low + (high - low) / 2;
+            if (arr[mid] <= target) {
+                if (mid == arr.length - 1 || arr[mid + 1] > target) {
                     return mid;
                 } else {
-                    mid = mid + 1;
+                    low = mid + 1;
                 }
             } else {
-                high = high - 1;
+                high = mid - 1;
             }
         }
         return -1;

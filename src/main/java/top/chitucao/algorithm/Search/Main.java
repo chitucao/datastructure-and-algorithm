@@ -60,7 +60,7 @@ public class Main {
 
     @Test
     public void testFindLELast() {
-        int index = BinarySearch.binarySearch8(arr4, 7);
+        int index = BinarySearch.binarySearch8(arr4, 9);
         System.out.println("binarySearch8: " + index);
     }
 }

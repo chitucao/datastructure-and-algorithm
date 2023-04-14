@@ -38,13 +38,17 @@ public class InsertionSort {
             return;
         }
         int n = nums.length;
+
         for (int i = 1; i < n; i++) {
             int num = nums[i];
-            int j = i - 1;
-            for (; j >= 0 && nums[j] > num; j--) {
-                nums[j + 1] = nums[j];
+
+            int tail = i - 1;
+
+            for (; tail >= 0 && nums[tail] > num; tail--) {
+                nums[tail + 1] = nums[tail];
             }
-            nums[j + 1] = num;
+
+            nums[tail + 1] = num;
         }
 
     }

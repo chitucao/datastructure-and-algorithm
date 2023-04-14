@@ -10,19 +10,19 @@ public class LargeNum {
 
     public static void main(String[] args) {
         String num1 = "-123";
-        String num2 = "-456";
+        String num2 = "122";
         System.out.println(new LargeNum().add(num1, num2));
     }
 
     public String add(String num1, String num2) {
-        boolean positiveNum1 = num1.charAt(0) != '-';
-        boolean positiveNum2 = num2.charAt(0) != '-';
+        boolean isPositiveNum1 = !num1.startsWith("-");
+        boolean isPositiveNum2 = !num2.startsWith("-");
 
-        if (positiveNum1 && positiveNum2) {
+        if (isPositiveNum1 && isPositiveNum2) {
             return doAdd(num1, num2);
-        } else if (!positiveNum1 && !positiveNum2) {
+        } else if (!isPositiveNum1 && !isPositiveNum2) {
             return negate(doAdd(num1.substring(1), num2.substring(1)));
-        } else if (positiveNum1 && !positiveNum2) {
+        } else if (isPositiveNum1 && !isPositiveNum2) {
             return doSub(num1, num2.substring(1));
         } else {
             return doSub(num2, num1.substring(1));
@@ -30,20 +30,20 @@ public class LargeNum {
     }
 
     public String doAdd(String num1, String num2) {
-        int len1 = num1.length() - 1;
-        int len2 = num2.length() - 1;
+        int tail1 = num1.length() - 1;
+        int tail2 = num2.length() - 1;
 
-        StringBuilder sb = new StringBuilder();
         int carry = 0;
-        while (len1 >= 0 || len2 >= 0) {
-            int n1 = len1 >= 0 ? num1.charAt(len1--) - '0' : 0;
-            int n2 = len2 >= 0 ? num2.charAt(len2--) - '0' : 0;
+        StringBuilder sb = new StringBuilder();
+        while (tail1 >= 0 || tail2 >= 0) {
+            int n1 = tail1 >= 0 ? num1.charAt(tail1--) - '0' : 0;
+            int n2 = tail2 >= 0 ? num2.charAt(tail2--) - '0' : 0;
             int sum = n1 + n2 + carry;
             sb.append(sum % 10);
             carry = sum / 10;
         }
-        if (carry > 0) {
-            sb.append(carry);
+        if (carry == 1) {
+            sb.append(1);
         }
         return sb.reverse().toString();
     }
@@ -53,14 +53,14 @@ public class LargeNum {
             return negate(doSub(num2, num1));
         }
 
-        int len1 = num1.length() - 1;
-        int len2 = num2.length() - 1;
+        int tail1 = num1.length() - 1;
+        int tail2 = num2.length() - 1;
 
-        StringBuilder sb = new StringBuilder();
         int borrow = 0;
-        while (len1 >= 0 || len2 >= 0) {
-            int n1 = len1 >= 0 ? num1.charAt(len1--) - '0' : 0;
-            int n2 = len2 >= 0 ? num2.charAt(len2--) - '0' : 0;
+        StringBuilder sb = new StringBuilder();
+        while (tail1 >= 0 || tail2 >= 0) {
+            int n1 = tail1 >= 0 ? num1.charAt(tail1--) - '0' : 0;
+            int n2 = tail2 >= 0 ? num2.charAt(tail2--) - '0' : 0;
             int sub = n1 - n2 - borrow;
             if (sub < 0) {
                 sub += 10;
@@ -68,9 +68,7 @@ public class LargeNum {
             }
             sb.append(sub);
         }
-
         sb.reverse();
-
         int idx = 0;
 
         while (idx < sb.length() && sb.charAt(idx) == '0') {

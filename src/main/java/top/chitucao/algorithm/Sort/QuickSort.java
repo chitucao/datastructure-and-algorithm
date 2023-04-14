@@ -42,6 +42,7 @@ public class QuickSort {
 
 
     // 这里选择p作为分区节点，循环完成后最终保证p元素处于正确的排序位置
+    // 核心是找到并交换左右两个分区不符合要求元素的位置，保证其处于正确的分区
     private static int partition1(int[] arr, int p, int q) {
         int pivot = arr[p];
         while (p < q) {
